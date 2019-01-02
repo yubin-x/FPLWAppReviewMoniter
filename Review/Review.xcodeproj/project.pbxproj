@@ -13,6 +13,9 @@
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
 		82ECBD0D21DD077900900188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0C21DD077900900188 /* Assets.xcassets */; };
 		82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0E21DD077900900188 /* LaunchScreen.storyboard */; };
+		82ECBD1A21DD08F500900188 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1921DD08F500900188 /* FPReviewViewController.swift */; };
+		82ECBD1C21DD095900900188 /* FPReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */; };
+		82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1E21DD147800900188 /* ReviewModel.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		82ECBD0C21DD077900900188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82ECBD0F21DD077900900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82ECBD1121DD077900900188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82ECBD1921DD08F500900188 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
+		82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewModel.swift; sourceTree = "<group>"; };
+		82ECBD1E21DD147800900188 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +78,8 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				82ECBD1D21DD145B00900188 /* Models */,
+				82ECBD1821DD08DA00900188 /* FPReview */,
 				82ECBD0221DD077800900188 /* AppDelegate.swift */,
 				82ECBD0421DD077800900188 /* ViewController.swift */,
 				82ECBD0621DD077800900188 /* Main.storyboard */,
@@ -81,6 +89,23 @@
 				82ECBD0921DD077800900188 /* Review.xcdatamodeld */,
 			);
 			path = Review;
+			sourceTree = "<group>";
+		};
+		82ECBD1821DD08DA00900188 /* FPReview */ = {
+			isa = PBXGroup;
+			children = (
+				82ECBD1921DD08F500900188 /* FPReviewViewController.swift */,
+				82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */,
+			);
+			path = FPReview;
+			sourceTree = "<group>";
+		};
+		82ECBD1D21DD145B00900188 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				82ECBD1E21DD147800900188 /* ReviewModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EACA14358D398094B8EA5A21 /* Frameworks */ = {
@@ -207,7 +232,10 @@
 			files = (
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
 				82ECBD0521DD077800900188 /* ViewController.swift in Sources */,
+				82ECBD1C21DD095900900188 /* FPReviewViewModel.swift in Sources */,
+				82ECBD1A21DD08F500900188 /* FPReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
+				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +386,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -375,7 +406,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
