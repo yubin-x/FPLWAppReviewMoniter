@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SVProgressHUD
 
-let url = "https://itunes.apple.com/rss/customerreviews/page=%d/id=414478124/sortby=mostrecent/json?l=en&&cc=cn"
+let url = "https://itunes.apple.com/rss/customerreviews/page=%d/id=1141466520/sortby=mostrecent/json?l=en&&cc=cn"
 
 class FPReviewViewModel {
     

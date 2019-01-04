@@ -9,21 +9,43 @@
 import Foundation
 
 struct ReviewModel: Decodable {
-    var feed: ReviewFeedModel
+    var feed: FeedModel
 }
 
-struct ReviewFeedModel: Decodable {
-    var entry: [ReviewEntryModel]
+struct FeedModel: Decodable {
+    var entry: [EntryModel]
 }
 
-struct ReviewEntryModel: Decodable {
-    var author: ReviewAuthorModel
+struct EntryModel: Decodable {
+    var author: AuthorModel
+    var rating: RatingModel
+    var title: TitleModel
+    var content: ContentModel
+    
+    enum CodingKeys: String, CodingKey {
+        case author
+        case rating = "im:rating"
+        case title
+        case content
+    }
 }
 
-struct ReviewAuthorModel: Decodable {
-    var name: ReviewNameModel
+struct AuthorModel: Decodable {
+    var name: NameModel
 }
 
-struct ReviewNameModel: Decodable {
+struct NameModel: Decodable {
+    var label: String
+}
+
+struct RatingModel: Decodable {
+    var label: String
+}
+
+struct TitleModel: Decodable {
+    var label: String
+}
+
+struct ContentModel: Decodable {
     var label: String
 }
