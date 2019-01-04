@@ -13,7 +13,11 @@ struct ReviewModel: Decodable {
 }
 
 struct FeedModel: Decodable {
-    var entry: [EntryModel]
+    var entrys: [EntryModel]
+    
+    enum CodingKeys: String, CodingKey {
+        case entrys = "entry"
+    }
 }
 
 struct EntryModel: Decodable {

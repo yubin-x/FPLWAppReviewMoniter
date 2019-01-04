@@ -7,7 +7,9 @@ target 'Review' do
 
 	pod 'Alamofire'
 	pod 'SVProgressHUD'
-
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    
   # Pods for Review
 
 end

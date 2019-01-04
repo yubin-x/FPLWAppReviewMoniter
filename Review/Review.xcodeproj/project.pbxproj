@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
+		82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */; };
+		82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
-		82ECBD0521DD077800900188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0421DD077800900188 /* ViewController.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
 		82ECBD0D21DD077900900188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0C21DD077900900188 /* Assets.xcassets */; };
 		82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0E21DD077900900188 /* LaunchScreen.storyboard */; };
-		82ECBD1A21DD08F500900188 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1921DD08F500900188 /* FPReviewViewController.swift */; };
-		82ECBD1C21DD095900900188 /* FPReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */; };
+		82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */; };
+		82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */; };
 		82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1E21DD147800900188 /* ReviewModel.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
 /* End PBXBuildFile section */
@@ -23,16 +25,18 @@
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
+		82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewServiceLayer.swift; sourceTree = "<group>"; };
+		82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		82ECBD0421DD077800900188 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82ECBD0A21DD077800900188 /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 		82ECBD0C21DD077900900188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		82ECBD0F21DD077900900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82ECBD1121DD077900900188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		82ECBD1921DD08F500900188 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
-		82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewModel.swift; sourceTree = "<group>"; };
+		82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewController.swift; sourceTree = "<group>"; };
+		82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewModel.swift; sourceTree = "<group>"; };
 		82ECBD1E21DD147800900188 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,8 +64,18 @@
 		82766C4B21DF7E490048EFB9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				82766C4C21DF83F00048EFB9 /* ReviewService.swift */,
+				82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		82766C5021DF92A50048EFB9 /* AppReviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */,
+			);
+			path = AppReviewViewController;
 			sourceTree = "<group>";
 		};
 		82ECBCF621DD077700900188 = {
@@ -85,11 +99,11 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				82766C5021DF92A50048EFB9 /* AppReviewViewController */,
 				82766C4B21DF7E490048EFB9 /* Service */,
 				82ECBD1D21DD145B00900188 /* Models */,
-				82ECBD1821DD08DA00900188 /* FPReview */,
+				82ECBD1821DD08DA00900188 /* BaseReviewView */,
 				82ECBD0221DD077800900188 /* AppDelegate.swift */,
-				82ECBD0421DD077800900188 /* ViewController.swift */,
 				82ECBD0621DD077800900188 /* Main.storyboard */,
 				82ECBD0C21DD077900900188 /* Assets.xcassets */,
 				82ECBD0E21DD077900900188 /* LaunchScreen.storyboard */,
@@ -99,13 +113,13 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
-		82ECBD1821DD08DA00900188 /* FPReview */ = {
+		82ECBD1821DD08DA00900188 /* BaseReviewView */ = {
 			isa = PBXGroup;
 			children = (
-				82ECBD1921DD08F500900188 /* FPReviewViewController.swift */,
-				82ECBD1B21DD095900900188 /* FPReviewViewModel.swift */,
+				82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */,
+				82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */,
 			);
-			path = FPReview;
+			path = BaseReviewView;
 			sourceTree = "<group>";
 		};
 		82ECBD1D21DD145B00900188 /* Models */ = {
@@ -219,11 +233,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Review/Pods-Review-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,9 +257,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
-				82ECBD0521DD077800900188 /* ViewController.swift in Sources */,
-				82ECBD1C21DD095900900188 /* FPReviewViewModel.swift in Sources */,
-				82ECBD1A21DD08F500900188 /* FPReviewViewController.swift in Sources */,
+				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
+				82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */,
+				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
+				82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */,
+				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
 			);
