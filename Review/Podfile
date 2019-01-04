@@ -9,7 +9,7 @@ target 'Review' do
 	pod 'SVProgressHUD'
     pod 'RxSwift'
     pod 'RxCocoa'
-    
+    pod 'Cosmos'
   # Pods for Review
 
 end
