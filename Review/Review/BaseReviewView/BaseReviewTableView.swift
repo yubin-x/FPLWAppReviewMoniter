@@ -12,7 +12,5 @@ class BaseReviewTableView: UITableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        
     }
 }

@@ -1,5 +1,5 @@
 //
-//  FPReviewViewController.swift
+//  LWReviewViewController.swift
 //  Review
 //
 //  Created by Wenslow on 2019/1/4.
@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import RxCocoa
 import RxSwift
+import RxCocoa
 
-class FPReviewViewController: BaseReviewViewController {
+class LWReviewViewController: BaseReviewViewController {
 
     @IBOutlet weak var tableView: BaseReviewTableView!
     
     override var appID: String {
         get {
-            return "1141466520"
+            return "1248039588"
         }
         set {}
     }

@@ -12,6 +12,7 @@
 		82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
+		82766C5821DFB2240048EFB9 /* LWReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
@@ -32,6 +33,7 @@
 		82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
+		82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWReviewViewController.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */,
+				82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */,
 			);
 			path = AppReviewViewController;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
+				82766C5821DFB2240048EFB9 /* LWReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

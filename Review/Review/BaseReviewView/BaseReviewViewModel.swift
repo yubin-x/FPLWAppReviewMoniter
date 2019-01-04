@@ -18,8 +18,6 @@ class BaseReviewViewModel: BaseReviewViewable {
     let reviewService: ReviewServiceLayer
     let disposeBag = DisposeBag()
     
-    var reviewEntryModels = [EntryModel]()
-    
     init(appID: String,
          reviewService: ReviewServiceLayer = ReviewService()) {
         self.appID = appID
@@ -33,6 +31,7 @@ class BaseReviewViewModel: BaseReviewViewable {
             observerList.append(reviewService.fetchReviewData(appID: appID, page: i))
         }
         
+        /* Zip three API call result to [[EntryModel]] Array */
         return Observable.zip(observerList)
             .map { (result) -> [EntryModel] in
                 var entryModels = [EntryModel]()

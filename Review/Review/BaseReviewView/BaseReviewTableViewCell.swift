@@ -15,16 +15,13 @@ class BaseReviewTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var grayView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        grayView.layer.cornerRadius = 10
+        grayView.layer.masksToBounds = true
     }
     
     func bindData(entryModel: EntryModel) {
