@@ -10,6 +10,8 @@
 		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
 		82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */; };
 		82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */; };
+		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
+		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
@@ -28,6 +30,8 @@
 		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewServiceLayer.swift; sourceTree = "<group>"; };
 		82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
+		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
+		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 			children = (
 				82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */,
 				82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */,
+				82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */,
+				82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */,
 			);
 			path = BaseReviewView;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
+				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
+				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
@@ -416,7 +424,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -433,7 +444,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
