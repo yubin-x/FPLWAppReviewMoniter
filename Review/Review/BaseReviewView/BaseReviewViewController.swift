@@ -30,7 +30,7 @@ class BaseReviewViewController: UIViewController {
         return indicatorView
     }()
     
-    let disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -52,6 +52,14 @@ class BaseReviewViewController: UIViewController {
                     self.indicatorView.startAnimating()
                 }
             }).disposed(by: disposeBag)
+    }
+    
+    func refreshData(tableView: UITableView) {
+        disposeBag = DisposeBag()
+        tableView.setContentOffset(.zero, animated: false)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            self.fetchReviewData(tableView: tableView)
+        }
     }
     
     func startTimer(tableView: UITableView) {

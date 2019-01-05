@@ -28,4 +28,8 @@ class FPReviewViewController: BaseReviewViewController {
         super.viewDidAppear(animated)
         startTimer(tableView: tableView)
     }
+    
+    @IBAction func tapRefreshItem(_ sender: Any) {
+        refreshData(tableView: tableView)
+    }
 }

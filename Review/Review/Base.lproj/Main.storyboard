@@ -103,7 +103,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Ss-hv-GYX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recent Reviews" id="zpL-xZ-qc3"/>
+                    <navigationItem key="navigationItem" title="Recent Reviews" id="zpL-xZ-qc3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="SbF-JO-gUz">
+                            <connections>
+                                <action selector="tapRefreshItem:" destination="yra-Zp-nVC" id="HvN-Z1-Rf1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="tdO-7R-Bcj" id="X0r-dv-ZPH"/>
                     </connections>
@@ -205,7 +211,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="N22-ZD-Vzh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Recent Reviews" id="9wU-7S-yzH"/>
+                    <navigationItem key="navigationItem" title="Recent Reviews" id="9wU-7S-yzH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="eKR-nn-gnc">
+                            <connections>
+                                <action selector="tapRefreshItem:" destination="GMr-vd-4Kk" id="Qpl-3p-a53"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="De4-5x-aeC" id="m45-OJ-0ef"/>
                     </connections>

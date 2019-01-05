@@ -21,7 +21,6 @@ struct ConfigurationProvidor {
             return UserDefaults.standard.double(forKey: autoScrollTimeIntervalKey)
         }
         set {
-            guard newValue > 1 else { return }
             UserDefaults.standard.set(newValue, forKey: autoScrollTimeIntervalKey)
         }
     }
