@@ -22,6 +22,14 @@ class BaseReviewViewController: UIViewController {
         return BaseReviewViewModel(appID: appID)
     }()
     
+    lazy var indicatorView: UIActivityIndicatorView = {
+        let indicatorView = UIActivityIndicatorView(style: .gray)
+        view.addSubview(indicatorView)
+        indicatorView.center = view.center
+        indicatorView.hidesWhenStopped = true
+        return indicatorView
+    }()
+    
     let disposeBag = DisposeBag()
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -30,25 +38,40 @@ class BaseReviewViewController: UIViewController {
     }
     
     func fetchReviewData(tableView: UITableView) {
+        indicatorView.startAnimating()
         viewModel.fetchReviewData()
             .bind(to: tableView.rx.items(cellIdentifier: "BaseReviewTableViewCell", cellType: BaseReviewTableViewCell.self)) { (_, model, cell) in
                 cell.bindData(entryModel: model)
             }.disposed(by: disposeBag)
+        
+        viewModel.finishFetchDataObserver
+            .subscribe(onNext: { [unowned self] (value) in
+                if value {
+                    self.indicatorView.stopAnimating()
+                } else {
+                    self.indicatorView.startAnimating()
+                }
+            }).disposed(by: disposeBag)
     }
     
     func startTimer(tableView: UITableView) {
-        timer = Timer(timeInterval: 5, repeats: true) { [unowned self] (_) in
+        guard ConfigurationProvidor.enableAutoScroll else { return }
+        
+        timer = Timer(timeInterval: ConfigurationProvidor.autoScrollTimeInterval,
+                      repeats: true) { [unowned self] (_) in
             guard let firstIndexPath = tableView.indexPathsForVisibleRows?.first,
                 let lastIndexPath = tableView.indexPathsForVisibleRows?.last else { return }
             
             if self.lastIndexPath == lastIndexPath {
                 self.lastIndexPathEqualCount += 1
+            } else {
+                self.lastIndexPathEqualCount = 0
             }
             
             /* when lastIndexPath stay same for more than ten times,
              it means tableView truely scroll to end */
             
-            if self.lastIndexPathEqualCount >= 10 {
+            if self.lastIndexPathEqualCount >= 5 {
                 self.shouldScrollToTop = true
                 self.lastIndexPathEqualCount = 0
             }
@@ -71,7 +94,8 @@ class BaseReviewViewController: UIViewController {
     }
     
     func invalidateTimer() {
-        guard timer.isValid else { return }
+        guard let timer = timer,
+            timer.isValid else { return }
         timer.invalidate()
     }
 }

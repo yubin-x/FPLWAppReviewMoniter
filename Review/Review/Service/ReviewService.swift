@@ -9,6 +9,10 @@
 import RxSwift
 import Alamofire
 
+protocol ReviewServiceLayer {
+    func fetchReviewData(appID: String, page: Int) -> Observable<[EntryModel]>
+}
+
 class ReviewService: ReviewServiceLayer {
     
     let baseURL = "https://itunes.apple.com/rss/customerreviews/page=%d/id=%@/sortby=mostrecent/json?l=en&&cc=cn"

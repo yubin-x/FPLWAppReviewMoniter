@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxSwift
-import RxCocoa
 
 class LWReviewViewController: BaseReviewViewController {
 
@@ -16,7 +14,7 @@ class LWReviewViewController: BaseReviewViewController {
     
     override var appID: String {
         get {
-            return "1248039588"
+            return ConfigurationProvidor.LincolnWayAppID
         }
         set {}
     }

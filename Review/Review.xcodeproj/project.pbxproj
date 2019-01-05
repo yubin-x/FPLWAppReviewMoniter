@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
-		82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */; };
 		82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
 		82766C5821DFB2240048EFB9 /* LWReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */; };
+		82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5A21E046F10048EFB9 /* SettingViewController.swift */; };
+		82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
@@ -29,11 +30,12 @@
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
-		82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewServiceLayer.swift; sourceTree = "<group>"; };
 		82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
 		82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWReviewViewController.swift; sourceTree = "<group>"; };
+		82766C5A21E046F10048EFB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvidor.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				82766C4C21DF83F00048EFB9 /* ReviewService.swift */,
-				82766C4E21DF85CB0048EFB9 /* ReviewServiceLayer.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -83,6 +84,15 @@
 				82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */,
 			);
 			path = AppReviewViewController;
+			sourceTree = "<group>";
+		};
+		82766C5921E046D20048EFB9 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				82766C5A21E046F10048EFB9 /* SettingViewController.swift */,
+				82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		82ECBCF621DD077700900188 = {
@@ -106,6 +116,7 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				82766C5921E046D20048EFB9 /* Setting */,
 				82766C5021DF92A50048EFB9 /* AppReviewViewController */,
 				82766C4B21DF7E490048EFB9 /* Service */,
 				82ECBD1D21DD145B00900188 /* Models */,
@@ -268,12 +279,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
+				82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */,
 				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
 				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
-				82766C4F21DF85CB0048EFB9 /* ReviewServiceLayer.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
 				82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */,
+				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,

@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import RxCocoa
-import RxSwift
 
 class FPReviewViewController: BaseReviewViewController {
 
@@ -16,7 +14,7 @@ class FPReviewViewController: BaseReviewViewController {
     
     override var appID: String {
         get {
-            return "1141466520"
+            return ConfigurationProvidor.FordPassAppID
         }
         set {}
     }
