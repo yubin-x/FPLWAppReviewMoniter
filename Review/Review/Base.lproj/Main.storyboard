@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MrU-10-iWw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MrU-10-iWw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -234,6 +234,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="7ul-4h-WPg" kind="relationship" relationship="viewControllers" id="NCb-Ie-Xn5"/>
@@ -249,7 +254,7 @@
         <scene sceneID="iuA-Eg-eKR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ul-4h-WPg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FordPass" id="CTc-Ve-aNm">
+                    <tabBarItem key="tabBarItem" title="FordPass" image="fp-unselected-item" landscapeImage="fp-item" largeContentSizeImage="fp-item" selectedImage="fp-item" id="CTc-Ve-aNm">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -355,7 +360,7 @@
         <scene sceneID="n1q-Vr-0yt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="55P-9g-qTH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lincoln Way" id="kj3-Qu-i86"/>
+                    <tabBarItem key="tabBarItem" title="Lincoln Way" image="lw-unselected-item" landscapeImage="lw-unselected-item" largeContentSizeImage="lw-unselected-item" selectedImage="lw-item" id="kj3-Qu-i86"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="SSm-f6-cxQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -368,13 +373,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qfb-RA-lWB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-426.39999999999998" y="-198.35082458770617"/>
+            <point key="canvasLocation" x="-426" y="-173"/>
         </scene>
         <!--Setting-->
         <scene sceneID="5F7-Hk-fGB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tNs-KG-gbs" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="hg9-Pd-DfI"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="settings-unselected-item" landscapeImage="settings-unselected-item" largeContentSizeImage="settings-unselected-item" selectedImage="settings-item" id="hg9-Pd-DfI">
+                        <color key="badgeColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hNQ-kr-dzG">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -390,4 +397,12 @@
             <point key="canvasLocation" x="-426" y="621"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="fp-item" width="22" height="22"/>
+        <image name="fp-unselected-item" width="22" height="22"/>
+        <image name="lw-item" width="22" height="22"/>
+        <image name="lw-unselected-item" width="22" height="22"/>
+        <image name="settings-item" width="22" height="22"/>
+        <image name="settings-unselected-item" width="22" height="22"/>
+    </resources>
 </document>

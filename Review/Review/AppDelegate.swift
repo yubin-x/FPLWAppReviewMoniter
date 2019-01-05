@@ -17,8 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UserDefaults.standard.register(defaults: [ConfigurationProvidor.autoScrollTimeIntervalKey: 5])
-        UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
+        ConfigurationProvidor.registerDefaultValue()
+        
+        UIDevice.current.userInterfaceIdiom
         
         return true
     }

@@ -13,8 +13,8 @@ struct ConfigurationProvidor {
     static let FordPassAppID = "1141466520"
     static let LincolnWayAppID = "1248039588"
     
-    static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
-    static let enableAutoScrollKey = "enableAutoScrollKey"
+    private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
+    private static let enableAutoScrollKey = "enableAutoScrollKey"
     
     static var autoScrollTimeInterval: TimeInterval {
         get {
@@ -32,5 +32,10 @@ struct ConfigurationProvidor {
         set {
             UserDefaults.standard.set(newValue, forKey: enableAutoScrollKey)
         }
+    }
+    
+    static func registerDefaultValue() {
+        UserDefaults.standard.register(defaults: [ConfigurationProvidor.autoScrollTimeIntervalKey: 5])
+        UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
     }
 }

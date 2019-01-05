@@ -20,11 +20,11 @@ class SettingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUIValue()
+        setupUI()
         bindUI()
     }
     
-    func setupUIValue() {
+    func setupUI() {
         scrollSwitcher.isOn = ConfigurationProvidor.enableAutoScroll
         textField.text = String(ConfigurationProvidor.autoScrollTimeInterval)
         
@@ -59,5 +59,7 @@ class SettingViewController: UIViewController {
             .drive(onNext: { (value) in
                 ConfigurationProvidor.enableAutoScroll = value
             }).disposed(by: disposeBag)
+        
+        
     }
 }

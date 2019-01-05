@@ -6,7 +6,6 @@ target 'Review' do
   use_frameworks!
 
 	pod 'Alamofire'
-	pod 'SVProgressHUD'
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Cosmos'
