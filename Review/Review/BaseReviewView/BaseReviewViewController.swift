@@ -39,18 +39,18 @@ class BaseReviewViewController: UIViewController {
     
     func fetchReviewData(tableView: UITableView) {
         indicatorView.startAnimating()
-        viewModel.fetchReviewData()
+        
+        let observer = viewModel.fetchReviewData().share()
+        
+        observer
             .bind(to: tableView.rx.items(cellIdentifier: "BaseReviewTableViewCell", cellType: BaseReviewTableViewCell.self)) { (_, model, cell) in
                 cell.bindData(entryModel: model)
             }.disposed(by: disposeBag)
         
-        viewModel.finishFetchDataObserver
-            .subscribe(onNext: { [unowned self] (value) in
-                if value {
-                    self.indicatorView.stopAnimating()
-                } else {
-                    self.indicatorView.startAnimating()
-                }
+        observer
+            .asObservable()
+            .subscribe({ [unowned self] _ in
+                self.indicatorView.stopAnimating()
             }).disposed(by: disposeBag)
     }
     

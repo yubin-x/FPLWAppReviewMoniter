@@ -17,9 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
         ConfigurationProvidor.registerDefaultValue()
         
-        UIDevice.current.userInterfaceIdiom
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let iPhoneTabbarVC = storyBoard.instantiateViewController(withIdentifier: "iPhoneTabbarVC")
+        
+        window?.rootViewController = iPhoneTabbarVC
+        window?.makeKeyAndVisible()
         
         return true
     }
@@ -92,6 +98,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
-

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class LWReviewViewController: BaseReviewViewController {
 
     @IBOutlet weak var tableView: BaseReviewTableView!
+    @IBOutlet weak var refreshBarItem: UIBarButtonItem!
     
     override var appID: String {
         get {
@@ -22,15 +24,15 @@ class LWReviewViewController: BaseReviewViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchReviewData(tableView: tableView)
+        
+        refreshBarItem.rx.tap.asObservable()
+            .subscribe(onNext: { [unowned self] _ in
+                self.refreshData(tableView: self.tableView)
+            }).disposed(by: disposeBag)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startTimer(tableView: tableView)
     }
-    
-    @IBAction func tapRefreshItem(_ sender: Any) {
-        refreshData(tableView: tableView)
-    }
-
 }

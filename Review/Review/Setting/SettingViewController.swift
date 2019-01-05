@@ -38,20 +38,7 @@ class SettingViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         tapGesture.rx.event.bind(onNext: { [unowned self] _ in
-            
             self.textField.resignFirstResponder()
-            
-            let newTimeInterval: TimeInterval
-            
-            if let value = self.textField.text,
-                let timeInterval = Double(value),
-                timeInterval >= 1 && timeInterval <= 20 {
-                newTimeInterval = timeInterval
-            } else {
-                newTimeInterval = 5
-                self.textField.text = "5"
-            }
-            ConfigurationProvidor.autoScrollTimeInterval = newTimeInterval
         }).disposed(by: disposeBag)
         
         scrollSwitcher.rx.isOn.asObservable()
@@ -60,6 +47,21 @@ class SettingViewController: UIViewController {
                 ConfigurationProvidor.enableAutoScroll = value
             }).disposed(by: disposeBag)
         
-        
+        textField.rx.controlEvent([.editingDidEnd])
+            .asObservable()
+            .subscribe(onNext: { [unowned self] _ in
+                let newTimeInterval: TimeInterval
+                
+                if let value = self.textField.text,
+                    let timeInterval = Double(value),
+                    timeInterval >= 1 && timeInterval <= 20 {
+                    newTimeInterval = timeInterval
+                } else {
+                    newTimeInterval = 5
+                    self.textField.text = "5"
+                }
+                ConfigurationProvidor.autoScrollTimeInterval = newTimeInterval
+            })
+            .disposed(by: disposeBag)
     }
 }
