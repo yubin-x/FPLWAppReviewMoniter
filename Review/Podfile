@@ -9,6 +9,7 @@ target 'Review' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Cosmos'
+    pod 'SnapKit'
   # Pods for Review
 
 end

@@ -22,6 +22,7 @@
 		82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */; };
 		82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */; };
 		82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1E21DD147800900188 /* ReviewModel.swift */; };
+		82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewController.swift; sourceTree = "<group>"; };
 		82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewModel.swift; sourceTree = "<group>"; };
 		82ECBD1E21DD147800900188 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
+		82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */,
 				82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */,
+				82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */,
 			);
 			path = AppReviewViewController;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -263,6 +267,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,6 +284,7 @@
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
 				82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */,
 				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
+				82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */,
 				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,

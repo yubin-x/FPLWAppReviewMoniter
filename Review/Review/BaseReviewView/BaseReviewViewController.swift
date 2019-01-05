@@ -79,7 +79,7 @@ class BaseReviewViewController: UIViewController {
             /* when lastIndexPath stay same for more than ten times,
              it means tableView truely scroll to end */
             
-            if self.lastIndexPathEqualCount >= 5 {
+            if self.lastIndexPathEqualCount >= 10 {
                 self.shouldScrollToTop = true
                 self.lastIndexPathEqualCount = 0
             }
