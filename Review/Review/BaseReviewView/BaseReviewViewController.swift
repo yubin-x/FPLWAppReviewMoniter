@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import SnapKit
 
 class BaseReviewViewController: UIViewController {
 
@@ -25,7 +26,9 @@ class BaseReviewViewController: UIViewController {
     lazy var indicatorView: UIActivityIndicatorView = {
         let indicatorView = UIActivityIndicatorView(style: .gray)
         view.addSubview(indicatorView)
-        indicatorView.center = view.center
+        indicatorView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
         indicatorView.hidesWhenStopped = true
         return indicatorView
     }()
