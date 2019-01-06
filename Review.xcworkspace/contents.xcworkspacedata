@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ReviewHelper/ReviewHelper.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Review.xcodeproj">
    </FileRef>
    <FileRef
