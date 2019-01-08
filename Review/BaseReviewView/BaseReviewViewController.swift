@@ -11,8 +11,15 @@ import RxSwift
 import RxCocoa
 import SnapKit
 
-class BaseReviewViewController: UIViewController {
+protocol ReviewViewControllerProtocol {
+    var appID: String { set get }
+    func refreshData()
+}
 
+class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
+
+    @IBOutlet weak var tableView: BaseReviewTableView!
+    
     var appID = ""
     var timer: Timer!
     var shouldScrollToTop = false
@@ -35,12 +42,22 @@ class BaseReviewViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        fetchReviewData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        startTimer(tableView: tableView)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         invalidateTimer()
     }
     
-    func fetchReviewData(tableView: UITableView) {
+    func fetchReviewData() {
         indicatorView.startAnimating()
         
         let observer = viewModel.fetchReviewData().share()
@@ -57,11 +74,11 @@ class BaseReviewViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
     
-    func refreshData(tableView: UITableView) {
+    func refreshData() {
         disposeBag = DisposeBag()
         tableView.setContentOffset(.zero, animated: false)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            self.fetchReviewData(tableView: tableView)
+            self.fetchReviewData()
         }
     }
     
@@ -108,5 +125,9 @@ class BaseReviewViewController: UIViewController {
         guard let timer = timer,
             timer.isValid else { return }
         timer.invalidate()
+    }
+    
+    deinit {
+        invalidateTimer()
     }
 }

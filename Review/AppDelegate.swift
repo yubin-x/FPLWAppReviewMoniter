@@ -21,12 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ConfigurationProvidor.registerDefaultValue()
         
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        
         if UIDevice.current.userInterfaceIdiom == .pad {
-            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "iPadTabbarVC")
+            window?.rootViewController = ViewControllerFactory.makeIPadTabberVC()
         } else {
-            window?.rootViewController = storyBoard.instantiateViewController(withIdentifier: "iPhoneTabbarVC")
+            window?.rootViewController = ViewControllerFactory.makeIPhoneTabberVC()
         }
         
         window?.makeKeyAndVisible()

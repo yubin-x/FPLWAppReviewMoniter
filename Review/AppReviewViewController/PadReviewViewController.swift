@@ -14,11 +14,12 @@ class PadReviewViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var refreshItem: UIBarButtonItem!
     
-    lazy var storyBoard = UIStoryboard(name: "Main", bundle: nil)
-    lazy var fpReviewVC = storyBoard.instantiateViewController(withIdentifier: "FPReviewViewController") as! FPReviewViewController
-    lazy var lwReviewVC = storyBoard.instantiateViewController(withIdentifier: "LWReviewViewController") as! LWReviewViewController
-    lazy var bmwReviewVC = storyBoard.instantiateViewController(withIdentifier: "BMWReviewViewController") as! BMWReviewViewController
-    lazy var mmReviewVC = storyBoard.instantiateViewController(withIdentifier: "MMReviewViewController") as! MMReviewViewController
+    lazy var fpReviewVC = ViewControllerFactory.makeFPReviewViewController()
+    lazy var lwReviewVC = ViewControllerFactory.makeLWReviewViewController()
+    lazy var bmwReviewVC = ViewControllerFactory.makeBMWReviewViewController()
+    lazy var mmReviewVC = ViewControllerFactory.makeMMReviewViewController()
+    
+    lazy var vcArray = [fpReviewVC, lwReviewVC, bmwReviewVC, mmReviewVC]
     
     let disposeBag = DisposeBag()
     
@@ -28,20 +29,16 @@ class PadReviewViewController: UIViewController {
         
         refreshItem.rx.tap.asObservable()
             .subscribe(onNext: { [unowned self] _ in
-                self.fpReviewVC.refreshData(tableView: self.fpReviewVC.tableView)
-                self.lwReviewVC.refreshData(tableView: self.lwReviewVC.tableView)
+                self.vcArray.forEach {
+                    $0.refreshData()
+                }
             }).disposed(by: disposeBag)
     }
     
     func setUpUI() {
-        stackView.addArrangedSubview(fpReviewVC.view)
-        stackView.addArrangedSubview(lwReviewVC.view)
-        stackView.addArrangedSubview(bmwReviewVC.view)
-        stackView.addArrangedSubview(mmReviewVC.view)
-        
-        addChild(fpReviewVC)
-        addChild(lwReviewVC)
-        addChild(bmwReviewVC)
-        addChild(mmReviewVC)
+        vcArray.forEach { [unowned self] in
+            self.stackView.addArrangedSubview($0.view)
+            self.addChild($0)
+        }
     }
 }

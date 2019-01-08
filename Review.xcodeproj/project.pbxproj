@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
-		82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
-		82766C5821DFB2240048EFB9 /* LWReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */; };
 		82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5A21E046F10048EFB9 /* SettingViewController.swift */; };
 		82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */; };
-		829965E021E4CCFF004F2A14 /* BMWReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965DF21E4CCFF004F2A14 /* BMWReviewViewController.swift */; };
-		829965E221E4CD7A004F2A14 /* MMReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965E121E4CD7A004F2A14 /* MMReviewViewController.swift */; };
+		829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965E621E4E7BD004F2A14 /* BaseReviewView.swift */; };
+		829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829965E821E4E97C004F2A14 /* BaseReviewView.xib */; };
+		829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */; };
+		829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965ED21E4F074004F2A14 /* PhoneViewController.swift */; };
+		829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965F021E4F6CD004F2A14 /* AlertHelper.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
@@ -33,14 +34,15 @@
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
-		82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPReviewViewController.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
-		82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LWReviewViewController.swift; sourceTree = "<group>"; };
 		82766C5A21E046F10048EFB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvidor.swift; sourceTree = "<group>"; };
-		829965DF21E4CCFF004F2A14 /* BMWReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMWReviewViewController.swift; sourceTree = "<group>"; };
-		829965E121E4CD7A004F2A14 /* MMReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMReviewViewController.swift; sourceTree = "<group>"; };
+		829965E621E4E7BD004F2A14 /* BaseReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewView.swift; sourceTree = "<group>"; };
+		829965E821E4E97C004F2A14 /* BaseReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseReviewView.xib; sourceTree = "<group>"; };
+		829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		829965ED21E4F074004F2A14 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		829965F021E4F6CD004F2A14 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,11 +88,8 @@
 		82766C5021DF92A50048EFB9 /* AppReviewViewController */ = {
 			isa = PBXGroup;
 			children = (
-				82766C5121DF92D20048EFB9 /* FPReviewViewController.swift */,
-				82766C5721DFB2240048EFB9 /* LWReviewViewController.swift */,
 				82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */,
-				829965DF21E4CCFF004F2A14 /* BMWReviewViewController.swift */,
-				829965E121E4CD7A004F2A14 /* MMReviewViewController.swift */,
+				829965ED21E4F074004F2A14 /* PhoneViewController.swift */,
 			);
 			path = AppReviewViewController;
 			sourceTree = "<group>";
@@ -102,6 +101,22 @@
 				82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		829965EC21E4EB3E004F2A14 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		829965EF21E4F6AC004F2A14 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				829965F021E4F6CD004F2A14 /* AlertHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		82ECBCF621DD077700900188 = {
@@ -125,6 +140,8 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				829965EF21E4F6AC004F2A14 /* Helper */,
+				829965EC21E4EB3E004F2A14 /* Factory */,
 				82766C5921E046D20048EFB9 /* Setting */,
 				82766C5021DF92A50048EFB9 /* AppReviewViewController */,
 				82766C4B21DF7E490048EFB9 /* Service */,
@@ -147,6 +164,8 @@
 				82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */,
 				82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */,
 				82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */,
+				829965E621E4E7BD004F2A14 /* BaseReviewView.swift */,
+				829965E821E4E97C004F2A14 /* BaseReviewView.xib */,
 			);
 			path = BaseReviewView;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 				82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */,
 				82ECBD0D21DD077900900188 /* Assets.xcassets in Resources */,
 				82ECBD0821DD077800900188 /* Main.storyboard in Resources */,
+				829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,21 +307,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				829965E221E4CD7A004F2A14 /* MMReviewViewController.swift in Sources */,
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
 				82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */,
 				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
 				82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */,
 				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
-				829965E021E4CCFF004F2A14 /* BMWReviewViewController.swift in Sources */,
+				829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */,
+				829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
-				82766C5221DF92D20048EFB9 /* FPReviewViewController.swift in Sources */,
 				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
+				829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
-				82766C5821DFB2240048EFB9 /* LWReviewViewController.swift in Sources */,
+				829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
