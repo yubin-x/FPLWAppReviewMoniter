@@ -38,7 +38,34 @@ class ViewController: NSViewController {
         let date = Date()
         let calendar = Calendar.current
         let comp = calendar.dateComponents([.hour], from: date)
-        guard let hour = comp.hour, (9...18).contains(hour) else { return false }
+        guard let hour = comp.hour else { return false }
+        
+        let locale = Locale.current
+        let formatter = DateFormatter.dateFormat(fromTemplate: "j", options: 0, locale: locale)
+        
+        if formatter?.contains("a") == true {
+            // 12 小时制
+            return twelveHourCondition(date: date, hour: hour)
+        } else {
+            // 24 小时制
+            return twentyFourHourCondition(hour: hour)
+        }
+    }
+    
+    func twelveHourCondition(date: Date, hour: Int) -> Bool {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "a"
+        let currentAMPMFormat = dateFormatter.string(from: date).uppercased()
+        
+        if currentAMPMFormat == "AM" {
+            return hour >= 9
+        } else {
+            return hour <= 6
+        }
+    }
+    
+    func twentyFourHourCondition(hour: Int) -> Bool {
+        guard (9...18).contains(hour) else { return false }
         return true
     }
 }

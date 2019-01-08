@@ -12,6 +12,8 @@ struct ConfigurationProvidor {
     
     static let FordPassAppID = "1141466520"
     static let LincolnWayAppID = "1248039588"
+    static let BMWAppID = "1120208127"
+    static let MercedesMeAppID = "1317228250"
     
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"

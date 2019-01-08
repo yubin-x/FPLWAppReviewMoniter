@@ -17,6 +17,8 @@ class PadReviewViewController: UIViewController {
     lazy var storyBoard = UIStoryboard(name: "Main", bundle: nil)
     lazy var fpReviewVC = storyBoard.instantiateViewController(withIdentifier: "FPReviewViewController") as! FPReviewViewController
     lazy var lwReviewVC = storyBoard.instantiateViewController(withIdentifier: "LWReviewViewController") as! LWReviewViewController
+    lazy var bmwReviewVC = storyBoard.instantiateViewController(withIdentifier: "BMWReviewViewController") as! BMWReviewViewController
+    lazy var mmReviewVC = storyBoard.instantiateViewController(withIdentifier: "MMReviewViewController") as! MMReviewViewController
     
     let disposeBag = DisposeBag()
     
@@ -34,8 +36,12 @@ class PadReviewViewController: UIViewController {
     func setUpUI() {
         stackView.addArrangedSubview(fpReviewVC.view)
         stackView.addArrangedSubview(lwReviewVC.view)
+        stackView.addArrangedSubview(bmwReviewVC.view)
+        stackView.addArrangedSubview(mmReviewVC.view)
         
         addChild(fpReviewVC)
         addChild(lwReviewVC)
+        addChild(bmwReviewVC)
+        addChild(mmReviewVC)
     }
 }
