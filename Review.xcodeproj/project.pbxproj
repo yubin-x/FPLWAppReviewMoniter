@@ -14,6 +14,8 @@
 		82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */; };
 		827BE3ED21E8C424009E0517 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3EC21E8C424009E0517 /* AppModel.swift */; };
 		827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3EE21E8C8CE009E0517 /* AppSearchService.swift */; };
+		827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F121E8D3F8009E0517 /* AppListViewController.swift */; };
+		827BE3F421E8D538009E0517 /* AppListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */; };
 		829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965E621E4E7BD004F2A14 /* BaseReviewView.swift */; };
 		829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829965E821E4E97C004F2A14 /* BaseReviewView.xib */; };
 		829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */; };
@@ -42,6 +44,8 @@
 		82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationProvidor.swift; sourceTree = "<group>"; };
 		827BE3EC21E8C424009E0517 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		827BE3EE21E8C8CE009E0517 /* AppSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchService.swift; sourceTree = "<group>"; };
+		827BE3F121E8D3F8009E0517 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
+		827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListTableViewCell.swift; sourceTree = "<group>"; };
 		829965E621E4E7BD004F2A14 /* BaseReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewView.swift; sourceTree = "<group>"; };
 		829965E821E4E97C004F2A14 /* BaseReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseReviewView.xib; sourceTree = "<group>"; };
 		829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -108,6 +112,15 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		827BE3F021E8D3E0009E0517 /* ManageAppView */ = {
+			isa = PBXGroup;
+			children = (
+				827BE3F121E8D3F8009E0517 /* AppListViewController.swift */,
+				827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */,
+			);
+			path = ManageAppView;
+			sourceTree = "<group>";
+		};
 		829965EC21E4EB3E004F2A14 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +158,7 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				827BE3F021E8D3E0009E0517 /* ManageAppView */,
 				829965EF21E4F6AC004F2A14 /* Helper */,
 				829965EC21E4EB3E004F2A14 /* Factory */,
 				82766C5921E046D20048EFB9 /* Setting */,
@@ -318,9 +332,11 @@
 				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
 				82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */,
 				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
+				827BE3F421E8D538009E0517 /* AppListTableViewCell.swift in Sources */,
 				829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */,
 				829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
+				827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
 				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
