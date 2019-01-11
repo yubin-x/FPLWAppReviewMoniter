@@ -18,7 +18,14 @@ class AppSearchService: AppSearchServiceLayer {
     let baseURL = "https://itunes.apple.com/search?term=%@&country=%@&entity=software"
     
     func searchApp(term: String, country: Country) -> Observable<[AppModel]> {
-        let urlString = String(format: baseURL, term, country.rawValue)
+        
+        let urlString: String
+        
+        if let encodingString = String(format: baseURL, term, country.rawValue).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            urlString = encodingString
+        } else {
+            urlString = ""
+        }
         
         return Observable<[AppModel]>.create({ (observer) -> Disposable in
             
@@ -27,7 +34,7 @@ class AppSearchService: AppSearchServiceLayer {
                 if let data = response.result.value {
                     do {
                         let value = try JSONDecoder().decode(AppSearchResult.self, from: data)
-                        observer.onNext(value.result)
+                        observer.onNext(value.results)
                     } catch {
                         observer.onNext([])
                         print(error)

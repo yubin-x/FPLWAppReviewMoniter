@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class AppListTableViewCell: UITableViewCell {
 
@@ -20,10 +21,9 @@ class AppListTableViewCell: UITableViewCell {
         appIconImageView.layer.masksToBounds = true
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func bindData(appModel: AppModel) {
+        guard let url = URL(string: appModel.iconURLString) else { return }
+        appIconImageView.kf.setImage(with: url)
+        appNameLabel.text = appModel.appName
     }
-
 }

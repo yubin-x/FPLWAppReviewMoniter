@@ -16,6 +16,9 @@
 		827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3EE21E8C8CE009E0517 /* AppSearchService.swift */; };
 		827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F121E8D3F8009E0517 /* AppListViewController.swift */; };
 		827BE3F421E8D538009E0517 /* AppListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */; };
+		827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F521E8D874009E0517 /* AppSearchViewController.swift */; };
+		827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */; };
+		827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F921E8F04E009E0517 /* AppListTableView.swift */; };
 		829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965E621E4E7BD004F2A14 /* BaseReviewView.swift */; };
 		829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829965E821E4E97C004F2A14 /* BaseReviewView.xib */; };
 		829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */; };
@@ -46,6 +49,9 @@
 		827BE3EE21E8C8CE009E0517 /* AppSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchService.swift; sourceTree = "<group>"; };
 		827BE3F121E8D3F8009E0517 /* AppListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewController.swift; sourceTree = "<group>"; };
 		827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListTableViewCell.swift; sourceTree = "<group>"; };
+		827BE3F521E8D874009E0517 /* AppSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchViewController.swift; sourceTree = "<group>"; };
+		827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchViewModel.swift; sourceTree = "<group>"; };
+		827BE3F921E8F04E009E0517 /* AppListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListTableView.swift; sourceTree = "<group>"; };
 		829965E621E4E7BD004F2A14 /* BaseReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewView.swift; sourceTree = "<group>"; };
 		829965E821E4E97C004F2A14 /* BaseReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseReviewView.xib; sourceTree = "<group>"; };
 		829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
@@ -117,6 +123,9 @@
 			children = (
 				827BE3F121E8D3F8009E0517 /* AppListViewController.swift */,
 				827BE3F321E8D538009E0517 /* AppListTableViewCell.swift */,
+				827BE3F521E8D874009E0517 /* AppSearchViewController.swift */,
+				827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */,
+				827BE3F921E8F04E009E0517 /* AppListTableView.swift */,
 			);
 			path = ManageAppView;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Review/Pods-Review-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -311,6 +321,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -338,6 +349,7 @@
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
+				827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */,
 				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				827BE3ED21E8C424009E0517 /* AppModel.swift in Sources */,
@@ -345,7 +357,9 @@
 				829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
 				827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */,
+				827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */,
 				829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */,
+				827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

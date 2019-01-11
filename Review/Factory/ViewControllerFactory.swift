@@ -47,4 +47,13 @@ struct ViewControllerFactory {
 //        vc.appID = ConfigurationProvidor.currentApp.appID
 //        return vc
 //    }
+    
+    static func makeAppListViewController() -> UINavigationController {
+        let vc = storyBoard.instantiateViewController(withIdentifier: "AppListViewController") as! AppListViewController
+        return UINavigationController(rootViewController: vc)
+    }
+    
+    static func makeSearchAppViewController() -> UIViewController {
+        return storyBoard.instantiateViewController(withIdentifier: "AppSearchViewController") as! AppSearchViewController
+    }
 }

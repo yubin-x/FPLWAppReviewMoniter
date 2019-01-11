@@ -9,14 +9,14 @@
 import Foundation
 
 struct AppSearchResult: Decodable {
-    let result: [AppModel]
+    let results: [AppModel]
 }
 
 struct AppModel: Decodable {
     let appName: String
     let iconURLString: String
     let appId: Int
-    let averageUserRating: Double
+    let averageUserRating: Double?
     
     enum CodingKeys: String, CodingKey {
         case appName = "trackName"

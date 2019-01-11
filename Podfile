@@ -10,6 +10,7 @@ target 'Review' do
     pod 'RxCocoa'
     pod 'Cosmos'
     pod 'SnapKit'
+    pod 'Kingfisher'
   # Pods for Review
 
 end

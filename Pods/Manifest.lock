@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.0)
   - Cosmos (15.0.0)
+  - Kingfisher (4.6.3)
   - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxSwift (4.1.2)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Cosmos
+  - Kingfisher
   - RxCocoa
   - RxSwift
   - SnapKit
@@ -17,6 +19,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Cosmos
+    - Kingfisher
     - RxCocoa
     - RxSwift
     - SnapKit
@@ -24,10 +27,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
   Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
+  Kingfisher: 98e6d5b5e807645743e8ed5ececd25d688d38452
   RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxSwift: e49536837d9901277638493ea537394d4b55f570
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: bc6a85a09e64b3b8acb652bbead808e81dde7c4f
+PODFILE CHECKSUM: be72129fdab1ad30c1041eb8473d72b756f75ef7
 
 COCOAPODS: 1.5.3

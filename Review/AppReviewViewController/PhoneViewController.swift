@@ -22,7 +22,7 @@ class PhoneViewController: UIViewController {
     
     func setUI() {
         let app = ConfigurationProvidor.saveApps.first
-        plusButton.isHidden = app == nil
+        plusButton.isHidden = app != nil
         
         guard let appModel = app else { return }
         plusButton.isHidden = true
@@ -48,10 +48,7 @@ class PhoneViewController: UIViewController {
     }
     
     @IBAction func tabActionBarItem(_ sender: Any) {
-//        let ac = AlertHelper.chooseOEMAppAlertSheet { [unowned self] in
-//            self.setCurrentVC()
-//        }
-//        present(ac, animated: true, completion: nil)
+        presentAppListViewController()
     }
     
     @IBAction func tabRefreshBarItem(_ sender: Any) {
@@ -60,5 +57,11 @@ class PhoneViewController: UIViewController {
     }
     
     @IBAction func touchPlusButton(_ sender: Any) {
+        presentAppListViewController()
+    }
+    
+    func presentAppListViewController() {
+        let appListVC = ViewControllerFactory.makeAppListViewController()
+        present(appListVC, animated: true, completion: nil)
     }
 }
