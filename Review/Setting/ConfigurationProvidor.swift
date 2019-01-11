@@ -8,35 +8,16 @@
 
 import Foundation
 
-enum OEMAppName: String {
-    case fordPass = "1141466520"
-    case lincolnWay = "1248039588"
-    case bmwConnected = "1120208127"
-    case mercedesMe = "1317228250"
-    
-    var appID: String {
-        return self.rawValue
-    }
-    
-    var appNameString: String {
-        switch self {
-        case .fordPass:
-            return "Ford Pass"
-        case .lincolnWay:
-            return "Lincoln Way"
-        case .bmwConnected:
-            return "BMW Connected"
-        case .mercedesMe:
-            return "Mercedes me"
-        }
-    }
+enum Country: String {
+    case china = "cn"
+    case usa = "us"
 }
 
 struct ConfigurationProvidor {
     
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"
-    private static let oemAppNameKey = "oemAppNameNameKey"
+    private static let savedAppKey = "savedAppKey"
     
     static var autoScrollTimeInterval: TimeInterval {
         get {
@@ -61,14 +42,13 @@ struct ConfigurationProvidor {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
     }
     
-    static var currentApp: OEMAppName {
+    static var saveApps: [AppModel] {
         get {
-            guard let rawValue = UserDefaults.standard.object(forKey: oemAppNameKey) as? String,
-                let app = OEMAppName(rawValue: rawValue) else { return .fordPass }
-            return app
+            guard let rawValue = UserDefaults.standard.object(forKey: savedAppKey) as? [AppModel] else { return [] }
+            return rawValue
         }
         set {
-            UserDefaults.standard.set(newValue.rawValue, forKey: oemAppNameKey)
+            UserDefaults.standard.set(newValue, forKey: savedAppKey)
         }
     }
 }

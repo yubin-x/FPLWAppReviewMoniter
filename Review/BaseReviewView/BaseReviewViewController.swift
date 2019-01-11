@@ -12,7 +12,7 @@ import RxCocoa
 import SnapKit
 
 protocol ReviewViewControllerProtocol {
-    var appID: String { set get }
+    func setNewApp(appModel: AppModel)
     func refreshData()
 }
 
@@ -20,15 +20,11 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
 
     @IBOutlet weak var tableView: BaseReviewTableView!
     
-    var appID = ""
     var timer: Timer!
     var shouldScrollToTop = false
     var lastIndexPath = IndexPath(row: 0, section: 0)
     var lastIndexPathEqualCount = 0
-    
-    lazy var viewModel: BaseReviewViewable = {
-        return BaseReviewViewModel(appID: appID)
-    }()
+    var viewModel: BaseReviewViewable!
     
     lazy var indicatorView: UIActivityIndicatorView = {
         let indicatorView = UIActivityIndicatorView(style: .gray)
@@ -49,7 +45,9 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        startTimer(tableView: tableView)
+        
+        guard !indicatorView.isAnimating else { return }
+        startTimer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -71,6 +69,8 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
             .asObservable()
             .subscribe({ [unowned self] _ in
                 self.indicatorView.stopAnimating()
+                self.startTimer()
+                self.title = self.viewModel.title
             }).disposed(by: disposeBag)
     }
     
@@ -82,13 +82,18 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         }
     }
     
-    func startTimer(tableView: UITableView) {
+    func setNewApp(appModel: AppModel) {
+        viewModel.appModel = appModel
+        refreshData()
+    }
+    
+    func startTimer() {
         guard ConfigurationProvidor.enableAutoScroll else { return }
         
         timer = Timer(timeInterval: ConfigurationProvidor.autoScrollTimeInterval,
                       repeats: true) { [unowned self] (_) in
-            guard let firstIndexPath = tableView.indexPathsForVisibleRows?.first,
-                let lastIndexPath = tableView.indexPathsForVisibleRows?.last else { return }
+            guard let firstIndexPath = self.tableView.indexPathsForVisibleRows?.first,
+                let lastIndexPath = self.tableView.indexPathsForVisibleRows?.last else { return }
             
             if self.lastIndexPath == lastIndexPath {
                 self.lastIndexPathEqualCount += 1
@@ -115,7 +120,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
                 targetIndexPath = IndexPath(row: firstIndexPath.row + 1, section: 0)
             }
             
-            tableView.scrollToRow(at: targetIndexPath, at: .top, animated: true)
+                        self.tableView.scrollToRow(at: targetIndexPath, at: .top, animated: true)
         }
         
         RunLoop.current.add(timer, forMode: .default)

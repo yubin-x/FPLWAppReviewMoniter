@@ -19,31 +19,32 @@ struct ViewControllerFactory {
         return storyBoard.instantiateViewController(withIdentifier: "iPhoneTabbarVC")
     }
     
-    static func makeFPReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
-        return makeBaseReviewViewController(appName: .fordPass)
-    }
+//    static func makeFPReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
+//        return makeBaseReviewViewController(appName: .fordPass)
+//    }
+//
+//    static func makeLWReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
+//        return makeBaseReviewViewController(appName: .lincolnWay)
+//    }
+//
+//    static func makeBMWReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
+//        return makeBaseReviewViewController(appName: .bmwConnected)
+//    }
+//
+//    static func makeMMReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
+//        return makeBaseReviewViewController(appName: .mercedesMe)
+//    }
     
-    static func makeLWReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
-        return makeBaseReviewViewController(appName: .lincolnWay)
-    }
-    
-    static func makeBMWReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
-        return makeBaseReviewViewController(appName: .bmwConnected)
-    }
-    
-    static func makeMMReviewViewController() -> UIViewController & ReviewViewControllerProtocol {
-        return makeBaseReviewViewController(appName: .mercedesMe)
-    }
-    
-    static func makeBaseReviewViewController(appName: OEMAppName) -> UIViewController & ReviewViewControllerProtocol {
+    static func makeBaseReviewViewController(appModel: AppModel) -> UIViewController & ReviewViewControllerProtocol {
         let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
-        vc.appID = appName.appID
+        let viewModel = BaseReviewViewModel(appModel: appModel)
+        vc.viewModel = viewModel
         return vc
     }
     
-    static func getCurrentOEMApp() -> UIViewController & ReviewViewControllerProtocol {
-        let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
-        vc.appID = ConfigurationProvidor.currentApp.appID
-        return vc
-    }
+//    static func getCurrentOEMApp() -> UIViewController & ReviewViewControllerProtocol {
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
+//        vc.appID = ConfigurationProvidor.currentApp.appID
+//        return vc
+//    }
 }

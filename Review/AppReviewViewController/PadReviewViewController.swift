@@ -14,12 +14,12 @@ class PadReviewViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var refreshItem: UIBarButtonItem!
     
-    lazy var fpReviewVC = ViewControllerFactory.makeFPReviewViewController()
-    lazy var lwReviewVC = ViewControllerFactory.makeLWReviewViewController()
-    lazy var bmwReviewVC = ViewControllerFactory.makeBMWReviewViewController()
-    lazy var mmReviewVC = ViewControllerFactory.makeMMReviewViewController()
+//    lazy var fpReviewVC = ViewControllerFactory.makeFPReviewViewController()
+//    lazy var lwReviewVC = ViewControllerFactory.makeLWReviewViewController()
+//    lazy var bmwReviewVC = ViewControllerFactory.makeBMWReviewViewController()
+//    lazy var mmReviewVC = ViewControllerFactory.makeMMReviewViewController()
     
-    lazy var vcArray = [fpReviewVC, lwReviewVC, bmwReviewVC, mmReviewVC]
+    lazy var vcArray = [BaseReviewViewController]()
     
     let disposeBag = DisposeBag()
     

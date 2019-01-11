@@ -24,7 +24,7 @@ class BaseReviewTableViewCell: UITableViewCell {
         grayView.layer.masksToBounds = true
     }
     
-    func bindData(entryModel: EntryModel) {
+    func bindData(entryModel: ReviewModel) {
         titleLabel.text = entryModel.title.label
         nameLabel.text = entryModel.author.name.label
         if let rating = Double(entryModel.rating.label) {

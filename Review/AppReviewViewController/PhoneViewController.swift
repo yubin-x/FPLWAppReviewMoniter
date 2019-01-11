@@ -11,39 +11,54 @@ import UIKit
 class PhoneViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var plusButton: UIButton!
     
     var reviewVC: (UIViewController & ReviewViewControllerProtocol)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setCurrentVC()
-    }
-
-    func setNavigationBar() {
-        self.title = ConfigurationProvidor.currentApp.appNameString
+        setUI()
     }
     
-    func setCurrentVC() {
+    func setUI() {
+        let app = ConfigurationProvidor.saveApps.first
+        plusButton.isHidden = app == nil
+        
+        guard let appModel = app else { return }
+        plusButton.isHidden = true
+        setCurrentVC(appModel: appModel)
+    }
+    
+    func setCurrentVC(appModel: AppModel) {
         if reviewVC != nil {
             stackView.removeArrangedSubview(reviewVC.view)
             reviewVC.removeFromParent()
         }
         
-        reviewVC = ViewControllerFactory.getCurrentOEMApp()
+        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appModel: appModel)
         stackView.addArrangedSubview(reviewVC.view)
         addChild(reviewVC)
-        setNavigationBar()
+        
+        setNavigationBar(appModel: appModel)
+    }
+    
+    func setNavigationBar(appModel: AppModel) {
+        guard let appModel = ConfigurationProvidor.saveApps.first else { return }
+        title = appModel.appName
     }
     
     @IBAction func tabActionBarItem(_ sender: Any) {
-        let ac = AlertHelper.chooseOEMAppAlertSheet { [unowned self] in
-            self.setCurrentVC()
-        }
-        present(ac, animated: true, completion: nil)
+//        let ac = AlertHelper.chooseOEMAppAlertSheet { [unowned self] in
+//            self.setCurrentVC()
+//        }
+//        present(ac, animated: true, completion: nil)
     }
     
     @IBAction func tabRefreshBarItem(_ sender: Any) {
+        guard let reviewVC = reviewVC else { return }
         reviewVC.refreshData()
+    }
+    
+    @IBAction func touchPlusButton(_ sender: Any) {
     }
 }
