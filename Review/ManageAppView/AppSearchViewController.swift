@@ -18,8 +18,6 @@ class AppSearchViewController: UIViewController {
         return AppSearchViewModel()
     }()
     
-    @IBOutlet weak var tableView: UITableView!
-    
     lazy var searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
         search.dimsBackgroundDuringPresentation = false
@@ -27,10 +25,14 @@ class AppSearchViewController: UIViewController {
         tableView.tableHeaderView = search.searchBar
         return search
     }()
+
+    var selectedModel: AppModel!
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bindUI()
         searchController.searchBar.placeholder = "App Name"
         navigationController?.navigationBar.tintColor = .black
@@ -50,10 +52,21 @@ class AppSearchViewController: UIViewController {
                 cell.bindData(appModel: model)
             }.disposed(by: disposeBag)
         
-        tableView.rx.itemSelected.asObservable()
-            .subscribe(onNext: { [unowned self] in
-                self.tableView.deselectRow(at: $0, animated: true)
+        tableView.rx.modelSelected(AppModel.self)
+            .subscribe(onNext: { [unowned self] (model) in
+                self.selectedModel = model
+                self.saveApp()
             }).disposed(by: disposeBag)
     }
 
+    func saveApp() {
+        
+        let ac = AlertHelper.addAppAlert(confirm: {
+            ConfigurationProvidor.saveApps = [self.selectedModel]
+        })
+        
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        navigationController?.visibleViewController?.present(ac, animated: true, completion: nil)
+    }
 }
