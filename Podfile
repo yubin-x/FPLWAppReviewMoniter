@@ -11,6 +11,7 @@ target 'Review' do
     pod 'Cosmos'
     pod 'SnapKit'
     pod 'Kingfisher'
+    pod 'CoreStore'
   # Pods for Review
 
 end
