@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PhoneViewController: UIViewController {
 
@@ -14,37 +16,60 @@ class PhoneViewController: UIViewController {
     @IBOutlet weak var plusButton: UIButton!
     
     var reviewVC: (UIViewController & ReviewViewControllerProtocol)!
+    var currentAppID: Int64?
+    
+    lazy var viewModel: PhoneViewable = PhoneViewModel()
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
+        bindViewModel()
     }
     
-    func setUI() {
-        let app = ConfigurationProvidor.saveApps.first
-        plusButton.isHidden = app != nil
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        refreshUI()
+    }
+    
+    func refreshUI() {
+        let appID = ConfigurationProvidor.savedAppIDs.first
+        plusButton.isHidden = appID != nil
         
-        guard let appModel = app else { return }
-        plusButton.isHidden = true
-        setCurrentVC(appModel: appModel)
-    }
-    
-    func setCurrentVC(appModel: AppModel) {
-        if reviewVC != nil {
-            stackView.removeArrangedSubview(reviewVC.view)
-            reviewVC.removeFromParent()
+        if let vc = reviewVC {
+            vc.view.isHidden = appID == nil
+            
+            if appID == nil {
+                title = nil
+                reviewVC.view.removeFromSuperview()
+                reviewVC.removeFromParent()
+            }
         }
         
-        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appModel: appModel)
-        stackView.addArrangedSubview(reviewVC.view)
-        addChild(reviewVC)
-        
-        setNavigationBar(appModel: appModel)
+        guard let id = appID,
+            currentAppID != id else { return }
+        currentAppID = id
+        viewModel.fetchApp(appID: id)
     }
     
-    func setNavigationBar(appModel: AppModel) {
-        guard let appModel = ConfigurationProvidor.saveApps.first else { return }
-        title = appModel.appName
+    func setCurrentVC(appID: Int64) {
+        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appID: appID)
+        stackView.addArrangedSubview(reviewVC.view)
+        addChild(reviewVC)
+    }
+    
+    func bindViewModel() {
+        viewModel.fetchAppResult
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [unowned self] in
+                guard let app = $0 else { return }
+                self.title = app.appName
+                if self.reviewVC == nil {
+                    self.setCurrentVC(appID: app.appId)
+                } else {
+                    self.reviewVC.setNewApp(appID: app.appId)
+                }
+            }).disposed(by: disposeBag)
     }
     
     @IBAction func tabActionBarItem(_ sender: Any) {

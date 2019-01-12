@@ -189,6 +189,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="closeBarItem" destination="cnF-g6-Bvu" id="qDx-qr-3si"/>
+                        <outlet property="tableView" destination="14U-PY-uXl" id="7bn-qA-kBY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ap-cA-bQp" userLabel="First Responder" sceneMemberID="firstResponder"/>

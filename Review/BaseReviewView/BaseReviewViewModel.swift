@@ -10,24 +10,19 @@ import RxSwift
 import RxCocoa
 
 protocol BaseReviewViewable {
-    var title: String { get }
-    var appModel: AppModel { set get }
+    var appID: Int64 { set get }
     func fetchReviewData() -> Observable<[ReviewModel]>
 }
 
 class BaseReviewViewModel: BaseReviewViewable {
     
-    var appModel: AppModel
+    var appID: Int64
     let reviewService: ReviewServiceLayer
     let disposeBag = DisposeBag()
     
-    var title: String {
-        return appModel.appName
-    }
-    
-    init(appModel: AppModel,
+    init(appID: Int64 ,
          reviewService: ReviewServiceLayer = ReviewService()) {
-        self.appModel = appModel
+        self.appID = appID
         self.reviewService = reviewService
     }
     
@@ -35,7 +30,7 @@ class BaseReviewViewModel: BaseReviewViewable {
         var observerList = [Observable<[ReviewModel]>]()
         
         for i in 1...3 {
-            observerList.append(reviewService.fetchReviewData(appID: String(appModel.appId), page: i))
+            observerList.append(reviewService.fetchReviewData(appID: String(appID), page: i))
         }
         
         /* Zip three API call result to [[EntryModel]] Array */

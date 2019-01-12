@@ -35,18 +35,12 @@ struct ViewControllerFactory {
 //        return makeBaseReviewViewController(appName: .mercedesMe)
 //    }
     
-    static func makeBaseReviewViewController(appModel: AppModel) -> UIViewController & ReviewViewControllerProtocol {
+    static func makeBaseReviewViewController(appID: Int64) -> UIViewController & ReviewViewControllerProtocol {
         let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
-        let viewModel = BaseReviewViewModel(appModel: appModel)
+        let viewModel = BaseReviewViewModel(appID: appID)
         vc.viewModel = viewModel
         return vc
     }
-    
-//    static func getCurrentOEMApp() -> UIViewController & ReviewViewControllerProtocol {
-//        let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
-//        vc.appID = ConfigurationProvidor.currentApp.appID
-//        return vc
-//    }
     
     static func makeAppListViewController() -> UINavigationController {
         let vc = storyBoard.instantiateViewController(withIdentifier: "AppListViewController") as! AppListViewController

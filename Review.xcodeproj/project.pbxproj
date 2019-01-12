@@ -24,6 +24,8 @@
 		829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */; };
 		829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965ED21E4F074004F2A14 /* PhoneViewController.swift */; };
 		829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965F021E4F6CD004F2A14 /* AlertHelper.swift */; };
+		82BA6C1A21E98BCA007AC9FB /* AppListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA6C1921E98BCA007AC9FB /* AppListViewModel.swift */; };
+		82BA6C1C21E99C52007AC9FB /* PhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BA6C1B21E99C52007AC9FB /* PhoneViewModel.swift */; };
 		82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0221DD077800900188 /* AppDelegate.swift */; };
 		82ECBD0821DD077800900188 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0621DD077800900188 /* Main.storyboard */; };
 		82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD0921DD077800900188 /* Review.xcdatamodeld */; };
@@ -57,6 +59,8 @@
 		829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		829965ED21E4F074004F2A14 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		829965F021E4F6CD004F2A14 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		82BA6C1921E98BCA007AC9FB /* AppListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListViewModel.swift; sourceTree = "<group>"; };
+		82BA6C1B21E99C52007AC9FB /* PhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewModel.swift; sourceTree = "<group>"; };
 		82ECBCFF21DD077800900188 /* Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82ECBD0221DD077800900188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82ECBD0721DD077800900188 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			children = (
 				82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */,
 				829965ED21E4F074004F2A14 /* PhoneViewController.swift */,
+				82BA6C1B21E99C52007AC9FB /* PhoneViewModel.swift */,
 			);
 			path = AppReviewViewController;
 			sourceTree = "<group>";
@@ -113,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				82766C5A21E046F10048EFB9 /* SettingViewController.swift */,
-				82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -126,6 +130,7 @@
 				827BE3F521E8D874009E0517 /* AppSearchViewController.swift */,
 				827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */,
 				827BE3F921E8F04E009E0517 /* AppListTableView.swift */,
+				82BA6C1921E98BCA007AC9FB /* AppListViewModel.swift */,
 			);
 			path = ManageAppView;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 		829965EF21E4F6AC004F2A14 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				82766C5C21E047140048EFB9 /* ConfigurationProvidor.swift */,
 				829965F021E4F6CD004F2A14 /* AlertHelper.swift */,
 			);
 			path = Helper;
@@ -351,6 +357,7 @@
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
+				82BA6C1A21E98BCA007AC9FB /* AppListViewModel.swift in Sources */,
 				827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */,
 				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
@@ -360,6 +367,7 @@
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
 				827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */,
 				827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */,
+				82BA6C1C21E99C52007AC9FB /* PhoneViewModel.swift in Sources */,
 				829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */,
 				827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */,
 			);
@@ -512,7 +520,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -529,7 +540,10 @@
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

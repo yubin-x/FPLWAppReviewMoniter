@@ -25,8 +25,6 @@ class AppSearchViewController: UIViewController {
         tableView.tableHeaderView = search.searchBar
         return search
     }()
-
-    var selectedModel: AppModel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -34,11 +32,17 @@ class AppSearchViewController: UIViewController {
         super.viewDidLoad()
         
         bindUI()
+        bindViewModel()
         searchController.searchBar.placeholder = "App Name"
         navigationController?.navigationBar.tintColor = .black
     }
     
-
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        searchController.isActive = false
+    }
+    
     func bindUI() {
         searchController.searchBar.rx.text
             .orEmpty
@@ -54,18 +58,27 @@ class AppSearchViewController: UIViewController {
         
         tableView.rx.modelSelected(AppModel.self)
             .subscribe(onNext: { [unowned self] (model) in
-                self.selectedModel = model
-                self.saveApp()
+                self.saveApp(appModel: model)
+            }).disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected.asObservable()
+            .subscribe(onNext: { [unowned self] (indexPath) in
+                self.tableView.deselectRow(at: indexPath, animated: true)
+            }).disposed(by: disposeBag)
+    }
+    
+    func bindViewModel() {
+        viewMode.saveAppSuccess.asObservable()
+            .subscribe(onNext: { [unowned self] (value) in
+                guard value else { return }
+                self.navigationController?.popViewController(animated: true)
             }).disposed(by: disposeBag)
     }
 
-    func saveApp() {
-        
-        let ac = AlertHelper.addAppAlert(confirm: {
-            ConfigurationProvidor.saveApps = [self.selectedModel]
+    func saveApp(appModel: AppModel) {
+        let ac = AlertHelper.addAppAlert(confirm: { [unowned self] in
+            self.viewMode.saveApp(appModel: appModel)
         })
-        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         navigationController?.visibleViewController?.present(ac, animated: true, completion: nil)
     }

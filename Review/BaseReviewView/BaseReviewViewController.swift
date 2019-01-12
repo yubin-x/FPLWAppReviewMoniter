@@ -12,7 +12,7 @@ import RxCocoa
 import SnapKit
 
 protocol ReviewViewControllerProtocol {
-    func setNewApp(appModel: AppModel)
+    func setNewApp(appID: Int64)
     func refreshData()
 }
 
@@ -62,19 +62,19 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         
         observer
             .bind(to: tableView.rx.items(cellIdentifier: "BaseReviewTableViewCell", cellType: BaseReviewTableViewCell.self)) { (_, model, cell) in
-                cell.bindData(entryModel: model)
-            }.disposed(by: disposeBag)
-        
+                    cell.bindData(entryModel: model)
+                }.disposed(by: disposeBag)
+            
         observer
             .asObservable()
             .subscribe({ [unowned self] _ in
                 self.indicatorView.stopAnimating()
                 self.startTimer()
-                self.title = self.viewModel.title
             }).disposed(by: disposeBag)
     }
     
     func refreshData() {
+        invalidateTimer()
         disposeBag = DisposeBag()
         tableView.setContentOffset(.zero, animated: false)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
@@ -82,8 +82,8 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         }
     }
     
-    func setNewApp(appModel: AppModel) {
-        viewModel.appModel = appModel
+    func setNewApp(appID: Int64) {
+        viewModel.appID = appID
         refreshData()
     }
     

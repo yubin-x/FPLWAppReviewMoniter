@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreStore
 
 enum Country: String {
     case china = "cn"
@@ -15,9 +16,11 @@ enum Country: String {
 
 struct ConfigurationProvidor {
     
+    static let ReviewCoreDataEntryKey = "Review"
+    
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"
-    private static let savedAppKey = "savedAppKey"
+    private static let savedAppIDsKeys = "savedAppIDsKeys"
     
     static var autoScrollTimeInterval: TimeInterval {
         get {
@@ -42,13 +45,13 @@ struct ConfigurationProvidor {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
     }
     
-    static var saveApps: [AppModel] {
+    static var savedAppIDs: [Int64] {
         get {
-            guard let rawValue = UserDefaults.standard.object(forKey: savedAppKey) as? [AppModel] else { return [] }
+            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKeys) as? [Int64] else { return [] }
             return rawValue
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: savedAppKey)
+            UserDefaults.standard.set(newValue, forKey: savedAppIDsKeys)
         }
     }
 }

@@ -22,8 +22,15 @@ class AppListTableViewCell: UITableViewCell {
     }
 
     func bindData(appModel: AppModel) {
+        appNameLabel.text = appModel.appName
         guard let url = URL(string: appModel.iconURLString) else { return }
         appIconImageView.kf.setImage(with: url)
-        appNameLabel.text = appModel.appName
+    }
+    
+    func bindData(appDataEntry: AppDataEntry) {
+        appNameLabel.text = appDataEntry.appName
+        guard let urlString = appDataEntry.iconURLString,
+            let url = URL(string: urlString) else { return }
+        appIconImageView.kf.setImage(with: url)
     }
 }
