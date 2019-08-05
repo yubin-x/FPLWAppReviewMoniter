@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ReviewHelper/ReviewHelper.xcodeproj">
+      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/ReviewHelperKit/ReviewHelperKit.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewService/AppStoreReviewService.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Review.xcodeproj">
