@@ -7,158 +7,170 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B13D1F322F7D9D000FE6107 /* ReviewHelperKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B13D1E922F7D9D000FE6107 /* ReviewHelperKit.framework */; };
-		3B13D1F822F7D9D000FE6107 /* ReviewHelperKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D1F722F7D9D000FE6107 /* ReviewHelperKitTests.swift */; };
-		3B13D1FA22F7D9D000FE6107 /* ReviewHelperKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B13D20422F7DA0A00FE6107 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */; };
+		3B10A63D22F853F0001C435C /* InstabugKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B10A63322F853EF001C435C /* InstabugKit.framework */; };
+		3B10A64222F853F0001C435C /* InstabugKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10A64122F853F0001C435C /* InstabugKitTests.swift */; };
+		3B10A64422F853F0001C435C /* InstabugKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B10A63622F853EF001C435C /* InstabugKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3B10A64F22F8540E001C435C /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B10A64E22F8540E001C435C /* Instabug.framework */; };
+		3B10A65122F85436001C435C /* InstabugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10A65022F85436001C435C /* InstabugHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B13D1F422F7D9D000FE6107 /* PBXContainerItemProxy */ = {
+		3B10A63E22F853F0001C435C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B13D1E022F7D9D000FE6107 /* Project object */;
+			containerPortal = 3B10A62A22F853EF001C435C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
-			remoteInfo = ReviewHelperKit;
+			remoteGlobalIDString = 3B10A63222F853EF001C435C;
+			remoteInfo = InstabugKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B13D1E922F7D9D000FE6107 /* ReviewHelperKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewHelperKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewHelperKit.h; sourceTree = "<group>"; };
-		3B13D1ED22F7D9D000FE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B13D1F222F7D9D000FE6107 /* ReviewHelperKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReviewHelperKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B13D1F722F7D9D000FE6107 /* ReviewHelperKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHelperKitTests.swift; sourceTree = "<group>"; };
-		3B13D1F922F7D9D000FE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationProvidor.swift; sourceTree = "<group>"; };
+		3B10A63322F853EF001C435C /* InstabugKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InstabugKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B10A63622F853EF001C435C /* InstabugKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InstabugKit.h; sourceTree = "<group>"; };
+		3B10A63722F853F0001C435C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B10A63C22F853F0001C435C /* InstabugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstabugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B10A64122F853F0001C435C /* InstabugKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugKitTests.swift; sourceTree = "<group>"; };
+		3B10A64322F853F0001C435C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B10A64E22F8540E001C435C /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
+		3B10A65022F85436001C435C /* InstabugHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B13D1E622F7D9D000FE6107 /* Frameworks */ = {
+		3B10A63022F853EF001C435C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B10A64F22F8540E001C435C /* Instabug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B13D1EF22F7D9D000FE6107 /* Frameworks */ = {
+		3B10A63922F853F0001C435C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B13D1F322F7D9D000FE6107 /* ReviewHelperKit.framework in Frameworks */,
+				3B10A63D22F853F0001C435C /* InstabugKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B13D1DF22F7D9D000FE6107 = {
+		3B10A62922F853EF001C435C = {
 			isa = PBXGroup;
 			children = (
-				3B13D1EB22F7D9D000FE6107 /* ReviewHelperKit */,
-				3B13D1F622F7D9D000FE6107 /* ReviewHelperKitTests */,
-				3B13D1EA22F7D9D000FE6107 /* Products */,
+				3B10A64D22F853FA001C435C /* SDK */,
+				3B10A63522F853EF001C435C /* InstabugKit */,
+				3B10A64022F853F0001C435C /* InstabugKitTests */,
+				3B10A63422F853EF001C435C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B13D1EA22F7D9D000FE6107 /* Products */ = {
+		3B10A63422F853EF001C435C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B13D1E922F7D9D000FE6107 /* ReviewHelperKit.framework */,
-				3B13D1F222F7D9D000FE6107 /* ReviewHelperKitTests.xctest */,
+				3B10A63322F853EF001C435C /* InstabugKit.framework */,
+				3B10A63C22F853F0001C435C /* InstabugKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3B13D1EB22F7D9D000FE6107 /* ReviewHelperKit */ = {
+		3B10A63522F853EF001C435C /* InstabugKit */ = {
 			isa = PBXGroup;
 			children = (
-				3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */,
-				3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */,
-				3B13D1ED22F7D9D000FE6107 /* Info.plist */,
+				3B10A63622F853EF001C435C /* InstabugKit.h */,
+				3B10A63722F853F0001C435C /* Info.plist */,
+				3B10A65022F85436001C435C /* InstabugHelper.swift */,
 			);
-			path = ReviewHelperKit;
+			path = InstabugKit;
 			sourceTree = "<group>";
 		};
-		3B13D1F622F7D9D000FE6107 /* ReviewHelperKitTests */ = {
+		3B10A64022F853F0001C435C /* InstabugKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B13D1F722F7D9D000FE6107 /* ReviewHelperKitTests.swift */,
-				3B13D1F922F7D9D000FE6107 /* Info.plist */,
+				3B10A64122F853F0001C435C /* InstabugKitTests.swift */,
+				3B10A64322F853F0001C435C /* Info.plist */,
 			);
-			path = ReviewHelperKitTests;
+			path = InstabugKitTests;
+			sourceTree = "<group>";
+		};
+		3B10A64D22F853FA001C435C /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3B10A64E22F8540E001C435C /* Instabug.framework */,
+			);
+			path = SDK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3B13D1E422F7D9D000FE6107 /* Headers */ = {
+		3B10A62E22F853EF001C435C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B13D1FA22F7D9D000FE6107 /* ReviewHelperKit.h in Headers */,
+				3B10A64422F853F0001C435C /* InstabugKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B13D1E822F7D9D000FE6107 /* ReviewHelperKit */ = {
+		3B10A63222F853EF001C435C /* InstabugKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B13D1FD22F7D9D000FE6107 /* Build configuration list for PBXNativeTarget "ReviewHelperKit" */;
+			buildConfigurationList = 3B10A64722F853F0001C435C /* Build configuration list for PBXNativeTarget "InstabugKit" */;
 			buildPhases = (
-				3B13D1E422F7D9D000FE6107 /* Headers */,
-				3B13D1E522F7D9D000FE6107 /* Sources */,
-				3B13D1E622F7D9D000FE6107 /* Frameworks */,
-				3B13D1E722F7D9D000FE6107 /* Resources */,
+				3B10A62E22F853EF001C435C /* Headers */,
+				3B10A62F22F853EF001C435C /* Sources */,
+				3B10A63022F853EF001C435C /* Frameworks */,
+				3B10A63122F853EF001C435C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReviewHelperKit;
-			productName = ReviewHelperKit;
-			productReference = 3B13D1E922F7D9D000FE6107 /* ReviewHelperKit.framework */;
+			name = InstabugKit;
+			productName = InstabugKit;
+			productReference = 3B10A63322F853EF001C435C /* InstabugKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		3B13D1F122F7D9D000FE6107 /* ReviewHelperKitTests */ = {
+		3B10A63B22F853F0001C435C /* InstabugKitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B13D20022F7D9D000FE6107 /* Build configuration list for PBXNativeTarget "ReviewHelperKitTests" */;
+			buildConfigurationList = 3B10A64A22F853F0001C435C /* Build configuration list for PBXNativeTarget "InstabugKitTests" */;
 			buildPhases = (
-				3B13D1EE22F7D9D000FE6107 /* Sources */,
-				3B13D1EF22F7D9D000FE6107 /* Frameworks */,
-				3B13D1F022F7D9D000FE6107 /* Resources */,
+				3B10A63822F853F0001C435C /* Sources */,
+				3B10A63922F853F0001C435C /* Frameworks */,
+				3B10A63A22F853F0001C435C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B13D1F522F7D9D000FE6107 /* PBXTargetDependency */,
+				3B10A63F22F853F0001C435C /* PBXTargetDependency */,
 			);
-			name = ReviewHelperKitTests;
-			productName = ReviewHelperKitTests;
-			productReference = 3B13D1F222F7D9D000FE6107 /* ReviewHelperKitTests.xctest */;
+			name = InstabugKitTests;
+			productName = InstabugKitTests;
+			productReference = 3B10A63C22F853F0001C435C /* InstabugKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B13D1E022F7D9D000FE6107 /* Project object */ = {
+		3B10A62A22F853EF001C435C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "朱廷";
 				TargetAttributes = {
-					3B13D1E822F7D9D000FE6107 = {
-						CreatedOnToolsVersion = 10.2.1;
-						LastSwiftMigration = 1020;
+					3B10A63222F853EF001C435C = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
 					};
-					3B13D1F122F7D9D000FE6107 = {
-						CreatedOnToolsVersion = 10.2.1;
+					3B10A63B22F853F0001C435C = {
+						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 3B13D1E322F7D9D000FE6107 /* Build configuration list for PBXProject "ReviewHelperKit" */;
+			buildConfigurationList = 3B10A62D22F853EF001C435C /* Build configuration list for PBXProject "InstabugKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,26 +178,26 @@
 				en,
 				Base,
 			);
-			mainGroup = 3B13D1DF22F7D9D000FE6107;
-			productRefGroup = 3B13D1EA22F7D9D000FE6107 /* Products */;
+			mainGroup = 3B10A62922F853EF001C435C;
+			productRefGroup = 3B10A63422F853EF001C435C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B13D1E822F7D9D000FE6107 /* ReviewHelperKit */,
-				3B13D1F122F7D9D000FE6107 /* ReviewHelperKitTests */,
+				3B10A63222F853EF001C435C /* InstabugKit */,
+				3B10A63B22F853F0001C435C /* InstabugKitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B13D1E722F7D9D000FE6107 /* Resources */ = {
+		3B10A63122F853EF001C435C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B13D1F022F7D9D000FE6107 /* Resources */ = {
+		3B10A63A22F853F0001C435C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,34 +207,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B13D1E522F7D9D000FE6107 /* Sources */ = {
+		3B10A62F22F853EF001C435C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B13D20422F7DA0A00FE6107 /* ConfigurationProvidor.swift in Sources */,
+				3B10A65122F85436001C435C /* InstabugHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B13D1EE22F7D9D000FE6107 /* Sources */ = {
+		3B10A63822F853F0001C435C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B13D1F822F7D9D000FE6107 /* ReviewHelperKitTests.swift in Sources */,
+				3B10A64222F853F0001C435C /* InstabugKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B13D1F522F7D9D000FE6107 /* PBXTargetDependency */ = {
+		3B10A63F22F853F0001C435C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3B13D1E822F7D9D000FE6107 /* ReviewHelperKit */;
-			targetProxy = 3B13D1F422F7D9D000FE6107 /* PBXContainerItemProxy */;
+			target = 3B10A63222F853EF001C435C /* InstabugKit */;
+			targetProxy = 3B10A63E22F853F0001C435C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3B13D1FB22F7D9D000FE6107 /* Debug */ = {
+		3B10A64522F853F0001C435C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -254,7 +266,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -274,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,7 +297,7 @@
 			};
 			name = Debug;
 		};
-		3B13D1FC22F7D9D000FE6107 /* Release */ = {
+		3B10A64622F853F0001C435C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -318,7 +329,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -332,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -344,17 +354,20 @@
 			};
 			name = Release;
 		};
-		3B13D1FE22F7D9D000FE6107 /* Debug */ = {
+		3B10A64822F853F0001C435C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReviewHelperKit/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+				);
+				INFOPLIST_FILE = InstabugKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -362,26 +375,30 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tz.ReviewHelperKit;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.InstabugKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3B13D1FF22F7D9D000FE6107 /* Release */ = {
+		3B10A64922F853F0001C435C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ReviewHelperKit/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SDK",
+				);
+				INFOPLIST_FILE = InstabugKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -389,44 +406,47 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tz.ReviewHelperKit;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.InstabugKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		3B13D20122F7D9D000FE6107 /* Debug */ = {
+		3B10A64B22F853F0001C435C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ReviewHelperKitTests/Info.plist;
+				INFOPLIST_FILE = InstabugKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tz.ReviewHelperKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.InstabugKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3B13D20222F7D9D000FE6107 /* Release */ = {
+		3B10A64C22F853F0001C435C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = ReviewHelperKitTests/Info.plist;
+				INFOPLIST_FILE = InstabugKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = tz.ReviewHelperKitTests;
+				PRODUCT_BUNDLE_IDENTIFIER = tz.InstabugKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -436,34 +456,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B13D1E322F7D9D000FE6107 /* Build configuration list for PBXProject "ReviewHelperKit" */ = {
+		3B10A62D22F853EF001C435C /* Build configuration list for PBXProject "InstabugKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B13D1FB22F7D9D000FE6107 /* Debug */,
-				3B13D1FC22F7D9D000FE6107 /* Release */,
+				3B10A64522F853F0001C435C /* Debug */,
+				3B10A64622F853F0001C435C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B13D1FD22F7D9D000FE6107 /* Build configuration list for PBXNativeTarget "ReviewHelperKit" */ = {
+		3B10A64722F853F0001C435C /* Build configuration list for PBXNativeTarget "InstabugKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B13D1FE22F7D9D000FE6107 /* Debug */,
-				3B13D1FF22F7D9D000FE6107 /* Release */,
+				3B10A64822F853F0001C435C /* Debug */,
+				3B10A64922F853F0001C435C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B13D20022F7D9D000FE6107 /* Build configuration list for PBXNativeTarget "ReviewHelperKitTests" */ = {
+		3B10A64A22F853F0001C435C /* Build configuration list for PBXNativeTarget "InstabugKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B13D20122F7D9D000FE6107 /* Debug */,
-				3B13D20222F7D9D000FE6107 /* Release */,
+				3B10A64B22F853F0001C435C /* Debug */,
+				3B10A64C22F853F0001C435C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B13D1E022F7D9D000FE6107 /* Project object */;
+	rootObject = 3B10A62A22F853EF001C435C /* Project object */;
 }

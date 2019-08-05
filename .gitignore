@@ -3013,3 +3013,94 @@ Carthage/Checkouts/SnapKit/Source/ConstraintView+Extensions.swift
 Carthage/Checkouts/SnapKit/Source/UILayoutSupport+Extensions.swift
 Observable.Extensions.swift
 Pods/Pods.xcodeproj/xcuserdata/tstone10.xcuserdatad/xcschemes/xcschememanagement.plist
+InstabugKit/SDK/Instabug.framework/Info.plist
+InstabugKit/SDK/Instabug.framework/Instabug
+InstabugKit/SDK/Instabug.framework/strip-frameworks.sh
+InstabugKit/SDK/Instabug.framework/_CodeSignature/CodeResources
+InstabugKit/SDK/Instabug.framework/Headers/IBGBugReporting.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGChats.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGCrashReporting.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGFeatureRequests.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGLog.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGNetworkLogger.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGReplies.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGReport.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGSurvey.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGSurveys.h
+InstabugKit/SDK/Instabug.framework/Headers/IBGTypes.h
+InstabugKit/SDK/Instabug.framework/Headers/Instabug.h
+InstabugKit/SDK/Instabug.framework/Headers/InstabugCore.h
+InstabugKit/SDK/Instabug.framework/Headers/UIView+Instabug.h
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/Assets.car
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/Config.plist
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGActionSheetCell.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGChatCell.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGChatListVC-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGFullScreenImageViewController.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGPoweredByView.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGPromptCell.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGPromptVC-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGReplyView-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGReportCategoriesVC-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGScreenshotVC-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGVideoPlaybackViewController.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGVoiceNoteRecordingViewController-iPhone.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/Info.plist
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/Inject_DSYM_Project-Archive.sh
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/Instabug_dsym_upload.sh
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/ar.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/cs.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/da.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/de.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/en.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/en.lproj/Localizable.stringsdict
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/es.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/fr.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/hu.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGActionSheetVC-iPhone.nib/objects-11.0+.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGActionSheetVC-iPhone.nib/runtime.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGBugVC-iPhone.nib/objects-11.0+.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGBugVC-iPhone.nib/runtime.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGChatVC-iPhone.nib/objects-11.0+.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/IBGChatVC-iPhone.nib/runtime.nib
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 10.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 11.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 12.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 14.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 15.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 16.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 17.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 17.omo
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 2.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 3.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 7.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 8.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel 9.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/InstabugDataModel.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugDataModel.momd/VersionInfo.plist
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugSurveysDataModel.momd/InstabugSurveysDataModel 2.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugSurveysDataModel.momd/InstabugSurveysDataModel 3.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugSurveysDataModel.momd/InstabugSurveysDataModel 3.omo
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugSurveysDataModel.momd/InstabugSurveysDataModel.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugSurveysDataModel.momd/VersionInfo.plist
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugUserStepsDataModel.momd/UserStepsDataModel 2.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugUserStepsDataModel.momd/UserStepsDataModel 3.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugUserStepsDataModel.momd/UserStepsDataModel 3.omo
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugUserStepsDataModel.momd/UserStepsDataModel.mom
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/InstabugUserStepsDataModel.momd/VersionInfo.plist
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/it.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/ja.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/ko.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/nb.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/nl.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/pl.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/pt-BR.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/pt-PT.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/ru.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/sk.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/sv.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/tr.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/zh-Hans.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/zh-Hant-TW.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/InstabugResources.bundle/zh-Hant.lproj/Localizable.strings
+InstabugKit/SDK/Instabug.framework/Modules/module.modulemap

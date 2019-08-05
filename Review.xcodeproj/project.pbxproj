@@ -38,9 +38,78 @@
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3B10A66B22F854C6001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B10A63322F853EF001C435C;
+			remoteInfo = InstabugKit;
+		};
+		3B10A66D22F854C6001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B10A63C22F853F0001C435C;
+			remoteInfo = InstabugKitTests;
+		};
+		3B10A66F22F854CF001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B10A63222F853EF001C435C;
+			remoteInfo = InstabugKit;
+		};
+		3B10A67622F854D8001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B13D1E922F7D9D000FE6107;
+			remoteInfo = ReviewHelperKit;
+		};
+		3B10A67822F854D8001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
+			remoteInfo = ReviewHelperKitTests;
+		};
+		3B10A67F22F854DD001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BCB8AAC22F67EA800BAA401;
+			remoteInfo = AppStoreReviewService;
+		};
+		3B10A68122F854DD001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BCB8AB522F67EA900BAA401;
+			remoteInfo = AppStoreReviewServiceTests;
+		};
+		3B10A68322F854E0001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BCB8AAB22F67EA800BAA401;
+			remoteInfo = AppStoreReviewService;
+		};
+		3B10A68522F854E5001C435C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
+			remoteInfo = ReviewHelperKit;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
+		3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugKit.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/InstabugKit/InstabugKit.xcodeproj; sourceTree = "<group>"; };
+		3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
+		3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
 		3BCB8A8522F67C7000BAA401 /* Review.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Review.entitlements; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
@@ -87,6 +156,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B10A66522F854C0001C435C /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */,
+				3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */,
+				3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */,
+			);
+			name = Dependency;
+			sourceTree = "<group>";
+		};
+		3B10A66722F854C6001C435C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B10A66C22F854C6001C435C /* InstabugKit.framework */,
+				3B10A66E22F854C6001C435C /* InstabugKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B10A67222F854D8001C435C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B10A67722F854D8001C435C /* ReviewHelperKit.framework */,
+				3B10A67922F854D8001C435C /* ReviewHelperKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B10A67B22F854DD001C435C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B10A68022F854DD001C435C /* AppStoreReviewService.framework */,
+				3B10A68222F854DD001C435C /* AppStoreReviewServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		73113C180381D5425071F74F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +262,7 @@
 		82ECBCF621DD077700900188 = {
 			isa = PBXGroup;
 			children = (
+				3B10A66522F854C0001C435C /* Dependency */,
 				82ECBD0121DD077800900188 /* Review */,
 				82ECBD0021DD077800900188 /* Products */,
 				73113C180381D5425071F74F /* Pods */,
@@ -238,6 +345,9 @@
 			buildRules = (
 			);
 			dependencies = (
+				3B10A68622F854E5001C435C /* PBXTargetDependency */,
+				3B10A68422F854E0001C435C /* PBXTargetDependency */,
+				3B10A67022F854CF001C435C /* PBXTargetDependency */,
 			);
 			name = Review;
 			productName = Review;
@@ -270,12 +380,71 @@
 			mainGroup = 82ECBCF621DD077700900188;
 			productRefGroup = 82ECBD0021DD077800900188 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B10A67B22F854DD001C435C /* Products */;
+					ProjectRef = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+				},
+				{
+					ProductGroup = 3B10A66722F854C6001C435C /* Products */;
+					ProjectRef = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
+				},
+				{
+					ProductGroup = 3B10A67222F854D8001C435C /* Products */;
+					ProjectRef = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				82ECBCFE21DD077800900188 /* Review */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B10A66C22F854C6001C435C /* InstabugKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = InstabugKit.framework;
+			remoteRef = 3B10A66B22F854C6001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B10A66E22F854C6001C435C /* InstabugKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InstabugKitTests.xctest;
+			remoteRef = 3B10A66D22F854C6001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B10A67722F854D8001C435C /* ReviewHelperKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReviewHelperKit.framework;
+			remoteRef = 3B10A67622F854D8001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B10A67922F854D8001C435C /* ReviewHelperKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReviewHelperKitTests.xctest;
+			remoteRef = 3B10A67822F854D8001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B10A68022F854DD001C435C /* AppStoreReviewService.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppStoreReviewService.framework;
+			remoteRef = 3B10A67F22F854DD001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B10A68222F854DD001C435C /* AppStoreReviewServiceTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppStoreReviewServiceTests.xctest;
+			remoteRef = 3B10A68122F854DD001C435C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		82ECBCFD21DD077800900188 /* Resources */ = {
@@ -345,6 +514,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B10A67022F854CF001C435C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InstabugKit;
+			targetProxy = 3B10A66F22F854CF001C435C /* PBXContainerItemProxy */;
+		};
+		3B10A68422F854E0001C435C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppStoreReviewService;
+			targetProxy = 3B10A68322F854E0001C435C /* PBXContainerItemProxy */;
+		};
+		3B10A68622F854E5001C435C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReviewHelperKit;
+			targetProxy = 3B10A68522F854E5001C435C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		82ECBD0621DD077800900188 /* Main.storyboard */ = {
@@ -490,6 +677,7 @@
 				CODE_SIGN_ENTITLEMENTS = Review/Review.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -499,7 +687,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_UIKITFORMAC = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -512,6 +700,7 @@
 				CODE_SIGN_ENTITLEMENTS = Review/Review.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2A6G2N9N43;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -521,7 +710,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wz.Review;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_UIKITFORMAC = NO;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
