@@ -46,7 +46,7 @@ class AppSearchViewController: UIViewController {
     func bindUI() {
         searchController.searchBar.rx.text
             .orEmpty
-            .debounce(1, scheduler: MainScheduler.instance)
+            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .filter { !$0.isEmpty }
             .flatMap {[unowned self] in

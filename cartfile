@@ -3,3 +3,4 @@ github "ReactiveX/RxSwift"
 github "evgenyneu/Cosmos" ~> 19.0
 github "SnapKit/SnapKit" ~> 5.0.0
 github "onevcat/Kingfisher" ~> 5.0
+github "JohnEstropia/CoreStore" >= 0.2.0

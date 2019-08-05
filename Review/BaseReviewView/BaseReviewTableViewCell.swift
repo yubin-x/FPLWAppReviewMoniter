@@ -27,11 +27,11 @@ class BaseReviewTableViewCell: UITableViewCell {
     func bindData(entryModel: ReviewModel) {
         titleLabel.text = entryModel.title.label
         nameLabel.text = entryModel.author.name.label
-        if let rating = Double(entryModel.rating.label) {
-            ratingView.rating = rating
-        } else {
-            ratingView.rating = 0
-        }
+//        if let rating = Double(entryModel.rating.label) {
+//            ratingView.rating = rating
+//        } else {
+//            ratingView.rating = 0
+//        }
         contentLabel.text = entryModel.content.label
     }
 }

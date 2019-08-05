@@ -8,23 +8,23 @@
 
 import Foundation
 
-struct ReviewSearchResult: Decodable {
-    let feed: FeedModel
+public struct ReviewSearchResult: Decodable {
+    public let feed: FeedModel
 }
 
-struct FeedModel: Decodable {
-    let entrys: [ReviewModel]
+public struct FeedModel: Decodable {
+    public let entrys: [ReviewModel]
     
     enum CodingKeys: String, CodingKey {
         case entrys = "entry"
     }
 }
 
-struct ReviewModel: Decodable {
-    let author: AuthorModel
-    let rating: RatingModel
-    let title: TitleModel
-    let content: ContentModel
+public struct ReviewModel: Decodable {
+    public let author: AuthorModel
+    public let rating: RatingModel
+    public let title: TitleModel
+    public let content: ContentModel
     
     enum CodingKeys: String, CodingKey {
         case author
@@ -34,22 +34,22 @@ struct ReviewModel: Decodable {
     }
 }
 
-struct AuthorModel: Decodable {
+public struct AuthorModel: Decodable {
     let name: NameModel
 }
 
-struct NameModel: Decodable {
+public struct NameModel: Decodable {
     let label: String
 }
 
-struct RatingModel: Decodable {
+public struct RatingModel: Decodable {
     let label: String
 }
 
-struct TitleModel: Decodable {
+public struct TitleModel: Decodable {
     let label: String
 }
 
-struct ContentModel: Decodable {
+public struct ContentModel: Decodable {
     let label: String
 }

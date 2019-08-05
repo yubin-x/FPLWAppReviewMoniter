@@ -9,7 +9,7 @@
 import RxSwift
 import Alamofire
 
-protocol ReviewServiceLayer {
+public protocol ReviewServiceLayer {
     func fetchReviewData(appID: String, page: Int) -> Observable<[ReviewModel]>
 }
 

@@ -9,7 +9,7 @@
 import Instabug
 
 public struct InstabugHelper {
-    static func beginInstabugWith() {
+    public static func beginInstabugWith() {
         Instabug.start(withToken: "cedd60760b8c644c4b49a063e16f9836", invocationEvents: [.shake, .screenshot])
     }
 }

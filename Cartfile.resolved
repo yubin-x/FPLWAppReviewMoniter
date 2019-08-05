@@ -1,5 +1,6 @@
 github "Alamofire/Alamofire" "4.8.2"
+github "JohnEstropia/CoreStore" "6.3.1"
 github "ReactiveX/RxSwift" "5.0.1"
-github "SnapKit/SnapKit" "5.0.0"
+github "SnapKit/SnapKit" "5.0.1"
 github "evgenyneu/Cosmos" "19.0.3"
 github "onevcat/Kingfisher" "5.7.0"

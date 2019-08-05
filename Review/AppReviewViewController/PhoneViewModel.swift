@@ -37,7 +37,7 @@ class PhoneViewModel: PhoneViewable {
     
     func fetchApp(appID: Int64) {
         dataStack.perform(asynchronous: { [unowned self] (transaction) -> Void in
-            guard let app = transaction.fetchOne(From<AppDataEntry>().where(\.appId == appID)) else { return }
+            guard let app = try? transaction.fetchOne(From<AppDataEntry>().where(\.appId == appID)) else { return }
             self.fetchAppResult.accept(app)
         }, completion: { (result) -> Void in
             switch result {

@@ -11,6 +11,7 @@
 		3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21822F7DACA00FE6107 /* ReviewService.swift */; };
 		3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */; };
 		3B13D21F22F7DAD600FE6107 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21D22F7DAD500FE6107 /* AppModel.swift */; };
+		3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */; };
 		3BCB8AB622F67EA900BAA401 /* AppStoreReviewService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */; };
 		3BCB8ABB22F67EA900BAA401 /* AppStoreReviewServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB8ABA22F67EA900BAA401 /* AppStoreReviewServiceTests.swift */; };
 		3BCB8ABD22F67EA900BAA401 /* AppStoreReviewService.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BCB8AAF22F67EA800BAA401 /* AppStoreReviewService.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 		3B13D21822F7DACA00FE6107 /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		3B13D21D22F7DAD500FE6107 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewServiceFactory.swift; sourceTree = "<group>"; };
 		3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppStoreReviewService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCB8AAF22F67EA800BAA401 /* AppStoreReviewService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreReviewService.h; sourceTree = "<group>"; };
 		3BCB8AB022F67EA800BAA401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				3B13D21622F7DACA00FE6107 /* Service */,
 				3BCB8AAF22F67EA800BAA401 /* AppStoreReviewService.h */,
 				3BCB8AB022F67EA800BAA401 /* Info.plist */,
+				3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */,
 			);
 			path = AppStoreReviewService;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B13D21922F7DACB00FE6107 /* AppSearchService.swift in Sources */,
+				3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */,
 				3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */,
 				3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */,
 				3B13D21F22F7DAD600FE6107 /* AppModel.swift in Sources */,

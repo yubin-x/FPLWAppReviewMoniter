@@ -15,13 +15,13 @@ public enum Country: String {
 
 public struct ConfigurationProvidor {
     
-    static let ReviewCoreDataEntryKey = "Review"
+    public static let ReviewCoreDataEntryKey = "Review"
     
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"
     private static let savedAppIDsKeys = "savedAppIDsKeys"
     
-    static var autoScrollTimeInterval: TimeInterval {
+    public static var autoScrollTimeInterval: TimeInterval {
         get {
             return UserDefaults.standard.double(forKey: autoScrollTimeIntervalKey)
         }
@@ -30,7 +30,7 @@ public struct ConfigurationProvidor {
         }
     }
     
-    static var enableAutoScroll: Bool {
+    public static var enableAutoScroll: Bool {
         get {
             return UserDefaults.standard.bool(forKey: enableAutoScrollKey)
         }
@@ -39,12 +39,12 @@ public struct ConfigurationProvidor {
         }
     }
     
-    static func registerDefaultValue() {
+    public static func registerDefaultValue() {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.autoScrollTimeIntervalKey: 5])
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
     }
     
-    static var savedAppIDs: [Int64] {
+    public static var savedAppIDs: [Int64] {
         get {
             guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKeys) as? [Int64] else { return [] }
             return rawValue

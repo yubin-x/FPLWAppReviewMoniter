@@ -37,7 +37,7 @@ class AppListViewModel: AppListViewable {
     }
     
     func fetchSavedApps() {
-        guard let apps = self.dataStack.fetchAll(From<AppDataEntry>()) else { return }
+        guard let apps = try? self.dataStack.fetchAll(From<AppDataEntry>()) else { return }
         appDataEntry.accept(apps)
         var appIDs = [Int64]()
         apps.forEach { appIDs.append($0.appId) }

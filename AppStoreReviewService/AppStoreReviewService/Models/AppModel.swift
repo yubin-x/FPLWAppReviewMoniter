@@ -8,20 +8,30 @@
 
 import Foundation
 
-struct AppSearchResult: Decodable {
+public struct AppSearchResult: Decodable {
     let results: [AppModel]
 }
 
-struct AppModel: Decodable {
-    let appName: String
-    let iconURLString: String
-    let appId: Int
-    let averageUserRating: Double?
+public struct AppModel: Decodable {
+    public let appName: String
+    public let iconURLString: String
+    public let appId: Int
+    public let averageUserRating: Double?
     
     enum CodingKeys: String, CodingKey {
         case appName = "trackName"
         case iconURLString = "artworkUrl60"
         case appId = "trackId"
         case averageUserRating
+    }
+    
+    public init(appName: String?,
+                iconURLString: String?,
+                appId: Int?,
+                averageUserRating: Double?) {
+        self.appName = appName ?? ""
+        self.iconURLString = iconURLString ?? ""
+        self.appId = appId ?? 0
+        self.averageUserRating = averageUserRating
     }
 }
