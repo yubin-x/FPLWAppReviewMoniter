@@ -7,49 +7,32 @@
 //
 
 import Foundation
+import AppStoreReviewAPILayer
 
-public struct ReviewSearchResult: Decodable {
-    public let feed: FeedModel
-}
-
-public struct FeedModel: Decodable {
-    public let entrys: [ReviewModel]
+public struct ReviewModel {
+    public let author: String
+    public let rating: Double
+    public let title: String
+    public let content: String
     
-    enum CodingKeys: String, CodingKey {
-        case entrys = "entry"
+    public init(author: String,
+                rating: Double,
+                title: String,
+                content: String) {
+        self.author = author
+        self.rating = rating
+        self.title = title
+        self.content = content
     }
-}
-
-public struct ReviewModel: Decodable {
-    public let author: AuthorModel
-    public let rating: RatingModel
-    public let title: TitleModel
-    public let content: ContentModel
     
-    enum CodingKeys: String, CodingKey {
-        case author
-        case rating = "im:rating"
-        case title
-        case content
+    public init(from reviewResponse: ReviewResponse) {
+        self.author = reviewResponse.author.name.label
+        if let rating = Double(reviewResponse.rating.label) {
+            self.rating = rating
+        } else {
+            self.rating = 0
+        }
+        self.title = reviewResponse.title.label
+        self.content = reviewResponse.content.label
     }
-}
-
-public struct AuthorModel: Decodable {
-    let name: NameModel
-}
-
-public struct NameModel: Decodable {
-    let label: String
-}
-
-public struct RatingModel: Decodable {
-    let label: String
-}
-
-public struct TitleModel: Decodable {
-    let label: String
-}
-
-public struct ContentModel: Decodable {
-    let label: String
 }

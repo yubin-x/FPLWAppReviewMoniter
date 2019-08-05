@@ -1,5 +1,5 @@
 //
-//  AppModel.swift
+//  AppSearchResult.swift
 //  Review
 //
 //  Created by Wenslow on 2019/1/11.
@@ -9,10 +9,10 @@
 import Foundation
 
 public struct AppSearchResult: Decodable {
-    let results: [AppModel]
+    let results: [AppSearchResponse]
 }
 
-public struct AppModel: Decodable {
+public struct AppSearchResponse: Decodable {
     public let appName: String
     public let iconURLString: String
     public let appId: Int

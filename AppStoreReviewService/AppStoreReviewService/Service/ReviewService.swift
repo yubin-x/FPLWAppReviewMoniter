@@ -7,37 +7,26 @@
 //
 
 import RxSwift
-import Alamofire
+import AppStoreReviewAPILayer
 
-public protocol ReviewServiceLayer {
-    func fetchReviewData(appID: String, page: Int) -> Observable<[ReviewModel]>
+public protocol ReviewServiceProtocol {
+    func fetchReviewData(appID: String, page: Int) -> Observable<Result<[ReviewModel],Error>>
 }
 
-class ReviewService: ReviewServiceLayer {
+class ReviewService: ReviewServiceProtocol {
     
-    let baseURL = "https://itunes.apple.com/rss/customerreviews/page=%d/id=%@/sortby=mostrecent/json?l=en&&cc=cn"
+    let reviewAPILayer: ReviewAPILayer
     
-    func fetchReviewData(appID: String, page: Int) -> Observable<[ReviewModel]> {
-        
-        let urlString = String(format: baseURL, page, appID)
-        
-        return Observable<[ReviewModel]>.create({ (observer) -> Disposable in
-            
-            Alamofire.request(urlString).responseData { response in
-                
-                if let data = response.result.value {
-                    do {
-                        let value = try JSONDecoder().decode(ReviewSearchResult.self, from: data)
-                        observer.onNext(value.feed.entrys)
-                    } catch {
-                        observer.onNext([])
-                        print(error)
-                    }
-                } else {
-                    observer.onNext([])
-                }
+    init(reviewAPILayer: ReviewAPILayer = AppStoreReviewAPILayerFactory.makeReviewAPILayer()) {
+        self.reviewAPILayer = reviewAPILayer
+    }
+    
+    func fetchReviewData(appID: String, page: Int) -> Observable<Result<[ReviewModel],Error>> {
+        return reviewAPILayer.fetchReviewData(appID: appID, page: page).map {
+            let reviewModels = $0.map {
+                return ReviewModel(from: $0)
             }
-            return Disposables.create()
-        })
+            return Result.success(reviewModels)
+        }.catchError { return Observable.just(Result.failure($0)) }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  AppSearchService.swift
+//  AppInfoService.swift
 //  Review
 //
 //  Created by Wenslow on 2019/1/11.
@@ -7,44 +7,27 @@
 //
 
 import RxSwift
-import Alamofire
+import AppStoreReviewAPILayer
 import ReviewHelperKit
 
-public protocol AppSearchServiceLayer {
-    func searchApp(term: String, country: Country) -> Observable<[AppModel]>
+public protocol AppInfoServiceProtocol {
+    func searchApp(term: String, country: Country) -> Observable<Result<[AppInfoModel], Error>>
 }
 
-class AppSearchService: AppSearchServiceLayer {
+class AppInfoService: AppInfoServiceProtocol {
     
-    let baseURL = "https://itunes.apple.com/search?term=%@&country=%@&entity=software"
+    let appSearchAPILayer: AppSearchAPILayer
     
-    func searchApp(term: String, country: Country) -> Observable<[AppModel]> {
-        
-        let urlString: String
-        
-        if let encodingString = String(format: baseURL, term, country.rawValue).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
-            urlString = encodingString
-        } else {
-            urlString = ""
-        }
-        
-        return Observable<[AppModel]>.create({ (observer) -> Disposable in
-            
-            Alamofire.request(urlString).responseData { response in
-                
-                if let data = response.result.value {
-                    do {
-                        let value = try JSONDecoder().decode(AppSearchResult.self, from: data)
-                        observer.onNext(value.results)
-                    } catch {
-                        observer.onNext([])
-                        print(error)
-                    }
-                } else {
-                    observer.onNext([])
-                }
-            }
-            return Disposables.create()
-        })
+    init(appSearchAPILayer: AppSearchAPILayer = AppStoreReviewAPILayerFactory.makeAppSearchAPILayer()) {
+        self.appSearchAPILayer = appSearchAPILayer
+    }
+    
+    func searchApp(term: String, country: Country) -> Observable<Result<[AppInfoModel], Error>> {
+        return appSearchAPILayer.searchApp(term: term, country: country).map {
+            let appModels = $0.map({ (response) -> AppInfoModel in
+                return AppInfoModel(from: response)
+            })
+            return Result.success(appModels)
+        }.catchError { return Observable.just(Result.failure($0)) }
     }
 }

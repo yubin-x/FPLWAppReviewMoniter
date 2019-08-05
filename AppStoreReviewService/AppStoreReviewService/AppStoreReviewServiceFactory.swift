@@ -9,11 +9,11 @@
 import Foundation
 
 public struct AppStoreReviewServiceFactory {
-    public static func makeAppSearchService() -> AppSearchServiceLayer {
-        return AppSearchService()
+    public static func makeAppSearchService() -> AppInfoServiceProtocol {
+        return AppInfoService()
     }
     
-    public static func makeReviewService() -> ReviewServiceLayer {
+    public static func makeReviewService() -> ReviewServiceProtocol {
         return ReviewService()
     }
 }

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B13D21922F7DACB00FE6107 /* AppSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21722F7DACA00FE6107 /* AppSearchService.swift */; };
+		3B13D21922F7DACB00FE6107 /* AppInfoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21722F7DACA00FE6107 /* AppInfoService.swift */; };
 		3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21822F7DACA00FE6107 /* ReviewService.swift */; };
 		3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */; };
-		3B13D21F22F7DAD600FE6107 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21D22F7DAD500FE6107 /* AppModel.swift */; };
+		3B13D21F22F7DAD600FE6107 /* AppInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */; };
 		3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */; };
 		3BCB8AB622F67EA900BAA401 /* AppStoreReviewService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */; };
 		3BCB8ABB22F67EA900BAA401 /* AppStoreReviewServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB8ABA22F67EA900BAA401 /* AppStoreReviewServiceTests.swift */; };
@@ -39,6 +39,48 @@
 			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
 			remoteInfo = ReviewHelperKit;
 		};
+		3BAB879D22F87AAF00B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BAB876822F8797E00B0CABD;
+			remoteInfo = AppStoreReviewAPILayer;
+		};
+		3BAB879F22F87AAF00B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BAB877122F8797F00B0CABD;
+			remoteInfo = AppStoreReviewAPILayerTests;
+		};
+		3BAB87A222F87AB500B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BAB876722F8797E00B0CABD;
+			remoteInfo = AppStoreReviewAPILayer;
+		};
+		3BAB87A922F87B4400B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BC1523F22F85BA500FA3F50;
+			remoteInfo = CacheKit;
+		};
+		3BAB87AB22F87B4400B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BC1524822F85BA500FA3F50;
+			remoteInfo = CacheKitTests;
+		};
+		3BAB87AD22F87B4900B0CABD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BC1523E22F85BA500FA3F50;
+			remoteInfo = CacheKit;
+		};
 		3BCB8AB722F67EA900BAA401 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3BCB8AA322F67EA800BAA401 /* Project object */;
@@ -50,10 +92,12 @@
 
 /* Begin PBXFileReference section */
 		3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ../ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
-		3B13D21722F7DACA00FE6107 /* AppSearchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSearchService.swift; sourceTree = "<group>"; };
+		3B13D21722F7DACA00FE6107 /* AppInfoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoService.swift; sourceTree = "<group>"; };
 		3B13D21822F7DACA00FE6107 /* ReviewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
-		3B13D21D22F7DAD500FE6107 /* AppModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoModel.swift; sourceTree = "<group>"; };
+		3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewAPILayer.xcodeproj; path = ../AppStoreReviewAPILayer/AppStoreReviewAPILayer.xcodeproj; sourceTree = "<group>"; };
+		3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CacheKit.xcodeproj; path = ../CacheKit/CacheKit.xcodeproj; sourceTree = "<group>"; };
 		3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewServiceFactory.swift; sourceTree = "<group>"; };
 		3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppStoreReviewService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCB8AAF22F67EA800BAA401 /* AppStoreReviewService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreReviewService.h; sourceTree = "<group>"; };
@@ -85,6 +129,8 @@
 		3B13D20522F7DA4800FE6107 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */,
+				3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */,
 				3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */,
 			);
 			name = Dependency;
@@ -102,7 +148,7 @@
 		3B13D21622F7DACA00FE6107 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				3B13D21722F7DACA00FE6107 /* AppSearchService.swift */,
+				3B13D21722F7DACA00FE6107 /* AppInfoService.swift */,
 				3B13D21822F7DACA00FE6107 /* ReviewService.swift */,
 			);
 			path = Service;
@@ -112,9 +158,27 @@
 			isa = PBXGroup;
 			children = (
 				3B13D21C22F7DAD500FE6107 /* ReviewModel.swift */,
-				3B13D21D22F7DAD500FE6107 /* AppModel.swift */,
+				3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		3BAB879922F87AAF00B0CABD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BAB879E22F87AAF00B0CABD /* AppStoreReviewAPILayer.framework */,
+				3BAB87A022F87AAF00B0CABD /* AppStoreReviewAPILayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BAB87A522F87B4400B0CABD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BAB87AA22F87B4400B0CABD /* CacheKit.framework */,
+				3BAB87AC22F87B4400B0CABD /* CacheKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		3BCB8AA222F67EA800BAA401 = {
@@ -183,6 +247,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				3BAB87AE22F87B4900B0CABD /* PBXTargetDependency */,
+				3BAB87A322F87AB500B0CABD /* PBXTargetDependency */,
 				3B13D21022F7DA5800FE6107 /* PBXTargetDependency */,
 			);
 			name = AppStoreReviewService;
@@ -239,6 +305,14 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 3BAB879922F87AAF00B0CABD /* Products */;
+					ProjectRef = 3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */;
+				},
+				{
+					ProductGroup = 3BAB87A522F87B4400B0CABD /* Products */;
+					ProjectRef = 3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */;
+				},
+				{
 					ProductGroup = 3B13D20722F7DA5200FE6107 /* Products */;
 					ProjectRef = 3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */;
 				},
@@ -266,6 +340,34 @@
 			remoteRef = 3B13D20D22F7DA5200FE6107 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3BAB879E22F87AAF00B0CABD /* AppStoreReviewAPILayer.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AppStoreReviewAPILayer.framework;
+			remoteRef = 3BAB879D22F87AAF00B0CABD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BAB87A022F87AAF00B0CABD /* AppStoreReviewAPILayerTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AppStoreReviewAPILayerTests.xctest;
+			remoteRef = 3BAB879F22F87AAF00B0CABD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BAB87AA22F87B4400B0CABD /* CacheKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CacheKit.framework;
+			remoteRef = 3BAB87A922F87B4400B0CABD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BAB87AC22F87B4400B0CABD /* CacheKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CacheKitTests.xctest;
+			remoteRef = 3BAB87AB22F87B4400B0CABD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -290,11 +392,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B13D21922F7DACB00FE6107 /* AppSearchService.swift in Sources */,
+				3B13D21922F7DACB00FE6107 /* AppInfoService.swift in Sources */,
 				3BC1523322F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift in Sources */,
 				3B13D21A22F7DACB00FE6107 /* ReviewService.swift in Sources */,
 				3B13D21E22F7DAD600FE6107 /* ReviewModel.swift in Sources */,
-				3B13D21F22F7DAD600FE6107 /* AppModel.swift in Sources */,
+				3B13D21F22F7DAD600FE6107 /* AppInfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +415,16 @@
 			isa = PBXTargetDependency;
 			name = ReviewHelperKit;
 			targetProxy = 3B13D20F22F7DA5800FE6107 /* PBXContainerItemProxy */;
+		};
+		3BAB87A322F87AB500B0CABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppStoreReviewAPILayer;
+			targetProxy = 3BAB87A222F87AB500B0CABD /* PBXContainerItemProxy */;
+		};
+		3BAB87AE22F87B4900B0CABD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CacheKit;
+			targetProxy = 3BAB87AD22F87B4900B0CABD /* PBXContainerItemProxy */;
 		};
 		3BCB8AB822F67EA900BAA401 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
