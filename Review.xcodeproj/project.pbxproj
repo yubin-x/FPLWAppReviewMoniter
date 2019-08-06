@@ -48,68 +48,68 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B10A66B22F854C6001C435C /* PBXContainerItemProxy */ = {
+		D4547E0722F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B10A63322F853EF001C435C;
-			remoteInfo = InstabugKit;
-		};
-		3B10A66D22F854C6001C435C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 3B10A63C22F853F0001C435C;
-			remoteInfo = InstabugKitTests;
-		};
-		3B10A66F22F854CF001C435C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B10A63222F853EF001C435C;
-			remoteInfo = InstabugKit;
-		};
-		3B10A67622F854D8001C435C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			containerPortal = D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3B13D1E922F7D9D000FE6107;
 			remoteInfo = ReviewHelperKit;
 		};
-		3B10A67822F854D8001C435C /* PBXContainerItemProxy */ = {
+		D4547E0922F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			containerPortal = D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3B13D1F222F7D9D000FE6107;
 			remoteInfo = ReviewHelperKitTests;
 		};
-		3B10A67F22F854DD001C435C /* PBXContainerItemProxy */ = {
+		D4547E1022F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			containerPortal = D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3BCB8AAC22F67EA800BAA401;
 			remoteInfo = AppStoreReviewService;
 		};
-		3B10A68122F854DD001C435C /* PBXContainerItemProxy */ = {
+		D4547E1222F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			containerPortal = D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3BCB8AB522F67EA900BAA401;
 			remoteInfo = AppStoreReviewServiceTests;
 		};
-		3B10A68322F854E0001C435C /* PBXContainerItemProxy */ = {
+		D4547E1922F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+			containerPortal = D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B10A63322F853EF001C435C;
+			remoteInfo = InstabugKit;
+		};
+		D4547E1B22F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B10A63C22F853F0001C435C;
+			remoteInfo = InstabugKitTests;
+		};
+		D4547E1D22F91D6A00FA2F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3BCB8AAB22F67EA800BAA401;
 			remoteInfo = AppStoreReviewService;
 		};
-		3B10A68522F854E5001C435C /* PBXContainerItemProxy */ = {
+		D4547E1F22F91D6D00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+			containerPortal = D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 3B13D1E822F7D9D000FE6107;
 			remoteInfo = ReviewHelperKit;
+		};
+		D4547E2122F91D6F00FA2F42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B10A63222F853EF001C435C;
+			remoteInfo = InstabugKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -138,9 +138,6 @@
 /* Begin PBXFileReference section */
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
-		3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugKit.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/InstabugKit/InstabugKit.xcodeproj; sourceTree = "<group>"; };
-		3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
-		3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = ../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
 		3BAB874B22F869E100B0CABD /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 		3BAB874C22F869E200B0CABD /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cosmos.framework; sourceTree = "<group>"; };
 		3BAB874D22F869E400B0CABD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
@@ -182,6 +179,9 @@
 		82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewModel.swift; sourceTree = "<group>"; };
 		82ECBD1E21DD147800900188 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadReviewViewController.swift; sourceTree = "<group>"; };
+		D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
+		D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
+		D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugKit.xcodeproj; path = InstabugKit/InstabugKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,38 +199,11 @@
 		3B10A66522F854C0001C435C /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
-				3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */,
-				3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */,
-				3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */,
+				D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */,
+				D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */,
+				D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */,
 			);
 			name = Dependency;
-			sourceTree = "<group>";
-		};
-		3B10A66722F854C6001C435C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B10A66C22F854C6001C435C /* InstabugKit.framework */,
-				3B10A66E22F854C6001C435C /* InstabugKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3B10A67222F854D8001C435C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B10A67722F854D8001C435C /* ReviewHelperKit.framework */,
-				3B10A67922F854D8001C435C /* ReviewHelperKitTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3B10A67B22F854DD001C435C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3B10A68022F854DD001C435C /* AppStoreReviewService.framework */,
-				3B10A68222F854DD001C435C /* AppStoreReviewServiceTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		3BAB874722F869D500B0CABD /* Frameworks */ = {
@@ -379,6 +352,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D4547E0322F91D5B00FA2F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4547E0822F91D5B00FA2F42 /* ReviewHelperKit.framework */,
+				D4547E0A22F91D5B00FA2F42 /* ReviewHelperKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4547E0C22F91D5B00FA2F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4547E1122F91D5B00FA2F42 /* AppStoreReviewService.framework */,
+				D4547E1322F91D5B00FA2F42 /* AppStoreReviewServiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4547E1522F91D5B00FA2F42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4547E1A22F91D5B00FA2F42 /* InstabugKit.framework */,
+				D4547E1C22F91D5B00FA2F42 /* InstabugKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		EACA14358D398094B8EA5A21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,9 +404,9 @@
 			buildRules = (
 			);
 			dependencies = (
-				3B10A68622F854E5001C435C /* PBXTargetDependency */,
-				3B10A68422F854E0001C435C /* PBXTargetDependency */,
-				3B10A67022F854CF001C435C /* PBXTargetDependency */,
+				D4547E2222F91D6F00FA2F42 /* PBXTargetDependency */,
+				D4547E2022F91D6D00FA2F42 /* PBXTargetDependency */,
+				D4547E1E22F91D6A00FA2F42 /* PBXTargetDependency */,
 			);
 			name = Review;
 			productName = Review;
@@ -441,16 +441,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3B10A67B22F854DD001C435C /* Products */;
-					ProjectRef = 3B10A67A22F854DD001C435C /* AppStoreReviewService.xcodeproj */;
+					ProductGroup = D4547E0C22F91D5B00FA2F42 /* Products */;
+					ProjectRef = D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */;
 				},
 				{
-					ProductGroup = 3B10A66722F854C6001C435C /* Products */;
-					ProjectRef = 3B10A66622F854C6001C435C /* InstabugKit.xcodeproj */;
+					ProductGroup = D4547E1522F91D5B00FA2F42 /* Products */;
+					ProjectRef = D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */;
 				},
 				{
-					ProductGroup = 3B10A67222F854D8001C435C /* Products */;
-					ProjectRef = 3B10A67122F854D8001C435C /* ReviewHelperKit.xcodeproj */;
+					ProductGroup = D4547E0322F91D5B00FA2F42 /* Products */;
+					ProjectRef = D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -461,46 +461,46 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		3B10A66C22F854C6001C435C /* InstabugKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = InstabugKit.framework;
-			remoteRef = 3B10A66B22F854C6001C435C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B10A66E22F854C6001C435C /* InstabugKitTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = InstabugKitTests.xctest;
-			remoteRef = 3B10A66D22F854C6001C435C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3B10A67722F854D8001C435C /* ReviewHelperKit.framework */ = {
+		D4547E0822F91D5B00FA2F42 /* ReviewHelperKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = ReviewHelperKit.framework;
-			remoteRef = 3B10A67622F854D8001C435C /* PBXContainerItemProxy */;
+			remoteRef = D4547E0722F91D5B00FA2F42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3B10A67922F854D8001C435C /* ReviewHelperKitTests.xctest */ = {
+		D4547E0A22F91D5B00FA2F42 /* ReviewHelperKitTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ReviewHelperKitTests.xctest;
-			remoteRef = 3B10A67822F854D8001C435C /* PBXContainerItemProxy */;
+			remoteRef = D4547E0922F91D5B00FA2F42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3B10A68022F854DD001C435C /* AppStoreReviewService.framework */ = {
+		D4547E1122F91D5B00FA2F42 /* AppStoreReviewService.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = AppStoreReviewService.framework;
-			remoteRef = 3B10A67F22F854DD001C435C /* PBXContainerItemProxy */;
+			remoteRef = D4547E1022F91D5B00FA2F42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		3B10A68222F854DD001C435C /* AppStoreReviewServiceTests.xctest */ = {
+		D4547E1322F91D5B00FA2F42 /* AppStoreReviewServiceTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AppStoreReviewServiceTests.xctest;
-			remoteRef = 3B10A68122F854DD001C435C /* PBXContainerItemProxy */;
+			remoteRef = D4547E1222F91D5B00FA2F42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4547E1A22F91D5B00FA2F42 /* InstabugKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = InstabugKit.framework;
+			remoteRef = D4547E1922F91D5B00FA2F42 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D4547E1C22F91D5B00FA2F42 /* InstabugKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InstabugKitTests.xctest;
+			remoteRef = D4547E1B22F91D5B00FA2F42 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -592,20 +592,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B10A67022F854CF001C435C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = InstabugKit;
-			targetProxy = 3B10A66F22F854CF001C435C /* PBXContainerItemProxy */;
-		};
-		3B10A68422F854E0001C435C /* PBXTargetDependency */ = {
+		D4547E1E22F91D6A00FA2F42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppStoreReviewService;
-			targetProxy = 3B10A68322F854E0001C435C /* PBXContainerItemProxy */;
+			targetProxy = D4547E1D22F91D6A00FA2F42 /* PBXContainerItemProxy */;
 		};
-		3B10A68622F854E5001C435C /* PBXTargetDependency */ = {
+		D4547E2022F91D6D00FA2F42 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ReviewHelperKit;
-			targetProxy = 3B10A68522F854E5001C435C /* PBXContainerItemProxy */;
+			targetProxy = D4547E1F22F91D6D00FA2F42 /* PBXContainerItemProxy */;
+		};
+		D4547E2222F91D6F00FA2F42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = InstabugKit;
+			targetProxy = D4547E2122F91D6F00FA2F42 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -10,8 +10,8 @@
 		3B10A63D22F853F0001C435C /* InstabugKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B10A63322F853EF001C435C /* InstabugKit.framework */; };
 		3B10A64222F853F0001C435C /* InstabugKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10A64122F853F0001C435C /* InstabugKitTests.swift */; };
 		3B10A64422F853F0001C435C /* InstabugKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B10A63622F853EF001C435C /* InstabugKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3B10A64F22F8540E001C435C /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B10A64E22F8540E001C435C /* Instabug.framework */; };
 		3B10A65122F85436001C435C /* InstabugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B10A65022F85436001C435C /* InstabugHelper.swift */; };
+		D4547E2A22F91DAF00FA2F42 /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4547E2922F91DAF00FA2F42 /* Instabug.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +31,8 @@
 		3B10A63C22F853F0001C435C /* InstabugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstabugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B10A64122F853F0001C435C /* InstabugKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugKitTests.swift; sourceTree = "<group>"; };
 		3B10A64322F853F0001C435C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B10A64E22F8540E001C435C /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 		3B10A65022F85436001C435C /* InstabugHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstabugHelper.swift; sourceTree = "<group>"; };
+		D4547E2922F91DAF00FA2F42 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B10A64F22F8540E001C435C /* Instabug.framework in Frameworks */,
+				D4547E2A22F91DAF00FA2F42 /* Instabug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +58,7 @@
 		3B10A62922F853EF001C435C = {
 			isa = PBXGroup;
 			children = (
-				3B10A64D22F853FA001C435C /* SDK */,
+				D4547E2822F91DAF00FA2F42 /* SDK */,
 				3B10A63522F853EF001C435C /* InstabugKit */,
 				3B10A64022F853F0001C435C /* InstabugKitTests */,
 				3B10A63422F853EF001C435C /* Products */,
@@ -93,10 +93,10 @@
 			path = InstabugKitTests;
 			sourceTree = "<group>";
 		};
-		3B10A64D22F853FA001C435C /* SDK */ = {
+		D4547E2822F91DAF00FA2F42 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				3B10A64E22F8540E001C435C /* Instabug.framework */,
+				D4547E2922F91DAF00FA2F42 /* Instabug.framework */,
 			);
 			path = SDK;
 			sourceTree = "<group>";

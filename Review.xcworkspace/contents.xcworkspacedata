@@ -2,19 +2,19 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewAPILayer/AppStoreReviewAPILayer.xcodeproj">
+      location = "group:InstabugKit/InstabugKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/CacheKit/CacheKit.xcodeproj">
+      location = "group:CacheKit/CacheKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/InstabugKit/InstabugKit.xcodeproj">
+      location = "group:AppStoreReviewAPILayer/AppStoreReviewAPILayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/ReviewHelperKit/ReviewHelperKit.xcodeproj">
+      location = "group:ReviewHelperKit/ReviewHelperKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:../../../../System/Volumes/Data/Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewService/AppStoreReviewService.xcodeproj">
+      location = "group:AppStoreReviewService/AppStoreReviewService.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Review.xcodeproj">
