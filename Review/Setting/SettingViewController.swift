@@ -12,25 +12,28 @@ import RxCocoa
 
 class SettingViewController: UIViewController {
 
-    @IBOutlet weak var scrollSwitcher: UISwitch!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var versionLabel: UILabel!
+    lazy var rootView = SettingView()
     
     let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view = rootView
+        title = "Setting"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         setupUI()
         bindUI()
     }
     
     func setupUI() {
-        scrollSwitcher.isOn = ConfigurationProvidor.enableAutoScroll
-        textField.text = String(ConfigurationProvidor.autoScrollTimeInterval)
+        rootView.scrollSwitcher.isOn = ConfigurationProvidor.enableAutoScroll
+        rootView.timeIntervalTextField.text = String(ConfigurationProvidor.autoScrollTimeInterval)
         
         guard let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
         
-        versionLabel.text = "Version: " + versionNumber
+        rootView.versionLabel.text = "Version: " + versionNumber
     }
     
     func bindUI() {
@@ -38,27 +41,27 @@ class SettingViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         tapGesture.rx.event.bind(onNext: { [unowned self] _ in
-            self.textField.resignFirstResponder()
+            self.rootView.timeIntervalTextField.resignFirstResponder()
         }).disposed(by: disposeBag)
         
-        scrollSwitcher.rx.isOn.asObservable()
+        rootView.scrollSwitcher.rx.isOn.asObservable()
             .asDriver(onErrorJustReturn: false)
             .drive(onNext: { (value) in
                 ConfigurationProvidor.enableAutoScroll = value
             }).disposed(by: disposeBag)
         
-        textField.rx.controlEvent([.editingDidEnd])
+        rootView.timeIntervalTextField.rx.controlEvent([.editingDidEnd])
             .asObservable()
             .subscribe(onNext: { [unowned self] _ in
                 let newTimeInterval: TimeInterval
                 
-                if let value = self.textField.text,
+                if let value = self.rootView.timeIntervalTextField.text,
                     let timeInterval = Double(value),
                     timeInterval >= 1 && timeInterval <= 20 {
                     newTimeInterval = timeInterval
                 } else {
                     newTimeInterval = 5
-                    self.textField.text = "5"
+                    self.rootView.timeIntervalTextField.text = "5"
                 }
                 ConfigurationProvidor.autoScrollTimeInterval = newTimeInterval
             })

@@ -45,6 +45,13 @@
 		D4547E3A22F9219B00FA2F42 /* SnapKit.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3022F9217200FA2F42 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4547E3B22F9219B00FA2F42 /* CoreStore.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2C22F9215F00FA2F42 /* CoreStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4547E3C22F9219B00FA2F42 /* Alamofire.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2B22F9215700FA2F42 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8D822F97240003E5AB8 /* PhoneTabBarController.swift */; };
+		D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8DA22F97345003E5AB8 /* SettingView.swift */; };
+		D46AC8DE22F98295003E5AB8 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8DD22F98295003E5AB8 /* Color.swift */; };
+		D46AC8E022F983F8003E5AB8 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8DF22F983F8003E5AB8 /* Font.swift */; };
+		D46AC8E222F98497003E5AB8 /* ImageKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E122F98496003E5AB8 /* ImageKit.swift */; };
+		D46AC8E522F98549003E5AB8 /* PhoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */; };
+		D46AC8E722F9865D003E5AB8 /* PhoneReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +189,13 @@
 		D4547E3122F9217200FA2F42 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		D4547E3222F9218400FA2F42 /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cosmos.framework; path = Carthage/Build/iOS/Cosmos.framework; sourceTree = "<group>"; };
 		D4547E3322F9219000FA2F42 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instabug.framework; path = InstabugKit/SDK/Instabug.framework; sourceTree = "<group>"; };
+		D46AC8D822F97240003E5AB8 /* PhoneTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTabBarController.swift; sourceTree = "<group>"; };
+		D46AC8DA22F97345003E5AB8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		D46AC8DD22F98295003E5AB8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		D46AC8DF22F983F8003E5AB8 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		D46AC8E122F98496003E5AB8 /* ImageKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageKit.swift; sourceTree = "<group>"; };
+		D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewController.swift; sourceTree = "<group>"; };
+		D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				82766C5A21E046F10048EFB9 /* SettingViewController.swift */,
+				D46AC8DA22F97345003E5AB8 /* SettingView.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -311,6 +326,9 @@
 		82ECBD0121DD077800900188 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				D46AC8E322F9852C003E5AB8 /* PhoneReviewView */,
+				D46AC8DC22F98280003E5AB8 /* UITools */,
+				D46AC8D422F97215003E5AB8 /* Tabbar */,
 				3BCB8A8522F67C7000BAA401 /* Review.entitlements */,
 				827BE3F021E8D3E0009E0517 /* ManageAppView */,
 				829965EF21E4F6AC004F2A14 /* Helper */,
@@ -377,6 +395,33 @@
 				D4547E1C22F91D5B00FA2F42 /* InstabugKitTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D46AC8D422F97215003E5AB8 /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				D46AC8D822F97240003E5AB8 /* PhoneTabBarController.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		D46AC8DC22F98280003E5AB8 /* UITools */ = {
+			isa = PBXGroup;
+			children = (
+				D46AC8DD22F98295003E5AB8 /* Color.swift */,
+				D46AC8DF22F983F8003E5AB8 /* Font.swift */,
+				D46AC8E122F98496003E5AB8 /* ImageKit.swift */,
+			);
+			path = UITools;
+			sourceTree = "<group>";
+		};
+		D46AC8E322F9852C003E5AB8 /* PhoneReviewView */ = {
+			isa = PBXGroup;
+			children = (
+				D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */,
+				D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */,
+			);
+			path = PhoneReviewView;
 			sourceTree = "<group>";
 		};
 		EACA14358D398094B8EA5A21 /* Frameworks */ = {
@@ -563,6 +608,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82ECBD0B21DD077800900188 /* Review.xcdatamodeld in Sources */,
+				D46AC8E222F98497003E5AB8 /* ImageKit.swift in Sources */,
 				82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */,
 				82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */,
 				82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */,
@@ -572,20 +618,26 @@
 				829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */,
 				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */,
+				D46AC8E722F9865D003E5AB8 /* PhoneReviewView.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
 				82BA6C1A21E98BCA007AC9FB /* AppListViewModel.swift in Sources */,
 				827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */,
 				82766C5D21E047140048EFB9 /* ConfigurationProvidor.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
 				827BE3ED21E8C424009E0517 /* AppModel.swift in Sources */,
+				D46AC8E022F983F8003E5AB8 /* Font.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
+				D46AC8DE22F98295003E5AB8 /* Color.swift in Sources */,
 				829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */,
 				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
+				D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */,
 				827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */,
+				D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */,
 				827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */,
 				82BA6C1C21E99C52007AC9FB /* PhoneViewModel.swift in Sources */,
 				829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */,
 				827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */,
+				D46AC8E522F98549003E5AB8 /* PhoneReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

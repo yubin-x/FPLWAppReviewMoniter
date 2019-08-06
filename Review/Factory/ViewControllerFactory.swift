@@ -9,6 +9,19 @@
 import UIKit
 
 struct ViewControllerFactory {
+    
+    static func makePhoneTabBarController() -> UITabBarController {
+        return PhoneTabBarController()
+    }
+    
+    static func makePhoneReviewViewController() -> UIViewController {
+        return PhoneReviewViewController()
+    }
+    
+    static func makeSettingViewController() -> UIViewController {
+        return SettingViewController()
+    }
+    
     static let storyBoard = UIStoryboard(name: "Main", bundle: nil)
     
     static func makeIPadTabberVC() -> UIViewController {

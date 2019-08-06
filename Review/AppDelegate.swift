@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        InstabugHelper.beginInstabugWith()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
+            InstabugHelper.beginInstabugWith()
+        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -27,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if UIDevice.current.userInterfaceIdiom == .pad {
             window?.rootViewController = ViewControllerFactory.makeIPadTabberVC()
         } else {
-            window?.rootViewController = ViewControllerFactory.makeIPhoneTabberVC()
+            window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
         }
         
         window?.makeKeyAndVisible()
