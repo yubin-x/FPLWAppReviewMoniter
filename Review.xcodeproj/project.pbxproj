@@ -7,15 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3BAB875422F86A0300B0CABD /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB874B22F869E100B0CABD /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875522F86A0300B0CABD /* SnapKit.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB874E22F869E600B0CABD /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875622F86A0300B0CABD /* RxRelay.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB875122F869EA00B0CABD /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875722F86A0300B0CABD /* RxSwift.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB874D22F869E400B0CABD /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875822F86A0300B0CABD /* RxCocoa.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB875322F869EE00B0CABD /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875922F86A0300B0CABD /* Kingfisher.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB875022F869E900B0CABD /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875A22F86A0300B0CABD /* Cosmos.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB874C22F869E200B0CABD /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875B22F86A0300B0CABD /* CoreStore.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB875222F869EC00B0CABD /* CoreStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3BAB875C22F86A0300B0CABD /* Alamofire.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3BAB874F22F869E700B0CABD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
@@ -45,6 +36,15 @@
 		82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1E21DD147800900188 /* ReviewModel.swift */; };
 		82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
+		D4547E3422F9219B00FA2F42 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3322F9219000FA2F42 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3522F9219B00FA2F42 /* Cosmos.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3222F9218400FA2F42 /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3622F9219B00FA2F42 /* Kingfisher.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2D22F9217200FA2F42 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3722F9219B00FA2F42 /* RxCocoa.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2F22F9217200FA2F42 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3822F9219B00FA2F42 /* RxRelay.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2E22F9217200FA2F42 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3922F9219B00FA2F42 /* RxSwift.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3122F9217200FA2F42 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3A22F9219B00FA2F42 /* SnapKit.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3022F9217200FA2F42 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3B22F9219B00FA2F42 /* CoreStore.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2C22F9215F00FA2F42 /* CoreStore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4547E3C22F9219B00FA2F42 /* Alamofire.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2B22F9215700FA2F42 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,15 +120,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3BAB875422F86A0300B0CABD /* Instabug.framework in Embeded Framework */,
-				3BAB875522F86A0300B0CABD /* SnapKit.framework in Embeded Framework */,
-				3BAB875622F86A0300B0CABD /* RxRelay.framework in Embeded Framework */,
-				3BAB875722F86A0300B0CABD /* RxSwift.framework in Embeded Framework */,
-				3BAB875822F86A0300B0CABD /* RxCocoa.framework in Embeded Framework */,
-				3BAB875922F86A0300B0CABD /* Kingfisher.framework in Embeded Framework */,
-				3BAB875A22F86A0300B0CABD /* Cosmos.framework in Embeded Framework */,
-				3BAB875B22F86A0300B0CABD /* CoreStore.framework in Embeded Framework */,
-				3BAB875C22F86A0300B0CABD /* Alamofire.framework in Embeded Framework */,
+				D4547E3422F9219B00FA2F42 /* Instabug.framework in Embeded Framework */,
+				D4547E3522F9219B00FA2F42 /* Cosmos.framework in Embeded Framework */,
+				D4547E3622F9219B00FA2F42 /* Kingfisher.framework in Embeded Framework */,
+				D4547E3722F9219B00FA2F42 /* RxCocoa.framework in Embeded Framework */,
+				D4547E3822F9219B00FA2F42 /* RxRelay.framework in Embeded Framework */,
+				D4547E3922F9219B00FA2F42 /* RxSwift.framework in Embeded Framework */,
+				D4547E3A22F9219B00FA2F42 /* SnapKit.framework in Embeded Framework */,
+				D4547E3B22F9219B00FA2F42 /* CoreStore.framework in Embeded Framework */,
+				D4547E3C22F9219B00FA2F42 /* Alamofire.framework in Embeded Framework */,
 			);
 			name = "Embeded Framework";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,15 +138,6 @@
 /* Begin PBXFileReference section */
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
-		3BAB874B22F869E100B0CABD /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
-		3BAB874C22F869E200B0CABD /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Cosmos.framework; sourceTree = "<group>"; };
-		3BAB874D22F869E400B0CABD /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
-		3BAB874E22F869E600B0CABD /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SnapKit.framework; sourceTree = "<group>"; };
-		3BAB874F22F869E700B0CABD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		3BAB875022F869E900B0CABD /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
-		3BAB875122F869EA00B0CABD /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
-		3BAB875222F869EC00B0CABD /* CoreStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreStore.framework; sourceTree = "<group>"; };
-		3BAB875322F869EE00B0CABD /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
 		3BCB8A8522F67C7000BAA401 /* Review.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Review.entitlements; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
@@ -182,6 +173,15 @@
 		D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
 		D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
 		D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugKit.xcodeproj; path = InstabugKit/InstabugKit.xcodeproj; sourceTree = "<group>"; };
+		D4547E2B22F9215700FA2F42 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		D4547E2C22F9215F00FA2F42 /* CoreStore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreStore.framework; path = Carthage/Build/iOS/CoreStore.framework; sourceTree = "<group>"; };
+		D4547E2D22F9217200FA2F42 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		D4547E2E22F9217200FA2F42 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
+		D4547E2F22F9217200FA2F42 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		D4547E3022F9217200FA2F42 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		D4547E3122F9217200FA2F42 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		D4547E3222F9218400FA2F42 /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cosmos.framework; path = Carthage/Build/iOS/Cosmos.framework; sourceTree = "<group>"; };
+		D4547E3322F9219000FA2F42 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Instabug.framework; path = InstabugKit/SDK/Instabug.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,15 +209,15 @@
 		3BAB874722F869D500B0CABD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3BAB874B22F869E100B0CABD /* Instabug.framework */,
-				3BAB874E22F869E600B0CABD /* SnapKit.framework */,
-				3BAB875122F869EA00B0CABD /* RxRelay.framework */,
-				3BAB874D22F869E400B0CABD /* RxSwift.framework */,
-				3BAB875322F869EE00B0CABD /* RxCocoa.framework */,
-				3BAB875022F869E900B0CABD /* Kingfisher.framework */,
-				3BAB874C22F869E200B0CABD /* Cosmos.framework */,
-				3BAB875222F869EC00B0CABD /* CoreStore.framework */,
-				3BAB874F22F869E700B0CABD /* Alamofire.framework */,
+				D4547E3322F9219000FA2F42 /* Instabug.framework */,
+				D4547E3222F9218400FA2F42 /* Cosmos.framework */,
+				D4547E2D22F9217200FA2F42 /* Kingfisher.framework */,
+				D4547E2F22F9217200FA2F42 /* RxCocoa.framework */,
+				D4547E2E22F9217200FA2F42 /* RxRelay.framework */,
+				D4547E3122F9217200FA2F42 /* RxSwift.framework */,
+				D4547E3022F9217200FA2F42 /* SnapKit.framework */,
+				D4547E2C22F9215F00FA2F42 /* CoreStore.framework */,
+				D4547E2B22F9215700FA2F42 /* Alamofire.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

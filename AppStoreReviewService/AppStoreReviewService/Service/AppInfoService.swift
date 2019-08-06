@@ -28,7 +28,7 @@ public enum AppInfoServiceError: Error {
 public protocol AppInfoServiceProtocol {
     func searchApp(term: String, country: Country) -> Observable<Result<[AppInfoModel], Error>>
     func fetchApp(appID: Int64) -> Observable<Result<AppInfoModel?, AppInfoServiceError>>
-    func fetchApps() -> Observable<Result<[AppInfoModel]?, AppInfoServiceError>>
+    func fetchApps() -> Observable<Result<[AppInfoModel], AppInfoServiceError>>
     func saveApp(data: AppInfoModel) -> Observable<Result<Bool, AppInfoServiceError>>
     func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppInfoServiceError>>
 }
@@ -67,15 +67,43 @@ class AppInfoService: AppInfoServiceProtocol {
         }
     }
     
-    func fetchApps() -> Observable<Result<[AppInfoModel]?, AppInfoServiceError>> {
-        <#code#>
+    func fetchApps() -> Observable<Result<[AppInfoModel], AppInfoServiceError>> {
+        return appInfoCacheManager.fetchApps().map {
+            let newResult = $0
+                .map { appDataEntrys -> [AppInfoModel] in
+                    guard let app = appDataEntrys else { return [] }
+                    return app.map { (appDataEntry) -> AppInfoModel in
+                        return AppInfoModel(from: appDataEntry)
+                    }
+                }
+                .mapError({ (error) -> AppInfoServiceError in
+                    return AppInfoServiceError.generateFrom(appDataEntryError: error)
+                })
+            return newResult
+        }
     }
     
     func saveApp(data: AppInfoModel) -> Observable<Result<Bool, AppInfoServiceError>> {
-        <#code#>
+        return appInfoCacheManager.saveApp(appId: Int64(data.appId),
+                                           appName: data.appName,
+                                           iconURLString: data.iconURLString,
+                                           averageUserRating: data.averageUserRating ?? 0)
+            .map {
+                let newResult = $0
+                    .mapError({ (error) -> AppInfoServiceError in
+                        return AppInfoServiceError.generateFrom(appDataEntryError: error)
+                    })
+                return newResult
+        }
     }
     
     func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppInfoServiceError>> {
-        <#code#>
+        return appInfoCacheManager.deleteApp(indexPath: indexPath).map {
+            let newResult = $0
+                .mapError({ (error) -> AppInfoServiceError in
+                    return AppInfoServiceError.generateFrom(appDataEntryError: error)
+                })
+            return newResult
+        }
     }
 }

@@ -18,7 +18,7 @@ public enum AppDataEntryError: Error {
 public protocol AppInfoCacheProtocol {
     func fetchApp(appID: Int64) -> Observable<Result<AppDataEntry?, AppDataEntryError>>
     func fetchApps() -> Observable<Result<[AppDataEntry]?, AppDataEntryError>>
-    func saveApp(data: AppDataEntry) -> Observable<Result<Bool, AppDataEntryError>>
+    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double) -> Observable<Result<Bool, AppDataEntryError>>
     func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppDataEntryError>>
 }
 
@@ -58,14 +58,14 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
         })
     }
     
-    func saveApp(data: AppDataEntry) -> Observable<Result<Bool, AppDataEntryError>> {
+    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double) -> Observable<Result<Bool, AppDataEntryError>> {
         return Observable<Result<Bool, AppDataEntryError>>.create({ [weak self] (observer) -> Disposable in
             self?.dataStack.perform(asynchronous: { (transaction) -> Void in
                 let app = transaction.create(Into<AppDataEntry>())
-                app.appId = data.appId
-                app.appName = data.appName
-                app.iconURLString = data.iconURLString
-                app.averageUserRating = data.averageUserRating
+                app.appId = appId
+                app.appName = appName
+                app.iconURLString = iconURLString
+                app.averageUserRating = averageUserRating
             }, completion: { (result) -> Void in
                 switch result {
                 case .success:
