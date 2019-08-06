@@ -12,13 +12,13 @@ import RxCocoa
 import SnapKit
 
 protocol ReviewViewControllerProtocol {
-    func setNewApp(appID: Int64)
+    func setNewApp(appID: Int)
     func refreshData()
 }
 
 class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
 
-    @IBOutlet weak var tableView: BaseReviewTableView!
+    lazy var tableView = BaseReviewTableView()
     
     var timer: Timer!
     var shouldScrollToTop = false
@@ -40,6 +40,14 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
+            make.bottomMargin.equalTo(view.safeAreaLayoutGuide.snp.bottomMargin)
+            make.left.right.equalToSuperview()
+        }
+        
         fetchReviewData()
     }
     
@@ -62,7 +70,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         
         observer
             .bind(to: tableView.rx.items(cellIdentifier: "BaseReviewTableViewCell", cellType: BaseReviewTableViewCell.self)) { (_, model, cell) in
-                    cell.bindData(entryModel: model)
+                    cell.bindData(reviewModel: model)
                 }.disposed(by: disposeBag)
             
         observer
@@ -82,7 +90,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         }
     }
     
-    func setNewApp(appID: Int64) {
+    func setNewApp(appID: Int) {
         viewModel.appID = appID
         refreshData()
     }
@@ -94,7 +102,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
                       repeats: true) { [unowned self] (_) in
             guard let firstIndexPath = self.tableView.indexPathsForVisibleRows?.first,
                 let lastIndexPath = self.tableView.indexPathsForVisibleRows?.last else { return }
-            
+
             if self.lastIndexPath == lastIndexPath {
                 self.lastIndexPathEqualCount += 1
             } else {
@@ -119,7 +127,6 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
             } else {
                 targetIndexPath = IndexPath(row: firstIndexPath.row + 1, section: 0)
             }
-            
                         self.tableView.scrollToRow(at: targetIndexPath, at: .top, animated: true)
         }
         

@@ -12,6 +12,8 @@ enum ColorKit {
     case labelTextColor
     case subLabelTextColor
     case backgroundColor
+    case nameLabelColor
+    case reviewCardBackgroundColor
     
     var value: UIColor? {
         switch self {
@@ -21,6 +23,10 @@ enum ColorKit {
             return UIColor.lightGray
         case .backgroundColor:
             return UIColor.white
+        case .nameLabelColor:
+            return UIColor(named: "color/nameLabelColor")
+        case .reviewCardBackgroundColor:
+            return UIColor(named: "color/reviewCardBackgroundColor")
         }
     }
 }

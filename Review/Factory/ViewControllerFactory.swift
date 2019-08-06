@@ -48,8 +48,8 @@ struct ViewControllerFactory {
 //        return makeBaseReviewViewController(appName: .mercedesMe)
 //    }
     
-    static func makeBaseReviewViewController(appID: Int64) -> UIViewController & ReviewViewControllerProtocol {
-        let vc = storyBoard.instantiateViewController(withIdentifier: "BaseReviewViewController") as! BaseReviewViewController
+    static func makeBaseReviewViewController(appID: Int) -> UIViewController & ReviewViewControllerProtocol {
+        let vc = BaseReviewViewController()
         let viewModel = BaseReviewViewModel(appID: appID)
         vc.viewModel = viewModel
         return vc

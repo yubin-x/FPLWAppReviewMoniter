@@ -46,13 +46,13 @@ class PhoneViewController: UIViewController {
             }
         }
         
-        guard let id = appID,
-            currentAppID != id else { return }
-        currentAppID = id
-        viewModel.fetchApp(appID: id)
+//        guard let id = appID,
+//            currentAppID != id else { return }
+//        currentAppID = id
+//        viewModel.fetchApp(appID: id)
     }
     
-    func setCurrentVC(appID: Int64) {
+    func setCurrentVC(appID: Int) {
         reviewVC = ViewControllerFactory.makeBaseReviewViewController(appID: appID)
         stackView.addArrangedSubview(reviewVC.view)
         addChild(reviewVC)
@@ -65,9 +65,9 @@ class PhoneViewController: UIViewController {
                 guard let app = $0 else { return }
                 self.title = app.appName
                 if self.reviewVC == nil {
-                    self.setCurrentVC(appID: app.appId)
+//                    self.setCurrentVC(appID: app.appId)
                 } else {
-                    self.reviewVC.setNewApp(appID: app.appId)
+//                    self.reviewVC.setNewApp(appID: app.appId)
                 }
             }).disposed(by: disposeBag)
     }

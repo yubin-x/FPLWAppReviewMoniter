@@ -25,7 +25,7 @@ class PhoneTabBarController: UITabBarController {
                                              image: ImageKit.settingTabBarImage.value,
                                              selectedImage: ImageKit.settingTabBarSelectedImage.value)
         
-        viewControllers = [settingNav]
+        viewControllers = [phoneReviewNav, settingNav]
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .normal)
     }

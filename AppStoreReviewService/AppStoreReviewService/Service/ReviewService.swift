@@ -10,7 +10,7 @@ import RxSwift
 import AppStoreReviewAPILayer
 
 public protocol ReviewServiceProtocol {
-    func fetchReviewData(appID: String, page: Int) -> Observable<Result<[ReviewModel],Error>>
+    func fetchReviewData(appID: Int, page: Int) -> Observable<Result<[ReviewModel],Error>>
 }
 
 class ReviewService: ReviewServiceProtocol {
@@ -21,8 +21,8 @@ class ReviewService: ReviewServiceProtocol {
         self.reviewAPILayer = reviewAPILayer
     }
     
-    func fetchReviewData(appID: String, page: Int) -> Observable<Result<[ReviewModel],Error>> {
-        return reviewAPILayer.fetchReviewData(appID: appID, page: page).map {
+    func fetchReviewData(appID: Int, page: Int) -> Observable<Result<[ReviewModel],Error>> {
+        return reviewAPILayer.fetchReviewData(appID: String(appID), page: page).map {
             let reviewModels = $0.map {
                 return ReviewModel(from: $0)
             }

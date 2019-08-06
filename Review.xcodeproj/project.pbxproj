@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C4C21DF83F00048EFB9 /* ReviewService.swift */; };
+		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
 		82766C5B21E046F10048EFB9 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5A21E046F10048EFB9 /* SettingViewController.swift */; };
@@ -19,8 +19,6 @@
 		827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F521E8D874009E0517 /* AppSearchViewController.swift */; };
 		827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */; };
 		827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BE3F921E8F04E009E0517 /* AppListTableView.swift */; };
-		829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965E621E4E7BD004F2A14 /* BaseReviewView.swift */; };
-		829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 829965E821E4E97C004F2A14 /* BaseReviewView.xib */; };
 		829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */; };
 		829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965ED21E4F074004F2A14 /* PhoneViewController.swift */; };
 		829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829965F021E4F6CD004F2A14 /* AlertHelper.swift */; };
@@ -33,7 +31,6 @@
 		82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82ECBD0E21DD077900900188 /* LaunchScreen.storyboard */; };
 		82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */; };
 		82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */; };
-		82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1E21DD147800900188 /* ReviewModel.swift */; };
 		82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
 		D4547E3422F9219B00FA2F42 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3322F9219000FA2F42 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -146,8 +143,8 @@
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
 		3BCB8A8522F67C7000BAA401 /* Review.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Review.entitlements; sourceTree = "<group>"; };
+		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82766C4C21DF83F00048EFB9 /* ReviewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewService.swift; sourceTree = "<group>"; };
 		82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableView.swift; sourceTree = "<group>"; };
 		82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewTableViewCell.swift; sourceTree = "<group>"; };
 		82766C5A21E046F10048EFB9 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
@@ -159,8 +156,6 @@
 		827BE3F521E8D874009E0517 /* AppSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchViewController.swift; sourceTree = "<group>"; };
 		827BE3F721E8DFFB009E0517 /* AppSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSearchViewModel.swift; sourceTree = "<group>"; };
 		827BE3F921E8F04E009E0517 /* AppListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListTableView.swift; sourceTree = "<group>"; };
-		829965E621E4E7BD004F2A14 /* BaseReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewView.swift; sourceTree = "<group>"; };
-		829965E821E4E97C004F2A14 /* BaseReviewView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseReviewView.xib; sourceTree = "<group>"; };
 		829965EA21E4EAB4004F2A14 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		829965ED21E4F074004F2A14 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		829965F021E4F6CD004F2A14 /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
@@ -175,7 +170,6 @@
 		82ECBD1121DD077900900188 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewController.swift; sourceTree = "<group>"; };
 		82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewModel.swift; sourceTree = "<group>"; };
-		82ECBD1E21DD147800900188 /* ReviewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewModel.swift; sourceTree = "<group>"; };
 		82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadReviewViewController.swift; sourceTree = "<group>"; };
 		D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
 		D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
@@ -248,7 +242,6 @@
 		82766C4B21DF7E490048EFB9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				82766C4C21DF83F00048EFB9 /* ReviewService.swift */,
 				827BE3EE21E8C8CE009E0517 /* AppSearchService.swift */,
 			);
 			path = Service;
@@ -355,8 +348,6 @@
 				82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */,
 				82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */,
 				82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */,
-				829965E621E4E7BD004F2A14 /* BaseReviewView.swift */,
-				829965E821E4E97C004F2A14 /* BaseReviewView.xib */,
 			);
 			path = BaseReviewView;
 			sourceTree = "<group>";
@@ -364,7 +355,6 @@
 		82ECBD1D21DD145B00900188 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				82ECBD1E21DD147800900188 /* ReviewModel.swift */,
 				827BE3EC21E8C424009E0517 /* AppModel.swift */,
 			);
 			path = Models;
@@ -420,6 +410,7 @@
 			children = (
 				D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */,
 				D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */,
+				3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */,
 			);
 			path = PhoneReviewView;
 			sourceTree = "<group>";
@@ -558,7 +549,6 @@
 				82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */,
 				82ECBD0D21DD077900900188 /* Assets.xcassets in Resources */,
 				82ECBD0821DD077800900188 /* Main.storyboard in Resources */,
-				829965E921E4E97C004F2A14 /* BaseReviewView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,10 +605,9 @@
 				82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */,
 				827BE3F421E8D538009E0517 /* AppListTableViewCell.swift in Sources */,
 				829965EB21E4EAB4004F2A14 /* ViewControllerFactory.swift in Sources */,
-				829965E721E4E7BD004F2A14 /* BaseReviewView.swift in Sources */,
-				82766C4D21DF83F00048EFB9 /* ReviewService.swift in Sources */,
 				827BE3F221E8D3F8009E0517 /* AppListViewController.swift in Sources */,
 				D46AC8E722F9865D003E5AB8 /* PhoneReviewView.swift in Sources */,
+				3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */,
 				82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */,
 				82BA6C1A21E98BCA007AC9FB /* AppListViewModel.swift in Sources */,
 				827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */,
@@ -629,7 +618,6 @@
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
 				D46AC8DE22F98295003E5AB8 /* Color.swift in Sources */,
 				829965F121E4F6CD004F2A14 /* AlertHelper.swift in Sources */,
-				82ECBD1F21DD147800900188 /* ReviewModel.swift in Sources */,
 				D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */,
 				827BE3EF21E8C8CE009E0517 /* AppSearchService.swift in Sources */,
 				D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */,

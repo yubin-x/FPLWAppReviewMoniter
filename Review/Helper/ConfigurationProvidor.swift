@@ -45,9 +45,9 @@ struct ConfigurationProvidor {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
     }
     
-    static var savedAppIDs: [Int64] {
+    static var savedAppIDs: [Int] {
         get {
-            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKeys) as? [Int64] else { return [] }
+            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKeys) as? [Int] else { return [] }
             return rawValue
         }
         set {

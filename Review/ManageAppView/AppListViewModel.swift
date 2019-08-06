@@ -41,7 +41,7 @@ class AppListViewModel: AppListViewable {
         appDataEntry.accept(apps)
         var appIDs = [Int64]()
         apps.forEach { appIDs.append($0.appId) }
-        ConfigurationProvidor.savedAppIDs = appIDs
+//        ConfigurationProvidor.savedAppIDs = appIDs
     }
     
     func deleteApp(indexPath: IndexPath) {
@@ -52,11 +52,11 @@ class AppListViewModel: AppListViewable {
         }, completion: { [unowned self] (result) -> Void in
             switch result {
             case .success:
-                if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
-                    var appIDs = ConfigurationProvidor.savedAppIDs
-                    appIDs.remove(at: index)
-                    ConfigurationProvidor.savedAppIDs = appIDs
-                }
+//                if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
+//                    var appIDs = ConfigurationProvidor.savedAppIDs
+//                    appIDs.remove(at: index)
+//                    ConfigurationProvidor.savedAppIDs = appIDs
+//                }
                 var apps = self.appDataEntry.value
                 apps.remove(at: indexPath.row)
                 self.appDataEntry.accept(apps)
@@ -68,6 +68,6 @@ class AppListViewModel: AppListViewable {
     func selectApp(indexPath: IndexPath) {
         guard appDataEntry.value.count >= indexPath.row else { return }
         let appId = appDataEntry.value[indexPath.row].appId
-        ConfigurationProvidor.savedAppIDs = [appId]
+//        ConfigurationProvidor.savedAppIDs = [appId]
     }
 }

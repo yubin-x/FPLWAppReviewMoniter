@@ -13,17 +13,30 @@ enum ImageKit {
     case reviewTabBarSelectedImage
     case settingTabBarImage
     case settingTabBarSelectedImage
+    case menuICONImage
+    case addAppICONImage
+    case refreshICONImage
     
     var value: UIImage? {
+        return UIImage(named: imageName)
+    }
+    
+    private var imageName: String {
         switch self {
         case .reviewTabBarImage:
-            return UIImage(named: "reivew-item")
+            return "review-unselected-item"
         case .reviewTabBarSelectedImage:
-            return UIImage(named: "review-unselected-item")
+            return "reivew-item"
         case .settingTabBarImage:
-            return UIImage(named: "settings-unselected-item")
+            return "settings-unselected-item"
         case .settingTabBarSelectedImage:
-            return UIImage(named: "settings-item")
+            return "settings-item"
+        case .menuICONImage:
+            return "menu"
+        case .addAppICONImage:
+            return "plus"
+        case .refreshICONImage:
+            return "refresh"
         }
     }
 }
