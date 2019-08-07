@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ImageKit {
+public enum ImageKit {
     case reviewTabBarImage
     case reviewTabBarSelectedImage
     case settingTabBarImage
@@ -17,7 +17,7 @@ enum ImageKit {
     case addAppICONImage
     case refreshICONImage
     
-    var value: UIImage? {
+    public var value: UIImage? {
         return UIImage(named: imageName)
     }
     

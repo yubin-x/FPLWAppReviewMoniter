@@ -8,12 +8,12 @@
 
 import RxCocoa
 import RxSwift
-import CoreStore
+import AppStoreReviewService
 import ReviewHelperKit
 
 protocol AppListViewable {
     var title: String { get }
-    var appDataEntry: BehaviorRelay<[AppDataEntry]> { get }
+    var fetchAppResult: Observable<[AppInfoModel]> { get }
     func fetchSavedApps()
     func deleteApp(indexPath: IndexPath)
     func selectApp(indexPath: IndexPath)
@@ -21,54 +21,66 @@ protocol AppListViewable {
 
 class AppListViewModel: AppListViewable {
     
-    let appDataEntry = BehaviorRelay<[AppDataEntry]>(value: [])
+    let fetchAppReplay = BehaviorRelay<[AppInfoModel]>(value: [])
+    let disposeBag = DisposeBag()
     
-    let dataStack: DataStack
+    let appInfoProtocol: AppInfoServiceProtocol
+    
+    var fetchAppResult: Observable<[AppInfoModel]> {
+        return fetchAppReplay.asObservable()
+    }
     
     var title: String {
         return "App List"
     }
     
-    init(dataStack: DataStack = DataStack(xcodeModelName: ConfigurationProvidor.ReviewCoreDataEntryKey)) {
-        self.dataStack = dataStack
-        
-        do {
-            try self.dataStack.addStorageAndWait()
-        }catch{}
+    init(appInfoProtocol: AppInfoServiceProtocol = AppStoreReviewServiceFactory.makeAppSearchService()) {
+        self.appInfoProtocol = appInfoProtocol
     }
     
     func fetchSavedApps() {
-        guard let apps = try? self.dataStack.fetchAll(From<AppDataEntry>()) else { return }
-        appDataEntry.accept(apps)
-        var appIDs = [Int64]()
-        apps.forEach { appIDs.append($0.appId) }
-//        ConfigurationProvidor.savedAppIDs = appIDs
+        appInfoProtocol.fetchApps()
+            .subscribe(onNext: { [weak self] (result) in
+                switch result {
+                case .success(let value):
+                    self?.fetchAppReplay.accept(value)
+                    var appIDs = [Int]()
+                    value.forEach { appIDs.append($0.appId) }
+                    ConfigurationProvidor.savedAppIDs = appIDs
+                case .failure(_):
+                    self?.fetchAppReplay.accept([])
+                }
+        }).disposed(by: disposeBag)
     }
     
     func deleteApp(indexPath: IndexPath) {
-        guard appDataEntry.value.count >= indexPath.row else { return }
-        let app = appDataEntry.value[indexPath.row]
-        dataStack.perform(asynchronous: { (transaction) -> Void in
-            transaction.delete(app)
-        }, completion: { [unowned self] (result) -> Void in
-            switch result {
-            case .success:
-//                if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
-//                    var appIDs = ConfigurationProvidor.savedAppIDs
-//                    appIDs.remove(at: index)
-//                    ConfigurationProvidor.savedAppIDs = appIDs
-//                }
-                var apps = self.appDataEntry.value
-                apps.remove(at: indexPath.row)
-                self.appDataEntry.accept(apps)
-            case .failure(let error): print(error)
-            }
-        })
+        guard fetchAppReplay.value.count >= indexPath.row else { return }
+        let app = fetchAppReplay.value[indexPath.row]
+        appInfoProtocol.deleteApp(indexPath: indexPath)
+            .subscribe(onNext: { (result) in
+                switch result {
+                case .success(let value):
+                    guard value else { return }
+                    if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
+                        var appIDs = ConfigurationProvidor.savedAppIDs
+                        appIDs.remove(at: index)
+                        ConfigurationProvidor.savedAppIDs = appIDs
+                    }
+                    var apps = self.fetchAppReplay.value
+                    apps.remove(at: indexPath.row)
+                    self.fetchAppReplay.accept(apps)
+                case .failure(_):
+                    break
+                }
+        }).disposed(by: disposeBag)
     }
     
     func selectApp(indexPath: IndexPath) {
-        guard appDataEntry.value.count >= indexPath.row else { return }
-        let appId = appDataEntry.value[indexPath.row].appId
-//        ConfigurationProvidor.savedAppIDs = [appId]
+        guard fetchAppReplay.value.count >= indexPath.row else { return }
+        let selectedAppId = fetchAppReplay.value[indexPath.row].appId
+        var appIDs = ConfigurationProvidor.savedAppIDs
+        appIDs.remove(at: indexPath.row)
+        appIDs.insert(selectedAppId, at: 0)
+        ConfigurationProvidor.savedAppIDs = appIDs
     }
 }

@@ -9,32 +9,44 @@
 import UIKit
 import SnapKit
 import RxSwift
+import AppStoreReviewService
+import ReviewUIKit
 
 class AppSearchViewController: UIViewController {
 
     let disposeBag = DisposeBag()
     
-    lazy var viewMode: AppSearchViewable = {
-        return AppSearchViewModel()
-    }()
+    let viewMode: AppSearchViewable
     
     lazy var searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
         search.dimsBackgroundDuringPresentation = false
-        search.searchBar.tintColor = .black
+        search.searchBar.tintColor = ColorKit.cloudColor.value
+        search.searchBar.barTintColor = ColorKit.searchBarColor.value
         tableView.tableHeaderView = search.searchBar
         return search
     }()
     
-    @IBOutlet weak var tableView: UITableView!
+    lazy var tableView = AppListTableView()
+    
+    init(viewMode: AppSearchViewable = AppSearchViewModel()) {
+        self.viewMode = viewMode
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view = tableView
+        
         bindUI()
         bindViewModel()
         searchController.searchBar.placeholder = "App Name"
-        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.tintColor = ColorKit.cloudColor.value
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,7 +68,7 @@ class AppSearchViewController: UIViewController {
                 cell.bindData(appModel: model)
             }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected(AppModel.self)
+        tableView.rx.modelSelected(AppInfoModel.self)
             .subscribe(onNext: { [unowned self] (model) in
                 self.saveApp(appModel: model)
             }).disposed(by: disposeBag)
@@ -75,9 +87,9 @@ class AppSearchViewController: UIViewController {
             }).disposed(by: disposeBag)
     }
 
-    func saveApp(appModel: AppModel) {
+    func saveApp(appModel: AppInfoModel) {
         let ac = AlertHelper.addAppAlert(confirm: { [unowned self] in
-            self.viewMode.saveApp(appModel: appModel)
+            self.viewMode.saveApp(appInfoModel: appModel)
         })
         
         navigationController?.visibleViewController?.present(ac, animated: true, completion: nil)

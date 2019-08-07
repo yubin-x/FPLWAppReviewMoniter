@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReviewUIKit
 
 class PhoneTabBarController: UITabBarController {
 
@@ -14,18 +15,12 @@ class PhoneTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let phoneReviewVC = ViewControllerFactory.makePhoneReviewViewController()
-        let phoneReviewNav = LightContentNavigationController(rootViewController: phoneReviewVC)
-        phoneReviewNav.tabBarItem = UITabBarItem(title: "Review",
-                                                 image: ImageKit.reviewTabBarImage.value,
-                                                 selectedImage: ImageKit.reviewTabBarSelectedImage.value)
+        phoneReviewVC.tabBarItem = TabBarItems.reviewTabBarItem()
         
         let settingVC = ViewControllerFactory.makeSettingViewController()
-        let settingNav = LightContentNavigationController(rootViewController: settingVC)
-        settingNav.tabBarItem = UITabBarItem(title: "Setting",
-                                             image: ImageKit.settingTabBarImage.value,
-                                             selectedImage: ImageKit.settingTabBarSelectedImage.value)
+        settingVC.tabBarItem = TabBarItems.settingTabBarItem()
         
-        viewControllers = [phoneReviewNav, settingNav]
+        viewControllers = [phoneReviewVC, settingVC]
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : ColorKit.nameLabelColor.value!], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : ColorKit.electronBlue.value!], for: .selected)

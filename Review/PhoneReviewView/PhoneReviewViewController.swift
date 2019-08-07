@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import ReviewHelperKit
+import ReviewUIKit
 
 class PhoneReviewViewController: UIViewController {
     
@@ -38,6 +39,7 @@ class PhoneReviewViewController: UIViewController {
         view = rootView
         
         setNavigationBar()
+        bindUI()
 //        bindViewModel()
     }
     
@@ -47,18 +49,11 @@ class PhoneReviewViewController: UIViewController {
     }
     
     private func setNavigationBar() {
-        let leftBarButton = UIBarButtonItem(image: ImageKit.menuICONImage.value,
-                                            style: UIBarButtonItem.Style.plain,
-                                            target: nil,
-                                            action: nil)
+        let leftBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.menuICONImage.value)
+        let rightBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.refreshICONImage.value)
         
-        let rightBarButton = UIBarButtonItem(image: ImageKit.refreshICONImage.value,
-                                             style: UIBarButtonItem.Style.plain,
-                                             target: nil,
-                                             action: nil)
-        
-        leftBarButton.rx.tap.subscribe(onNext: { (_) in
-            
+        leftBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
+            self.enterAppListVC()
         }).disposed(by: disposeBag)
         
         rightBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
@@ -111,6 +106,13 @@ class PhoneReviewViewController: UIViewController {
         addChild(reviewVC)
     }
     
+    func bindUI() {
+        rootView.plusButton.rx.tap
+            .subscribe(onNext: { [unowned self] (_) in
+                self.enterAppListVC()
+        }).disposed(by: disposeBag)
+    }
+    
 //    func bindViewModel() {
 //        viewModel.fetchAppResult
 //            .observeOn(MainScheduler.instance)
@@ -124,4 +126,8 @@ class PhoneReviewViewController: UIViewController {
 //                }
 //            }).disposed(by: disposeBag)
 //    }
+    
+    func enterAppListVC() {
+        present(ViewControllerFactory.makeAppListViewController(), animated: true, completion: nil)
+    }
 }

@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import ReviewHelperKit
+import ReviewUIKit
 import RxSwift
 
 class SettingView: UIView {
@@ -16,8 +17,7 @@ class SettingView: UIView {
     let disposeBag = DisposeBag()
     
     lazy var scrollSwitcherLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.labelFont.value
+        let label = Labels.h1Label()
         label.text = "Enable Auto Scroll"
         return label
     }()
@@ -27,15 +27,12 @@ class SettingView: UIView {
         return switcher
     }()
     lazy var timeIntervalLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.labelFont.value
+        let label = Labels.h1Label()
         label.text = "Auto Scroll Time Interval"
         return label
     }()
     lazy var timeIntervalTextField: UITextField = {
-        let textField = UITextField()
-        textField.borderStyle = UITextField.BorderStyle.roundedRect
-        textField.textAlignment = .center
+        let textField = TextFields.uneditableTextField()
         textField.delegate = self
         return textField
     }()
@@ -47,35 +44,18 @@ class SettingView: UIView {
         return slider
     }()
     lazy var rightLabel: UILabel = {
-        let label = UILabel()
+        let label = Labels.appInfoLabel()
         label.text = "© FordLabs China"
-        label.font = FontKit.rightInfoLabelFont.value
-        label.textColor = ColorKit.subLabelTextColor.value
-        label.textAlignment = .center
         return label
     }()
-    lazy var versionLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.rightInfoLabelFont.value
-        label.textColor = ColorKit.subLabelTextColor.value
-        label.textAlignment = .center
-        return label
-    }()
+    lazy var versionLabel: UILabel = Labels.appInfoLabel()
     lazy var currentRegionLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.labelFont.value
+        let label = Labels.h1Label()
         label.text = "Current Region"
         return label
     }()
     lazy var currentRegionValueLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.labelFont.value
-        label.textAlignment = .center
-        label.textColor = ColorKit.electronBlue.value
-        label.layer.cornerRadius = 5
-        label.layer.masksToBounds = true
-        label.layer.borderColor = ColorKit.electronBlue.value?.cgColor
-        label.layer.borderWidth = 1
+        let label = Labels.countryLabel()
         label.text = ConfigurationProvidor.currentCountry.countryName
         return label
     }()

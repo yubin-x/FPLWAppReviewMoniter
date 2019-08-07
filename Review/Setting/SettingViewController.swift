@@ -37,13 +37,6 @@ class SettingViewController: UIViewController {
     }
     
     func bindUI() {
-        let tapGesture = UITapGestureRecognizer()
-        view.addGestureRecognizer(tapGesture)
-        
-        tapGesture.rx.event.bind(onNext: { [unowned self] _ in
-            self.rootView.timeIntervalTextField.resignFirstResponder()
-        }).disposed(by: disposeBag)
-        
         rootView.scrollSwitcher.rx.isOn.asObservable()
             .asDriver(onErrorJustReturn: false)
             .drive(onNext: { (value) in

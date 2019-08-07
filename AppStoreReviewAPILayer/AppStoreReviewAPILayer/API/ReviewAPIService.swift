@@ -8,25 +8,33 @@
 
 import RxSwift
 import Alamofire
+import ReviewHelperKit
 
 public protocol ReviewAPILayer {
-    func fetchReviewData(appID: String, page: Int) -> Observable<[ReviewResponse]>
+    func fetchReviewData(appID: String, page: Int, country: Country) -> Observable<[ReviewResponse]>
 }
 
 class ReviewAPIService: ReviewAPILayer {
     
-    let baseURL = "https://itunes.apple.com/rss/customerreviews/page=%d/id=%@/sortby=mostrecent/json?l=en&&cc=cn"
+    let baseURL = "https://itunes.apple.com/rss/customerreviews/page=%d/id=%@/sortby=mostrecent/json?l=en&&cc=%@"
     
-    func fetchReviewData(appID: String, page: Int) -> Observable<[ReviewResponse]> {
+    func fetchReviewData(appID: String, page: Int, country: Country) -> Observable<[ReviewResponse]> {
         
-        let urlString = String(format: baseURL, page, appID)
+        let urlString: String
+        
+        if let encodingString = String(format: baseURL, page, appID, country.rawValue).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) {
+            urlString = encodingString
+        } else {
+            urlString = ""
+        }
         
         return Observable<[ReviewResponse]>.create({ (observer) -> Disposable in
             
             Alamofire.request(urlString).responseData { response in
-                
+                print(response)
                 if let data = response.result.value {
                     do {
+                        print(data)
                         let value = try JSONDecoder().decode(ReviewSearchResult.self, from: data)
                         observer.onNext(value.feed.entrys)
                     } catch {

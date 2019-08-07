@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReviewUIKit
 
 struct ViewControllerFactory {
     
@@ -15,11 +16,13 @@ struct ViewControllerFactory {
     }
     
     static func makePhoneReviewViewController() -> UIViewController {
-        return PhoneReviewViewController()
+        let phoneReviewVC = PhoneReviewViewController()
+        return LightContentNavigationController(rootViewController: phoneReviewVC)
     }
     
     static func makeSettingViewController() -> UIViewController {
-        return SettingViewController()
+        let settingVC = SettingViewController()
+        return LightContentNavigationController(rootViewController: settingVC)
     }
     
     static let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -56,11 +59,11 @@ struct ViewControllerFactory {
     }
     
     static func makeAppListViewController() -> UINavigationController {
-        let vc = storyBoard.instantiateViewController(withIdentifier: "AppListViewController") as! AppListViewController
-        return UINavigationController(rootViewController: vc)
+        let vc = AppListViewController()
+        return LightContentNavigationController(rootViewController: vc)
     }
     
     static func makeSearchAppViewController() -> UIViewController {
-        return storyBoard.instantiateViewController(withIdentifier: "AppSearchViewController") as! AppSearchViewController
+        return AppSearchViewController()
     }
 }

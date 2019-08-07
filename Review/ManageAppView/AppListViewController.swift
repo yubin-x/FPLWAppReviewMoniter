@@ -9,17 +9,26 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ReviewUIKit
 
 class AppListViewController: UIViewController {
     
-    @IBOutlet weak var closeBarItem: UIBarButtonItem!
-    @IBOutlet weak var tableView: AppListTableView!
+    lazy var tableView = AppListTableView()
     
-    lazy var viewModel: AppListViewable = AppListViewModel()
+    let viewModel: AppListViewable
     
     let disposeBag = DisposeBag()
 
     var didEntryAppSearchVC = false
+    
+    init(viewModel: AppListViewable = AppListViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +45,22 @@ class AppListViewController: UIViewController {
     
     func setUI() {
         title = viewModel.title
+        view = tableView
+        
+        let closeBarButtonItem = BarButtonItems.plainBarButtonItemWith(title: "Close")
+        let plusBarButtonItem = BarButtonItems.systemItemAdd()
+        
+        closeBarButtonItem.rx.tap.subscribe(onNext: { [unowned self] (_) in
+            self.dismiss(animated: true, completion: nil)
+        }).disposed(by: disposeBag)
+        
+        plusBarButtonItem.rx.tap.subscribe(onNext: { [unowned self] (_) in
+            self.enterAppSearchVC()
+        }).disposed(by: disposeBag)
+        
+        
+        navigationItem.leftBarButtonItem = closeBarButtonItem
+        navigationItem.rightBarButtonItem = plusBarButtonItem
     }
     
     func bindUI() {
@@ -52,11 +77,11 @@ class AppListViewController: UIViewController {
     }
     
     func bindViewModel() {
-        let observer = viewModel.appDataEntry.share()
+        let observer = viewModel.fetchAppResult.share()
         
         observer
             .bind(to: tableView.rx.items(cellIdentifier: "AppListTableViewCell", cellType: AppListTableViewCell.self)) { (_, model, cell) in
-                cell.bindData(appDataEntry: model)
+                cell.bindData(appModel: model)
             }.disposed(by: disposeBag)
         
         observer
@@ -70,13 +95,5 @@ class AppListViewController: UIViewController {
     func enterAppSearchVC() {
         let vc = ViewControllerFactory.makeSearchAppViewController()
         navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func tapCloseBarItem(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func tapPlusBarItem(_ sender: Any) {
-        enterAppSearchVC()
     }
 }

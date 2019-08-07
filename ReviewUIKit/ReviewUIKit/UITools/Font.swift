@@ -8,14 +8,14 @@
 
 import UIKit
 
-enum FontKit {
+public enum FontKit {
     case labelFont
     case subLabelFont
     case rightInfoLabelFont
     case nameLabelFont
     case reviewContentFont
     
-    var value: UIFont {
+    public var value: UIFont {
         switch self {
         case .labelFont:
             return UIFont.systemFont(ofSize: 17)

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B261A6122FB25040047C1DE /* Review.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A6022FB25030047C1DE /* Review.xcdatamodel */; };
 		3BAB87B222F8812B00B0CABD /* CacheKitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */; };
 		3BC1524922F85BA500FA3F50 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC1523F22F85BA500FA3F50 /* CacheKit.framework */; };
 		3BC1524E22F85BA500FA3F50 /* CacheKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1524D22F85BA500FA3F50 /* CacheKitTests.swift */; };
 		3BC1525022F85BA500FA3F50 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC1524222F85BA500FA3F50 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3BC1525A22F85C0100FA3F50 /* Review.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1525922F85C0100FA3F50 /* Review.xcdatamodel */; };
 		3BC1525C22F85C5000FA3F50 /* AppInfoCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B261A6022FB25030047C1DE /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 		3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKitFactory.swift; sourceTree = "<group>"; };
 		3BC1523F22F85BA500FA3F50 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC1524222F85BA500FA3F50 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
@@ -54,7 +55,6 @@
 		3BC1524822F85BA500FA3F50 /* CacheKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CacheKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC1524D22F85BA500FA3F50 /* CacheKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKitTests.swift; sourceTree = "<group>"; };
 		3BC1524F22F85BA500FA3F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3BC1525922F85C0100FA3F50 /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 		3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoCacheManager.swift; sourceTree = "<group>"; };
 		3BC1526922F85D7700FA3F50 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ../ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +100,7 @@
 		3BC1524122F85BA500FA3F50 /* CacheKit */ = {
 			isa = PBXGroup;
 			children = (
-				3BC1525922F85C0100FA3F50 /* Review.xcdatamodel */,
+				3B261A6022FB25030047C1DE /* Review.xcdatamodel */,
 				3BC1524222F85BA500FA3F50 /* CacheKit.h */,
 				3BC1524322F85BA500FA3F50 /* Info.plist */,
 				3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */,
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BC1525C22F85C5000FA3F50 /* AppInfoCacheManager.swift in Sources */,
-				3BC1525A22F85C0100FA3F50 /* Review.xcdatamodel in Sources */,
+				3B261A6122FB25040047C1DE /* Review.xcdatamodel in Sources */,
 				3BAB87B222F8812B00B0CABD /* CacheKitFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

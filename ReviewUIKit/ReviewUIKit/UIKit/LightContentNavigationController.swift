@@ -8,17 +8,18 @@
 
 import UIKit
 
-class LightContentNavigationController: UINavigationController {
+public class LightContentNavigationController: UINavigationController {
 
-    override var preferredStatusBarStyle: UIStatusBarStyle {
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationBar.barTintColor = ColorKit.electronBlue.value
-        let textAttributes = [NSAttributedString.Key.foregroundColor: ColorKit.reviewCardBackgroundColor.value!]
+        navigationBar.setValue(true, forKey: "hidesShadow")
+        let textAttributes = [NSAttributedString.Key.foregroundColor: ColorKit.cloudColor.value!]
         navigationBar.titleTextAttributes = textAttributes
     }
 }

@@ -1,17 +1,16 @@
 //
-//  UIAlertControllerHelper.swift
-//  Review
+//  AlertHelper.swift
+//  ReviewUIKit
 //
-//  Created by Wenslow on 2019/1/8.
-//  Copyright © 2019 Wenslow. All rights reserved.
+//  Created by 朱廷 on 2019/8/7.
+//  Copyright © 2019 朱廷. All rights reserved.
 //
 
 import UIKit
 
-struct AlertHelper {
-
-    static func addAppAlert(confirm: (()->())?) -> UIAlertController {
-        let ac = UIAlertController(title: "Add this App?", message: nil, preferredStyle: .alert)
+public struct AlertHelper {
+    public static func addAppAlert(confirm: (()->())?) -> UIAlertController {
+        let ac = UIAlertController(title: "Monitor this App?", message: nil, preferredStyle: .alert)
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
             confirm?()

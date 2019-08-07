@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReviewUIKit
 
 class BaseReviewTableView: UITableView {
 

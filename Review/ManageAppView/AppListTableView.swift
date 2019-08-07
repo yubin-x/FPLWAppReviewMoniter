@@ -7,10 +7,20 @@
 //
 
 import UIKit
+import ReviewUIKit
 
 class AppListTableView: UITableView {
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    override init(frame: CGRect, style: UITableView.Style) {
+        super.init(frame: frame, style: style)
+        
+        separatorStyle = .none
+        register(AppListTableViewCell.self, forCellReuseIdentifier: "AppListTableViewCell")
         tableFooterView = UIView()
+        backgroundColor = ColorKit.backgroundColor.value
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }

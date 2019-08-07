@@ -28,7 +28,7 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
     
     init(dataStack: DataStack = DataStack(xcodeModelName: ConfigurationProvidor.ReviewCoreDataEntryKey)) {
         self.dataStack = dataStack
-        
+    
         do {
             try self.dataStack.addStorageAndWait()
         }catch{}

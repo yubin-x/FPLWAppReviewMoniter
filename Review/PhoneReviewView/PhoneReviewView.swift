@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import ReviewUIKit
 
 class PhoneReviewView: UIView {
 
     lazy var plusButton: UIButton = {
         let button = UIButton()
-        button.setImage(ImageKit.addAppICONImage.value, for: .normal)
+        button.setImage(ImageKit.addAppICONImage.value?.withRenderingMode(UIImage.RenderingMode.alwaysTemplate),
+                        for: .normal)
+        button.tintColor = ColorKit.midnightBlue.value
         return button
     }()
     

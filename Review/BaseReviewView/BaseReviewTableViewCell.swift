@@ -9,42 +9,19 @@
 import UIKit
 import Cosmos
 import AppStoreReviewService
+import ReviewUIKit
 
 class BaseReviewTableViewCell: UITableViewCell {
 
-    lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.labelFont.value
-        return label
-    }()
-    let ratingView: CosmosView = {
-        var setting = CosmosSettings.default
-        setting.filledBorderColor = ColorKit.carrot.value!
-        setting.filledColor = ColorKit.carrot.value!
-        setting.emptyBorderColor = ColorKit.carrot.value!
-        let view = CosmosView(settings: setting)
-        return view
-    }()
-    lazy var nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.nameLabelFont.value
-        label.textAlignment = .right
-        label.textColor = ColorKit.nameLabelColor.value
-        return label
-    }()
+    lazy var titleLabel: UILabel = Labels.h1Label()
+    lazy var ratingView: RatingView = RatingView.quickInit()
+    lazy var nameLabel: UILabel = Labels.grayH2Label()
     lazy var contentLabel: UILabel = {
-        let label = UILabel()
-        label.font = FontKit.reviewContentFont.value
+        let label = Labels.h2Label()
         label.numberOfLines = 0
         return label
     }()
-    lazy var reviewCardView: UIView = {
-        let view = UIView()
-        view.backgroundColor = ColorKit.reviewCardBackgroundColor.value
-        view.layer.cornerRadius = 10
-        view.layer.masksToBounds = true
-        return view
-    }()
+    lazy var reviewCardView: UIView = Views.cardContentView()
     
     private let viewMargin: CGFloat = 25
     

@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppStoreReviewAPILayer/AppStoreReviewAPILayer/API/ReviewAPIService.swift"
+            timestampString = "586885058.489689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchReviewData(appID:page:country:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppStoreReviewAPILayer.ReviewAPIService.fetchReviewData(appID: Swift.String, page: Swift.Int) -&gt; RxSwift.Observable&lt;Swift.Array&lt;AppStoreReviewAPILayer.ReviewResponse&gt;&gt;"
+                  moduleName = "AppStoreReviewAPILayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewAPILayer/AppStoreReviewAPILayer/API/ReviewAPIService.swift"
+                  timestampString = "586884736.524973"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "269">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RxSwift.AnyObserver&lt;Swift.Array&lt;AppStoreReviewAPILayer.ReviewResponse&gt;&gt;) -&gt; RxSwift.Disposable in AppStoreReviewAPILayer.ReviewAPIService.fetchReviewData(appID: Swift.String, page: Swift.Int) -&gt; RxSwift.Observable&lt;Swift.Array&lt;AppStoreReviewAPILayer.ReviewResponse&gt;&gt;"
+                  moduleName = "AppStoreReviewAPILayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zhuting/WorkSpace/FPLWAppReviewMoniter/AppStoreReviewAPILayer/AppStoreReviewAPILayer/API/ReviewAPIService.swift"
+                  timestampString = "586884736.527945"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
