@@ -26,7 +26,7 @@ public enum AppInfoServiceError: Error {
 }
 
 public protocol AppInfoServiceProtocol {
-    func searchApp(term: String, country: Country) -> Observable<Result<[AppInfoModel], Error>>
+    func searchApp(term: String) -> Observable<Result<[AppInfoModel], Error>>
     func fetchApp(appID: Int) -> Observable<Result<AppInfoModel?, AppInfoServiceError>>
     func fetchApps() -> Observable<Result<[AppInfoModel], AppInfoServiceError>>
     func saveApp(data: AppInfoModel) -> Observable<Result<Bool, AppInfoServiceError>>
@@ -44,8 +44,8 @@ class AppInfoService: AppInfoServiceProtocol {
         self.appInfoCacheManager = appInfoCacheManager
     }
     
-    func searchApp(term: String, country: Country) -> Observable<Result<[AppInfoModel], Error>> {
-        return appSearchAPILayer.searchApp(term: term, country: country).map {
+    func searchApp(term: String) -> Observable<Result<[AppInfoModel], Error>> {
+        return appSearchAPILayer.searchApp(term: term, country: ConfigurationProvidor.currentCountry).map {
             let appModels = $0.map({ (response) -> AppInfoModel in
                 return AppInfoModel(from: response)
             })
