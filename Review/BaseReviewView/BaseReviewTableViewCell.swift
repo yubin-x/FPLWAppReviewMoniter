@@ -18,7 +18,11 @@ class BaseReviewTableViewCell: UITableViewCell {
         return label
     }()
     let ratingView: CosmosView = {
-        let view = CosmosView(settings: CosmosSettings.default)
+        var setting = CosmosSettings.default
+        setting.filledBorderColor = ColorKit.carrot.value!
+        setting.filledColor = ColorKit.carrot.value!
+        setting.emptyBorderColor = ColorKit.carrot.value!
+        let view = CosmosView(settings: setting)
         return view
     }()
     lazy var nameLabel: UILabel = {

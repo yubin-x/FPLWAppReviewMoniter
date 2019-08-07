@@ -10,16 +10,27 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import ReviewHelperKit
 
 class PhoneReviewViewController: UIViewController {
     
     lazy var rootView = PhoneReviewView()
-    lazy var viewModel: PhoneReviewViewable = PhoneReviewViewModel()
+    
+    let viewModel: PhoneReviewViewable
     
     let disposeBag = DisposeBag()
     
     var reviewVC: (UIViewController & ReviewViewControllerProtocol)!
     var currentAppID: Int?
+    
+    init(viewModel: PhoneReviewViewable = PhoneReviewViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +38,7 @@ class PhoneReviewViewController: UIViewController {
         view = rootView
         
         setNavigationBar()
-        bindViewModel()
+//        bindViewModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,20 +88,8 @@ class PhoneReviewViewController: UIViewController {
         guard let id = appID,
             currentAppID != id else { return }
         currentAppID = id
+        
         viewModel.fetchApp(appID: id)
-    }
-    
-    func setCurrentVC(appID: Int) {
-        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appID: appID)
-        rootView.addSubview(reviewVC.view)
-        reviewVC.view.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview()
-        }
-        addChild(reviewVC)
-    }
-    
-    func bindViewModel() {
-        viewModel.fetchAppResult
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [unowned self] in
                 guard let app = $0 else { return }
@@ -102,4 +101,27 @@ class PhoneReviewViewController: UIViewController {
                 }
             }).disposed(by: disposeBag)
     }
+    
+    func setCurrentVC(appID: Int) {
+        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appID: appID)
+        rootView.addSubview(reviewVC.view)
+        reviewVC.view.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+        addChild(reviewVC)
+    }
+    
+//    func bindViewModel() {
+//        viewModel.fetchAppResult
+//            .observeOn(MainScheduler.instance)
+//            .subscribe(onNext: { [unowned self] in
+//                guard let app = $0 else { return }
+//                self.title = app.appName
+//                if self.reviewVC == nil {
+//                    self.setCurrentVC(appID: app.appId)
+//                } else {
+//                    self.reviewVC.setNewApp(appID: app.appId)
+//                }
+//            }).disposed(by: disposeBag)
+//    }
 }

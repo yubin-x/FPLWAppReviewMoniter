@@ -11,6 +11,19 @@ import Foundation
 public enum Country: String {
     case china = "cn"
     case usa = "us"
+    
+    public var countryName: String {
+        switch self {
+        case .china:
+            return "China"
+        case .usa:
+            return "USA"
+        }
+    }
+    
+    public static func allCountry() -> [Country] {
+        return [.china, .usa]
+    }
 }
 
 public struct ConfigurationProvidor {
@@ -19,7 +32,8 @@ public struct ConfigurationProvidor {
     
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"
-    private static let savedAppIDsKeys = "savedAppIDsKeys"
+    private static let savedAppIDsKey = "savedAppIDsKey"
+    private static let currentCountryKey = "currentCountryKey"
     
     public static var autoScrollTimeInterval: TimeInterval {
         get {
@@ -39,18 +53,29 @@ public struct ConfigurationProvidor {
         }
     }
     
+    public static var currentCountry: Country {
+        get {
+            let rawValue = UserDefaults.standard.string(forKey: currentCountryKey) ?? "cn"
+            return Country(rawValue: rawValue) ?? Country.china
+        }
+        set {
+            UserDefaults.standard.set(newValue.rawValue, forKey: currentCountryKey)
+        }
+    }
+    
     public static func registerDefaultValue() {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.autoScrollTimeIntervalKey: 5])
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.enableAutoScrollKey: true])
+        UserDefaults.standard.register(defaults: [ConfigurationProvidor.currentCountryKey: "cn"])
     }
     
-    public static var savedAppIDs: [Int64] {
+    public static var savedAppIDs: [Int] {
         get {
-            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKeys) as? [Int64] else { return [] }
+            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKey) as? [Int] else { return [] }
             return rawValue
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: savedAppIDsKeys)
+            UserDefaults.standard.set(newValue, forKey: savedAppIDsKey)
         }
     }
 }

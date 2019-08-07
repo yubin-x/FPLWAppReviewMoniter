@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import CoreStore
+import ReviewHelperKit
 
 protocol AppSearchViewable {
     var saveAppSuccess: BehaviorRelay<Bool> { get }

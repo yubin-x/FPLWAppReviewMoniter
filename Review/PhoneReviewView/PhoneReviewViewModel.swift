@@ -12,13 +12,13 @@ import AppStoreReviewService
 
 protocol PhoneReviewViewable {
     var title: String { get }
-    var fetchAppResult: BehaviorRelay<AppInfoModel?> { get }
-    func fetchApp(appID: Int)
+//    var fetchAppResult: BehaviorRelay<AppInfoModel?> { get }
+    func fetchApp(appID: Int) -> Observable<AppInfoModel?>
 }
 
 class PhoneReviewViewModel: PhoneReviewViewable {
     
-    let fetchAppResult = BehaviorRelay<AppInfoModel?>(value: nil)
+//    let fetchAppResult = BehaviorRelay<AppInfoModel?>(value: nil)
     let disposeBag = DisposeBag()
     
     let appInfoService: AppInfoServiceProtocol
@@ -31,15 +31,17 @@ class PhoneReviewViewModel: PhoneReviewViewable {
         self.appInfoService = appInfoService
     }
     
-    func fetchApp(appID: Int) {
-        appInfoService.fetchApp(appID: appID).subscribe(onNext: { [weak self] (result) in
-            switch result {
-            case .success(let value):
-                self?.fetchAppResult.accept(value)
-            case .failure(let error):
-                print(error)
-            }
-        }).disposed(by: disposeBag)
+    func fetchApp(appID: Int) -> Observable<AppInfoModel?> {
+        return appInfoService.fetchApp(appID: appID)
+            .map { result in
+                switch result {
+                case .success(let value):
+                    return value
+                case .failure(let error):
+                    print(error)
+                    return nil
+                }
+        }
     }
 }
 

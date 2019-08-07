@@ -95,7 +95,7 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
                 }, completion: { (result) -> Void in
                     switch result {
                     case .success:
-                        if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
+                        if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: Int(app.appId)) {
                             var appIDs = ConfigurationProvidor.savedAppIDs
                             appIDs.remove(at: index)
                             ConfigurationProvidor.savedAppIDs = appIDs

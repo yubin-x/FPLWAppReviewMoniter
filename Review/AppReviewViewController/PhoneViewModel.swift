@@ -9,7 +9,7 @@
 import RxCocoa
 import RxSwift
 import CoreStore
-
+import ReviewHelperKit
 protocol PhoneViewable {
     var title: String { get }
     var fetchAppResult: BehaviorRelay<AppDataEntry?> { get }

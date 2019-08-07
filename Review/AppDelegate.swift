@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import InstabugKit
+import ReviewHelperKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

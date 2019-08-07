@@ -14,20 +14,23 @@ class PhoneTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let phoneReviewVC = ViewControllerFactory.makePhoneReviewViewController()
-        let phoneReviewNav = UINavigationController(rootViewController: phoneReviewVC)
+        let phoneReviewNav = LightContentNavigationController(rootViewController: phoneReviewVC)
         phoneReviewNav.tabBarItem = UITabBarItem(title: "Review",
                                                  image: ImageKit.reviewTabBarImage.value,
                                                  selectedImage: ImageKit.reviewTabBarSelectedImage.value)
         
         let settingVC = ViewControllerFactory.makeSettingViewController()
-        let settingNav = UINavigationController(rootViewController: settingVC)
+        let settingNav = LightContentNavigationController(rootViewController: settingVC)
         settingNav.tabBarItem = UITabBarItem(title: "Setting",
                                              image: ImageKit.settingTabBarImage.value,
                                              selectedImage: ImageKit.settingTabBarSelectedImage.value)
         
         viewControllers = [phoneReviewNav, settingNav]
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.black], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : ColorKit.nameLabelColor.value!], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : ColorKit.electronBlue.value!], for: .selected)
+        
+        tabBar.barTintColor = ColorKit.backgroundColor.value
     }
     
 

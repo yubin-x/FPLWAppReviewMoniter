@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ReviewHelperKit
 
 class SettingViewController: UIViewController {
 
@@ -21,7 +22,6 @@ class SettingViewController: UIViewController {
         
         view = rootView
         title = "Setting"
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         setupUI()
         bindUI()
@@ -30,7 +30,7 @@ class SettingViewController: UIViewController {
     func setupUI() {
         rootView.scrollSwitcher.isOn = ConfigurationProvidor.enableAutoScroll
         rootView.timeIntervalTextField.text = String(ConfigurationProvidor.autoScrollTimeInterval)
-        
+        rootView.slider.value = Float(ConfigurationProvidor.autoScrollTimeInterval)
         guard let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
         
         rootView.versionLabel.text = "Version: " + versionNumber
@@ -50,20 +50,10 @@ class SettingViewController: UIViewController {
                 ConfigurationProvidor.enableAutoScroll = value
             }).disposed(by: disposeBag)
         
-        rootView.timeIntervalTextField.rx.controlEvent([.editingDidEnd])
-            .asObservable()
-            .subscribe(onNext: { [unowned self] _ in
-                let newTimeInterval: TimeInterval
-                
-                if let value = self.rootView.timeIntervalTextField.text,
-                    let timeInterval = Double(value),
-                    timeInterval >= 1 && timeInterval <= 20 {
-                    newTimeInterval = timeInterval
-                } else {
-                    newTimeInterval = 5
-                    self.rootView.timeIntervalTextField.text = "5"
-                }
-                ConfigurationProvidor.autoScrollTimeInterval = newTimeInterval
+        rootView.slider.rx.value
+            .subscribe(onNext: { [unowned self] value in
+                self.rootView.timeIntervalTextField.text = String(format: "%0.1f", value)
+                ConfigurationProvidor.autoScrollTimeInterval = TimeInterval(value)
             })
             .disposed(by: disposeBag)
     }

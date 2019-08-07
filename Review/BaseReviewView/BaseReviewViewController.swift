@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import ReviewHelperKit
 
 protocol ReviewViewControllerProtocol {
     func setNewApp(appID: Int)

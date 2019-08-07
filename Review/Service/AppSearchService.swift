@@ -8,6 +8,7 @@
 
 import RxSwift
 import Alamofire
+import ReviewHelperKit
 
 protocol AppSearchServiceLayer {
     func searchApp(term: String, country: Country) -> Observable<[AppModel]>

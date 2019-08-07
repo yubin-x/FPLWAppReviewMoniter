@@ -9,6 +9,7 @@
 import RxCocoa
 import RxSwift
 import CoreStore
+import ReviewHelperKit
 
 protocol AppListViewable {
     var title: String { get }
