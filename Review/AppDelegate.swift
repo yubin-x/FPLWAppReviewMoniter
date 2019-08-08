@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import InstabugKit
+import Instabug
 import ReviewHelperKit
 
 @UIApplicationMain
@@ -18,10 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 5) {
-            InstabugHelper.beginInstabugWith()
-        }
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -34,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         window?.makeKeyAndVisible()
+        
+        Instabug.start(withToken: "cedd60760b8c644c4b49a063e16f9836", invocationEvents: [.shake, .screenshot])
         
         return true
     }

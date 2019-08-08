@@ -5,9 +5,6 @@
       location = "group:ReviewUIKit/ReviewUIKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:InstabugKit/InstabugKit.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:CacheKit/CacheKit.xcodeproj">
    </FileRef>
    <FileRef
