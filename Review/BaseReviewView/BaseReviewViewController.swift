@@ -11,9 +11,10 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import ReviewHelperKit
+import AppStoreReviewService
 
 protocol ReviewViewControllerProtocol {
-    func setNewApp(appID: Int)
+    func setNewApp(appInfoModel: AppInfoModel)
     func refreshData()
 }
 
@@ -25,7 +26,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
     var shouldScrollToTop = false
     var lastIndexPath = IndexPath(row: 0, section: 0)
     var lastIndexPathEqualCount = 0
-    var viewModel: BaseReviewViewable!
+    let viewModel: BaseReviewViewable
     
     lazy var indicatorView: UIActivityIndicatorView = {
         let indicatorView = UIActivityIndicatorView(style: .gray)
@@ -38,6 +39,15 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
     }()
     
     var disposeBag = DisposeBag()
+    
+    init(viewModel: BaseReviewViewable) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,14 +101,17 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         }
     }
     
-    func setNewApp(appID: Int) {
-        viewModel.appID = appID
+    func setNewApp(appInfoModel: AppInfoModel) {
+        viewModel.updateAppInfoModel(appInfoModel: appInfoModel)
         refreshData()
     }
     
     func startTimer() {
         guard ConfigurationProvidor.enableAutoScroll else { return }
-        
+        if timer != nil {
+            timer.invalidate()
+            timer = nil
+        }
         timer = Timer(timeInterval: ConfigurationProvidor.autoScrollTimeInterval,
                       repeats: true) { [unowned self] (_) in
             guard let firstIndexPath = self.tableView.indexPathsForVisibleRows?.first,
@@ -138,6 +151,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
         guard let timer = timer,
             timer.isValid else { return }
         timer.invalidate()
+        self.timer = nil
     }
     
     deinit {

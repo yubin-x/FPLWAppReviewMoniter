@@ -16,7 +16,7 @@ protocol AppListViewable {
     var fetchAppResult: Observable<[AppInfoModel]> { get }
     func fetchSavedApps()
     func deleteApp(indexPath: IndexPath)
-    func selectApp(indexPath: IndexPath)
+    func selectApp(appInfoModel: AppInfoModel)
 }
 
 class AppListViewModel: AppListViewable {
@@ -75,12 +75,12 @@ class AppListViewModel: AppListViewable {
         }).disposed(by: disposeBag)
     }
     
-    func selectApp(indexPath: IndexPath) {
-        guard fetchAppReplay.value.count >= indexPath.row else { return }
-        let selectedAppId = fetchAppReplay.value[indexPath.row].appId
+    func selectApp(appInfoModel: AppInfoModel) {
         var appIDs = ConfigurationProvidor.savedAppIDs
-        appIDs.remove(at: indexPath.row)
-        appIDs.insert(selectedAppId, at: 0)
-        ConfigurationProvidor.savedAppIDs = appIDs
+        if let index = appIDs.firstIndex(of: appInfoModel.appId) {
+            appIDs.remove(at: index)
+            appIDs.insert(appInfoModel.appId, at: 0)
+            ConfigurationProvidor.savedAppIDs = appIDs
+        }
     }
 }

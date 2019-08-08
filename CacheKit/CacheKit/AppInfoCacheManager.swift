@@ -26,7 +26,8 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
     
     let dataStack: DataStack
     
-    init(dataStack: DataStack = DataStack(xcodeModelName: ConfigurationProvidor.ReviewCoreDataEntryKey)) {
+    init(dataStack: DataStack = DataStack(xcodeModelName: ConfigurationProvidor.ReviewCoreDataEntryKey,
+                                          bundle: Bundle(for: AppInfoCacheManager.self))) {
         self.dataStack = dataStack
     
         do {
@@ -66,6 +67,7 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
                 app.appName = appName
                 app.iconURLString = iconURLString
                 app.averageUserRating = averageUserRating
+                app.country = ConfigurationProvidor.currentCountry.rawValue
             }, completion: { (result) -> Void in
                 switch result {
                 case .success:

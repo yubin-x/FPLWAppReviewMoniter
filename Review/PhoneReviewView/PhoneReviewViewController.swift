@@ -12,6 +12,7 @@ import RxCocoa
 import SnapKit
 import ReviewHelperKit
 import ReviewUIKit
+import AppStoreReviewService
 
 class PhoneReviewViewController: UIViewController {
     
@@ -50,19 +51,19 @@ class PhoneReviewViewController: UIViewController {
     
     private func setNavigationBar() {
         let leftBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.menuICONImage.value)
-        let rightBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.refreshICONImage.value)
+//        let rightBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.refreshICONImage.value)
         
         leftBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
             self.enterAppListVC()
         }).disposed(by: disposeBag)
         
-        rightBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
-            self.refreshUI()
-        }).disposed(by: disposeBag)
+//        rightBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
+//            self.refreshUI()
+//        }).disposed(by: disposeBag)
         
         
         navigationItem.leftBarButtonItem = leftBarButton
-        navigationItem.rightBarButtonItem = rightBarButton
+//        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     
@@ -90,15 +91,15 @@ class PhoneReviewViewController: UIViewController {
                 guard let app = $0 else { return }
                 self.title = app.appName
                 if self.reviewVC == nil {
-                    self.setCurrentVC(appID: app.appId)
+                    self.setCurrentVC(appInfoModel: app)
                 } else {
-                    self.reviewVC.setNewApp(appID: app.appId)
+                    self.reviewVC.setNewApp(appInfoModel: app)
                 }
             }).disposed(by: disposeBag)
     }
     
-    func setCurrentVC(appID: Int) {
-        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appID: appID)
+    func setCurrentVC(appInfoModel: AppInfoModel) {
+        reviewVC = ViewControllerFactory.makeBaseReviewViewController(appInfoModel: appInfoModel)
         rootView.addSubview(reviewVC.view)
         reviewVC.view.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
@@ -128,6 +129,14 @@ class PhoneReviewViewController: UIViewController {
 //    }
     
     func enterAppListVC() {
-        present(ViewControllerFactory.makeAppListViewController(), animated: true, completion: nil)
+        present(ViewControllerFactory.makeAppListViewController(delegate: self),
+                animated: true,
+                completion: nil)
+    }
+}
+
+extension PhoneReviewViewController: AppListViewControllerDelegate {
+    func didSelectedApp(appInfoModel: AppInfoModel) {
+        
     }
 }

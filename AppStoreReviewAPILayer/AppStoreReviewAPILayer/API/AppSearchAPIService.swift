@@ -27,7 +27,7 @@ class AppSearchAPIService: AppSearchAPILayer {
         } else {
             urlString = ""
         }
-        
+//        print(urlString)
         return Observable<[AppSearchResponse]>.create({ (observer) -> Disposable in
             
             Alamofire.request(urlString).responseData { response in

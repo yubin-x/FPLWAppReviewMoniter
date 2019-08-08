@@ -14,6 +14,7 @@ import ReviewUIKit
 class BaseReviewTableViewCell: UITableViewCell {
 
     lazy var titleLabel: UILabel = Labels.h1Label()
+    lazy var versionLabel: UILabel = Labels.grayH2Label()
     lazy var ratingView: RatingView = RatingView.quickInit()
     lazy var nameLabel: UILabel = Labels.grayH2Label()
     lazy var contentLabel: UILabel = {
@@ -35,9 +36,16 @@ class BaseReviewTableViewCell: UITableViewCell {
             make.top.bottom.equalToSuperview().inset(15)
         }
         
+        reviewCardView.addSubview(versionLabel)
+        versionLabel.snp.makeConstraints { (make) in
+            make.top.right.equalToSuperview().inset(15)
+            make.width.equalTo(50)
+        }
+        
         reviewCardView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.top.left.right.equalToSuperview().inset(15)
+            make.top.left.equalToSuperview().inset(15)
+            make.right.equalTo(versionLabel.snp.left).inset(-10)
         }
         
         reviewCardView.addSubview(ratingView)
@@ -50,7 +58,7 @@ class BaseReviewTableViewCell: UITableViewCell {
         reviewCardView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { (make) in
             make.centerY.equalTo(ratingView)
-            make.right.equalTo(titleLabel)
+            make.right.equalTo(versionLabel)
             make.left.equalTo(ratingView.snp.right).inset(10)
         }
         
@@ -66,6 +74,7 @@ class BaseReviewTableViewCell: UITableViewCell {
     }
     
     func bindData(reviewModel: ReviewModel) {
+        versionLabel.text = reviewModel.version
         titleLabel.text = reviewModel.title
         nameLabel.text = reviewModel.author
         ratingView.rating = reviewModel.rating

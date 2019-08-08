@@ -8,6 +8,7 @@
 
 import UIKit
 import ReviewUIKit
+import AppStoreReviewService
 
 struct ViewControllerFactory {
     
@@ -51,15 +52,15 @@ struct ViewControllerFactory {
 //        return makeBaseReviewViewController(appName: .mercedesMe)
 //    }
     
-    static func makeBaseReviewViewController(appID: Int) -> UIViewController & ReviewViewControllerProtocol {
-        let vc = BaseReviewViewController()
-        let viewModel = BaseReviewViewModel(appID: appID)
-        vc.viewModel = viewModel
+    static func makeBaseReviewViewController(appInfoModel: AppInfoModel) -> UIViewController & ReviewViewControllerProtocol {
+        let viewModel = BaseReviewViewModel(appInfoModel: appInfoModel)
+        let vc = BaseReviewViewController(viewModel: viewModel)
         return vc
     }
     
-    static func makeAppListViewController() -> UINavigationController {
+    static func makeAppListViewController(delegate: AppListViewControllerDelegate) -> UINavigationController {
         let vc = AppListViewController()
+        vc.delegate = delegate
         return LightContentNavigationController(rootViewController: vc)
     }
     

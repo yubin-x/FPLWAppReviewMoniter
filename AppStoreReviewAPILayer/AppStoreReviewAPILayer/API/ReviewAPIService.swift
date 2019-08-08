@@ -27,14 +27,12 @@ class ReviewAPIService: ReviewAPILayer {
         } else {
             urlString = ""
         }
-        
+//        print(urlString)
         return Observable<[ReviewResponse]>.create({ (observer) -> Disposable in
             
             Alamofire.request(urlString).responseData { response in
-                print(response)
                 if let data = response.result.value {
                     do {
-                        print(data)
                         let value = try JSONDecoder().decode(ReviewSearchResult.self, from: data)
                         observer.onNext(value.feed.entrys)
                     } catch {

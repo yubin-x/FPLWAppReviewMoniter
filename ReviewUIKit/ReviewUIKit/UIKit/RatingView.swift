@@ -16,6 +16,7 @@ public class RatingView: CosmosView {
         setting.filledColor = ColorKit.carrot.value!
         setting.emptyBorderColor = ColorKit.carrot.value!
         setting.fillMode = .precise
+        setting.updateOnTouch = false
         let view = RatingView(settings: setting)
         return view
     }

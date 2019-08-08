@@ -10,6 +10,11 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ReviewUIKit
+import AppStoreReviewService
+
+protocol AppListViewControllerDelegate: class {
+    func didSelectedApp(appInfoModel: AppInfoModel)
+}
 
 class AppListViewController: UIViewController {
     
@@ -20,6 +25,8 @@ class AppListViewController: UIViewController {
     let disposeBag = DisposeBag()
 
     var didEntryAppSearchVC = false
+    
+    weak var delegate: AppListViewControllerDelegate?
     
     init(viewModel: AppListViewable = AppListViewModel()) {
         self.viewModel = viewModel
@@ -69,9 +76,10 @@ class AppListViewController: UIViewController {
                 self.viewModel.deleteApp(indexPath: $0)
             }).disposed(by: disposeBag)
         
-        tableView.rx.itemSelected
-            .subscribe(onNext: { [unowned self] in
-                self.viewModel.selectApp(indexPath: $0)
+        tableView.rx.modelSelected(AppInfoModel.self)
+            .subscribe(onNext: { [unowned self] (model) in
+                self.viewModel.selectApp(appInfoModel: model)
+                self.delegate?.didSelectedApp(appInfoModel: model)
                 self.dismiss(animated: true, completion: nil)
             }).disposed(by: disposeBag)
     }

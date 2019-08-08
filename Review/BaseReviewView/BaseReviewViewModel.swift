@@ -11,27 +11,32 @@ import RxCocoa
 import AppStoreReviewService
 
 protocol BaseReviewViewable {
-    var appID: Int { set get }
+    var appInfoModel: AppInfoModel { get }
+    func updateAppInfoModel(appInfoModel: AppInfoModel)
     func fetchReviewData() -> Observable<[ReviewModel]>
 }
 
 class BaseReviewViewModel: BaseReviewViewable {
     
-    var appID: Int
+    var appInfoModel: AppInfoModel
     let reviewService: ReviewServiceProtocol
     let disposeBag = DisposeBag()
     
-    init(appID: Int,
+    init(appInfoModel: AppInfoModel,
          reviewService: ReviewServiceProtocol = AppStoreReviewServiceFactory.makeReviewService()) {
-        self.appID = appID
+        self.appInfoModel = appInfoModel
         self.reviewService = reviewService
+    }
+    
+    func updateAppInfoModel(appInfoModel: AppInfoModel) {
+        self.appInfoModel = appInfoModel
     }
     
     func fetchReviewData() -> Observable<[ReviewModel]> {
         var observerList = [Observable<Result<[ReviewModel], Error>>]()
         
         for i in 1...3 {
-            observerList.append(reviewService.fetchReviewData(appID: appID, page: i))
+            observerList.append(reviewService.fetchReviewData(appInfoModel: appInfoModel, page: i))
         }
         
         /* Zip three API call result to [[EntryModel]] Array */

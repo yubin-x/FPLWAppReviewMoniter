@@ -25,12 +25,14 @@ public struct ReviewResponse: Decodable {
     public let rating: RatingModel
     public let title: TitleModel
     public let content: ContentModel
+    public let version: VersionModel
     
     enum CodingKeys: String, CodingKey {
         case author
         case rating = "im:rating"
         case title
         case content
+        case version = "im:version"
     }
 }
 
@@ -51,5 +53,9 @@ public struct TitleModel: Decodable {
 }
 
 public struct ContentModel: Decodable {
+    public let label: String
+}
+
+public struct VersionModel: Decodable {
     public let label: String
 }

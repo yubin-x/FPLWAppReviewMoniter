@@ -14,15 +14,18 @@ public struct ReviewModel {
     public let rating: Double
     public let title: String
     public let content: String
+    public let version: String
     
     public init(author: String,
                 rating: Double,
                 title: String,
-                content: String) {
+                content: String,
+                version: String) {
         self.author = author
         self.rating = rating
         self.title = title
         self.content = content
+        self.version = version
     }
     
     public init(from reviewResponse: ReviewResponse) {
@@ -34,5 +37,6 @@ public struct ReviewModel {
         }
         self.title = reviewResponse.title.label
         self.content = reviewResponse.content.label
+        self.version = reviewResponse.version.label
     }
 }

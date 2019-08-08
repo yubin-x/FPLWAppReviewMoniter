@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B261A6122FB25040047C1DE /* Review.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A6022FB25030047C1DE /* Review.xcdatamodel */; };
 		3BAB87B222F8812B00B0CABD /* CacheKitFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */; };
 		3BC1524922F85BA500FA3F50 /* CacheKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC1523F22F85BA500FA3F50 /* CacheKit.framework */; };
 		3BC1524E22F85BA500FA3F50 /* CacheKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1524D22F85BA500FA3F50 /* CacheKitTests.swift */; };
 		3BC1525022F85BA500FA3F50 /* CacheKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BC1524222F85BA500FA3F50 /* CacheKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3BC1525C22F85C5000FA3F50 /* AppInfoCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */; };
+		D404261F22FBBA5700F91BF3 /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D404261D22FBBA5700F91BF3 /* Review.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3B261A6022FB25030047C1DE /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 		3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKitFactory.swift; sourceTree = "<group>"; };
 		3BC1523F22F85BA500FA3F50 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC1524222F85BA500FA3F50 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		3BC1524F22F85BA500FA3F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoCacheManager.swift; sourceTree = "<group>"; };
 		3BC1526922F85D7700FA3F50 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ../ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
+		D404261E22FBBA5700F91BF3 /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 		3BC1524122F85BA500FA3F50 /* CacheKit */ = {
 			isa = PBXGroup;
 			children = (
-				3B261A6022FB25030047C1DE /* Review.xcdatamodel */,
+				D404261D22FBBA5700F91BF3 /* Review.xcdatamodeld */,
 				3BC1524222F85BA500FA3F50 /* CacheKit.h */,
 				3BC1524322F85BA500FA3F50 /* Info.plist */,
 				3BC1525B22F85C5000FA3F50 /* AppInfoCacheManager.swift */,
@@ -267,8 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D404261F22FBBA5700F91BF3 /* Review.xcdatamodeld in Sources */,
 				3BC1525C22F85C5000FA3F50 /* AppInfoCacheManager.swift in Sources */,
-				3B261A6122FB25040047C1DE /* Review.xcdatamodel in Sources */,
 				3BAB87B222F8812B00B0CABD /* CacheKitFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -538,6 +538,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D404261D22FBBA5700F91BF3 /* Review.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D404261E22FBBA5700F91BF3 /* Review.xcdatamodel */,
+			);
+			currentVersion = D404261E22FBBA5700F91BF3 /* Review.xcdatamodel */;
+			name = Review.xcdatamodeld;
+			path = ../../Review/Review.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3BC1523622F85BA500FA3F50 /* Project object */;
 }

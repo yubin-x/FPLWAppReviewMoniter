@@ -8,8 +8,13 @@
 
 import UIKit
 import ReviewUIKit
+import RxSwift
 
 class AppListTableView: UITableView {
+    
+    lazy var refresh = UIRefreshControl()
+    
+    let disposeBag = DisposeBag()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -18,6 +23,15 @@ class AppListTableView: UITableView {
         register(AppListTableViewCell.self, forCellReuseIdentifier: "AppListTableViewCell")
         tableFooterView = UIView()
         backgroundColor = ColorKit.backgroundColor.value
+        refreshControl = refresh
+        
+        refresh.rx.controlEvent(.valueChanged)
+            .subscribe(onNext: { [unowned self] (_) in
+                let time = TimeInterval.random(in: 1..<3)
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time, execute: {
+                    self.refresh.endRefreshing()
+                })
+        }).disposed(by: disposeBag)
     }
     
     required init?(coder aDecoder: NSCoder) {

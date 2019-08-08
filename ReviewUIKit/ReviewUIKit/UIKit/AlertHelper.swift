@@ -9,6 +9,12 @@
 import UIKit
 
 public struct AlertHelper {
+    public static func duplicateAlert() -> UIAlertController {
+        let ac = UIAlertController(title: "Already monitor this App", message: nil, preferredStyle: .alert)
+        ac.addAction(makeCancelAction())
+        return ac
+    }
+    
     public static func addAppAlert(confirm: (()->())?) -> UIAlertController {
         let ac = UIAlertController(title: "Monitor this App?", message: nil, preferredStyle: .alert)
         

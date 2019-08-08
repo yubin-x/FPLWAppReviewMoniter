@@ -81,9 +81,13 @@ class AppSearchViewController: UIViewController {
     
     func bindViewModel() {
         viewMode.saveAppSuccess.asObservable()
-            .subscribe(onNext: { [unowned self] (value) in
-                guard value else { return }
-                self.navigationController?.popViewController(animated: true)
+            .skip(1)
+            .subscribe(onNext: { [weak self] (value) in
+                guard value else {
+                    self?.showDuplicateSaveAppAlert()
+                    return
+                }
+                self?.navigationController?.popViewController(animated: true)
             }).disposed(by: disposeBag)
     }
 
@@ -92,6 +96,11 @@ class AppSearchViewController: UIViewController {
             self.viewMode.saveApp(appInfoModel: appModel)
         })
         
+        navigationController?.visibleViewController?.present(ac, animated: true, completion: nil)
+    }
+    
+    func showDuplicateSaveAppAlert() {
+        let ac = AlertHelper.duplicateAlert()
         navigationController?.visibleViewController?.present(ac, animated: true, completion: nil)
     }
 }

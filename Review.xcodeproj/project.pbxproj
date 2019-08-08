@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B261A5E22FB24C60047C1DE /* Review.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A5C22FB24C50047C1DE /* Review.xcdatamodeld */; };
 		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
@@ -29,6 +28,7 @@
 		82ECBD1C21DD095900900188 /* BaseReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */; };
 		82F9941F21E0BC33005A1706 /* PadReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */; };
 		A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B6B1E82AA2991557B51F74 /* Pods_Review.framework */; };
+		D404262922FBBAB500F91BF3 /* CacheKit.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D404262622FBBAAB00F91BF3 /* CacheKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4547E3422F9219B00FA2F42 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3322F9219000FA2F42 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4547E3522F9219B00FA2F42 /* Cosmos.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E3222F9218400FA2F42 /* Cosmos.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D4547E3622F9219B00FA2F42 /* Kingfisher.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2D22F9217200FA2F42 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -65,6 +65,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3B7E0CF122FAFEA500593EB1;
 			remoteInfo = ReviewUIKit;
+		};
+		D404262522FBBAAB00F91BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D404262022FBBAAB00F91BF3 /* CacheKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BC1523F22F85BA500FA3F50;
+			remoteInfo = CacheKit;
+		};
+		D404262722FBBAAB00F91BF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D404262022FBBAAB00F91BF3 /* CacheKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3BC1524822F85BA500FA3F50;
+			remoteInfo = CacheKitTests;
 		};
 		D4547E0722F91D5B00FA2F42 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -138,6 +152,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D404262922FBBAB500F91BF3 /* CacheKit.framework in Embeded Framework */,
 				D4547E3422F9219B00FA2F42 /* Instabug.framework in Embeded Framework */,
 				D4547E3522F9219B00FA2F42 /* Cosmos.framework in Embeded Framework */,
 				D4547E3622F9219B00FA2F42 /* Kingfisher.framework in Embeded Framework */,
@@ -156,7 +171,6 @@
 /* Begin PBXFileReference section */
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
-		3B261A5D22FB24C50047C1DE /* Review.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Review.xcdatamodel; sourceTree = "<group>"; };
 		3B7E0D2322FB022400593EB1 /* ReviewUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewUIKit.xcodeproj; path = ReviewUIKit/ReviewUIKit.xcodeproj; sourceTree = "<group>"; };
 		3BCB8A8522F67C7000BAA401 /* Review.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Review.entitlements; sourceTree = "<group>"; };
 		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 		82ECBD1921DD08F500900188 /* BaseReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewController.swift; sourceTree = "<group>"; };
 		82ECBD1B21DD095900900188 /* BaseReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseReviewViewModel.swift; sourceTree = "<group>"; };
 		82F9941E21E0BC33005A1706 /* PadReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadReviewViewController.swift; sourceTree = "<group>"; };
+		D404262022FBBAAB00F91BF3 /* CacheKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CacheKit.xcodeproj; path = CacheKit/CacheKit.xcodeproj; sourceTree = "<group>"; };
 		D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewHelperKit.xcodeproj; path = ReviewHelperKit/ReviewHelperKit.xcodeproj; sourceTree = "<group>"; };
 		D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewService.xcodeproj; path = AppStoreReviewService/AppStoreReviewService.xcodeproj; sourceTree = "<group>"; };
 		D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InstabugKit.xcodeproj; path = InstabugKit/InstabugKit.xcodeproj; sourceTree = "<group>"; };
@@ -215,6 +230,7 @@
 		3B10A66522F854C0001C435C /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				D404262022FBBAAB00F91BF3 /* CacheKit.xcodeproj */,
 				3B7E0D2322FB022400593EB1 /* ReviewUIKit.xcodeproj */,
 				D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */,
 				D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */,
@@ -300,7 +316,6 @@
 		82ECBCF621DD077700900188 = {
 			isa = PBXGroup;
 			children = (
-				3B261A5C22FB24C50047C1DE /* Review.xcdatamodeld */,
 				3BAB874722F869D500B0CABD /* Frameworks */,
 				3B10A66522F854C0001C435C /* Dependency */,
 				82ECBD0121DD077800900188 /* Review */,
@@ -347,6 +362,15 @@
 				82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */,
 			);
 			path = BaseReviewView;
+			sourceTree = "<group>";
+		};
+		D404262122FBBAAB00F91BF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D404262622FBBAAB00F91BF3 /* CacheKit.framework */,
+				D404262822FBBAAB00F91BF3 /* CacheKitTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		D4547E0322F91D5B00FA2F42 /* Products */ = {
@@ -461,6 +485,10 @@
 					ProjectRef = D4547E0B22F91D5B00FA2F42 /* AppStoreReviewService.xcodeproj */;
 				},
 				{
+					ProductGroup = D404262122FBBAAB00F91BF3 /* Products */;
+					ProjectRef = D404262022FBBAAB00F91BF3 /* CacheKit.xcodeproj */;
+				},
+				{
 					ProductGroup = D4547E1522F91D5B00FA2F42 /* Products */;
 					ProjectRef = D4547E1422F91D5B00FA2F42 /* InstabugKit.xcodeproj */;
 				},
@@ -493,6 +521,20 @@
 			fileType = wrapper.cfbundle;
 			path = ReviewUIKitTests.xctest;
 			remoteRef = 3B7E0D2A22FB022400593EB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D404262622FBBAAB00F91BF3 /* CacheKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CacheKit.framework;
+			remoteRef = D404262522FBBAAB00F91BF3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D404262822FBBAAB00F91BF3 /* CacheKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CacheKitTests.xctest;
+			remoteRef = D404262722FBBAAB00F91BF3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		D4547E0822F91D5B00FA2F42 /* ReviewHelperKit.framework */ = {
@@ -612,7 +654,6 @@
 				D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */,
 				D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */,
 				827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */,
-				3B261A5E22FB24C60047C1DE /* Review.xcdatamodeld in Sources */,
 				82BA6C1C21E99C52007AC9FB /* PhoneViewModel.swift in Sources */,
 				829965EE21E4F074004F2A14 /* PhoneViewController.swift in Sources */,
 				827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */,
@@ -851,20 +892,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		3B261A5C22FB24C50047C1DE /* Review.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				3B261A5D22FB24C50047C1DE /* Review.xcdatamodel */,
-			);
-			currentVersion = 3B261A5D22FB24C50047C1DE /* Review.xcdatamodel */;
-			name = Review.xcdatamodeld;
-			path = Review/Review.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 82ECBCF721DD077700900188 /* Project object */;
 }

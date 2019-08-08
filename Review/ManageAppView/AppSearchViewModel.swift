@@ -33,6 +33,10 @@ class AppSearchViewModel: AppSearchViewable {
     }
     
     func saveApp(appInfoModel: AppInfoModel) {
+        guard !ConfigurationProvidor.savedAppIDs.contains(appInfoModel.appId) else {
+            saveAppSuccessReplay.accept(false)
+            return
+        }
         searchService.saveApp(data: appInfoModel)
             .subscribe(onNext: { [weak self] (result) in
                 switch result {
