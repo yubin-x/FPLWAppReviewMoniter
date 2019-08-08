@@ -41,6 +41,9 @@ class AppSearchViewModel: AppSearchViewable {
             .subscribe(onNext: { [weak self] (result) in
                 switch result {
                 case .success(_):
+                    var appIDs = ConfigurationProvidor.savedAppIDs
+                    appIDs.append(appInfoModel.appId)
+                    ConfigurationProvidor.savedAppIDs = appIDs
                     self?.saveAppSuccessReplay.accept(true)
                 case .failure(_):
                     self?.saveAppSuccessReplay.accept(false)

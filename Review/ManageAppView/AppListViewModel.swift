@@ -44,9 +44,6 @@ class AppListViewModel: AppListViewable {
                 switch result {
                 case .success(let value):
                     self?.fetchAppReplay.accept(value)
-                    var appIDs = [Int]()
-                    value.forEach { appIDs.append($0.appId) }
-                    ConfigurationProvidor.savedAppIDs = appIDs
                 case .failure(_):
                     self?.fetchAppReplay.accept([])
                 }
