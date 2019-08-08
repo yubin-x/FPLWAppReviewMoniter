@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5DD12622FC403400954B1D /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B5DD12522FC403400954B1D /* Instabug.framework */; };
+		3B5DD12722FC403F00954B1D /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = 3B5DD12522FC403400954B1D /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3BD9D4A022F9B0CF00048796 /* PhoneReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */; };
 		82766C5421DF96AD0048EFB9 /* BaseReviewTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5321DF96AD0048EFB9 /* BaseReviewTableView.swift */; };
 		82766C5621DF96BD0048EFB9 /* BaseReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82766C5521DF96BD0048EFB9 /* BaseReviewTableViewCell.swift */; };
@@ -41,8 +43,6 @@
 		D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8DA22F97345003E5AB8 /* SettingView.swift */; };
 		D46AC8E522F98549003E5AB8 /* PhoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */; };
 		D46AC8E722F9865D003E5AB8 /* PhoneReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */; };
-		D4A7BA2022FC0B62006AC1E3 /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A7BA1F22FC0B62006AC1E3 /* Instabug.framework */; };
-		D4A7BA2222FC0C9F006AC1E3 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4A7BA1F22FC0B62006AC1E3 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +146,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4A7BA2222FC0C9F006AC1E3 /* Instabug.framework in Embeded Framework */,
+				3B5DD12722FC403F00954B1D /* Instabug.framework in Embeded Framework */,
 				D414477122FBFB9800A612E3 /* ReviewHelperKit.framework in Embeded Framework */,
 				D414476F22FBFB8C00A612E3 /* AppStoreReviewService.framework in Embeded Framework */,
 				D414476E22FBFB8800A612E3 /* ReviewUIKit.framework in Embeded Framework */,
@@ -169,6 +169,7 @@
 /* Begin PBXFileReference section */
 		0789AD96B4A45996EFCE8769 /* Pods-Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.debug.xcconfig"; sourceTree = "<group>"; };
 		12248069E4992839073F4CC7 /* Pods-Review.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Review.release.xcconfig"; path = "Pods/Target Support Files/Pods-Review/Pods-Review.release.xcconfig"; sourceTree = "<group>"; };
+		3B5DD12522FC403400954B1D /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 		3B7E0D2322FB022400593EB1 /* ReviewUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewUIKit.xcodeproj; path = ReviewUIKit/ReviewUIKit.xcodeproj; sourceTree = "<group>"; };
 		3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewModel.swift; sourceTree = "<group>"; };
 		46B6B1E82AA2991557B51F74 /* Pods_Review.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Review.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,7 +207,6 @@
 		D46AC8DA22F97345003E5AB8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewController.swift; sourceTree = "<group>"; };
 		D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewView.swift; sourceTree = "<group>"; };
-		D4A7BA1F22FC0B62006AC1E3 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A82B4C7B113BBEC13B1B823D /* Pods_Review.framework in Frameworks */,
-				D4A7BA2022FC0B62006AC1E3 /* Instabug.framework in Frameworks */,
+				3B5DD12622FC403400954B1D /* Instabug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +232,15 @@
 				D4547E0222F91D5B00FA2F42 /* ReviewHelperKit.xcodeproj */,
 			);
 			name = Dependency;
+			sourceTree = "<group>";
+		};
+		3B5DD12422FC403400954B1D /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				3B5DD12522FC403400954B1D /* Instabug.framework */,
+			);
+			name = SDK;
+			path = Review/SDK;
 			sourceTree = "<group>";
 		};
 		3B7E0D2422FB022400593EB1 /* Products */ = {
@@ -300,7 +309,7 @@
 		82ECBCF621DD077700900188 = {
 			isa = PBXGroup;
 			children = (
-				D4FBE76F22FC08BF0071E155 /* SDK */,
+				3B5DD12422FC403400954B1D /* SDK */,
 				3BAB874722F869D500B0CABD /* Frameworks */,
 				3B10A66522F854C0001C435C /* Dependency */,
 				82ECBD0121DD077800900188 /* Review */,
@@ -399,14 +408,6 @@
 				3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */,
 			);
 			path = PhoneReviewView;
-			sourceTree = "<group>";
-		};
-		D4FBE76F22FC08BF0071E155 /* SDK */ = {
-			isa = PBXGroup;
-			children = (
-				D4A7BA1F22FC0B62006AC1E3 /* Instabug.framework */,
-			);
-			path = SDK;
 			sourceTree = "<group>";
 		};
 		EACA14358D398094B8EA5A21 /* Frameworks */ = {
@@ -806,7 +807,7 @@
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/Review/SDK",
 				);
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -834,7 +835,7 @@
 				DEVELOPMENT_TEAM = NUP7C5F5WD;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/SDK",
+					"$(PROJECT_DIR)/Review/SDK",
 				);
 				INFOPLIST_FILE = Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;

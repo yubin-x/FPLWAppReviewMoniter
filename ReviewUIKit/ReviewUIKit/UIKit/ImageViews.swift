@@ -11,7 +11,7 @@ import UIKit
 public struct ImageViews {
     public static func appICONImageView() -> UIImageView {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 10
+        imageView.layer.cornerRadius = 15
         imageView.layer.masksToBounds = true
         return imageView
     }
