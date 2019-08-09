@@ -32,4 +32,16 @@ public struct BarButtonItems {
         item.tintColor = ColorKit.cloudColor.value
         return item
     }
+    
+    public static func flexibleSpaceItem() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .flexibleSpace,
+                               target: nil,
+                               action: nil)
+    }
+    
+    public static func doneItem() -> UIBarButtonItem {
+        return UIBarButtonItem(barButtonSystemItem: .done,
+                               target: nil,
+                               action: nil)
+    }
 }

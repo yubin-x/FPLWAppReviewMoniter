@@ -22,6 +22,7 @@
 		3B7E0D2222FB01D200593EB1 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D2122FB01D200593EB1 /* Views.swift */; };
 		3B7E0D2D22FB02A000593EB1 /* TextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D2C22FB02A000593EB1 /* TextFields.swift */; };
 		3B7E0D3322FB081C00593EB1 /* LightContentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D3222FB081C00593EB1 /* LightContentNavigationController.swift */; };
+		D4A7BA9222FD10220079A041 /* PickerViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A7BA9122FD10220079A041 /* PickerViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		3B7E0D2122FB01D200593EB1 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		3B7E0D2C22FB02A000593EB1 /* TextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFields.swift; sourceTree = "<group>"; };
 		3B7E0D3222FB081C00593EB1 /* LightContentNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightContentNavigationController.swift; sourceTree = "<group>"; };
+		D4A7BA9122FD10220079A041 /* PickerViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				3B261A5222FB0B680047C1DE /* BarButtonItems.swift */,
 				3B261A5422FB11240047C1DE /* ImageViews.swift */,
 				3B261A5A22FB1F9F0047C1DE /* AlertHelper.swift */,
+				D4A7BA9122FD10220079A041 /* PickerViews.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				3B261A5B22FB1F9F0047C1DE /* AlertHelper.swift in Sources */,
 				3B7E0D3322FB081C00593EB1 /* LightContentNavigationController.swift in Sources */,
 				3B261A5522FB11240047C1DE /* ImageViews.swift in Sources */,
+				D4A7BA9222FD10220079A041 /* PickerViews.swift in Sources */,
 				3B7E0D1722FAFFF300593EB1 /* Labels.swift in Sources */,
 				3B7E0D1F22FB00D800593EB1 /* Font.swift in Sources */,
 				3B7E0D2222FB01D200593EB1 /* Views.swift in Sources */,

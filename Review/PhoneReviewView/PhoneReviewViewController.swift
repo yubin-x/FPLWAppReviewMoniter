@@ -41,7 +41,6 @@ class PhoneReviewViewController: UIViewController {
         
         setNavigationBar()
         bindUI()
-//        bindViewModel()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,19 +50,12 @@ class PhoneReviewViewController: UIViewController {
     
     private func setNavigationBar() {
         let leftBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.menuICONImage.value)
-//        let rightBarButton = BarButtonItems.plainBarButtonItemWith(image: ImageKit.refreshICONImage.value)
         
         leftBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
             self.enterAppListVC()
         }).disposed(by: disposeBag)
         
-//        rightBarButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
-//            self.refreshUI()
-//        }).disposed(by: disposeBag)
-        
-        
         navigationItem.leftBarButtonItem = leftBarButton
-//        navigationItem.rightBarButtonItem = rightBarButton
     }
     
     
@@ -113,20 +105,6 @@ class PhoneReviewViewController: UIViewController {
                 self.enterAppListVC()
         }).disposed(by: disposeBag)
     }
-    
-//    func bindViewModel() {
-//        viewModel.fetchAppResult
-//            .observeOn(MainScheduler.instance)
-//            .subscribe(onNext: { [unowned self] in
-//                guard let app = $0 else { return }
-//                self.title = app.appName
-//                if self.reviewVC == nil {
-//                    self.setCurrentVC(appID: app.appId)
-//                } else {
-//                    self.reviewVC.setNewApp(appID: app.appId)
-//                }
-//            }).disposed(by: disposeBag)
-//    }
     
     func enterAppListVC() {
         present(ViewControllerFactory.makeAppListViewController(delegate: self),

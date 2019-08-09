@@ -23,11 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ConfigurationProvidor.registerDefaultValue()
         
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            window?.rootViewController = ViewControllerFactory.makeIPadTabberVC()
-        } else {
-            window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
-        }
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            window?.rootViewController = ViewControllerFactory.makeIPadTabberVC()
+//        } else {
+//            window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
+//        }
+        
+        window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
         
         window?.makeKeyAndVisible()
         
@@ -37,9 +39,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            return .landscape
-        }
+//        if UIDevice.current.userInterfaceIdiom == .pad {
+//            return .landscape
+//        }
         return .portrait
     }
 

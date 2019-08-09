@@ -60,6 +60,12 @@ class SettingView: UIView {
         return label
     }()
     lazy var changeRegionButton = UIButton()
+    lazy var hiddenTextField: CountrySelectTextField = {
+        let textField = CountrySelectTextField()
+        textField.pickerView.delegate = self
+        textField.pickerView.dataSource = self
+        return textField
+    }()
     
     private let viewMargin: CGFloat = 25
     
@@ -82,6 +88,7 @@ class SettingView: UIView {
         addSubview(changeRegionButton)
         addSubview(currentRegionLabel)
         addSubview(currentRegionValueLabel)
+        addSubview(hiddenTextField)
         
         scrollSwitcher.snp.makeConstraints { (make) in
             make.topMargin.equalToSuperview().inset(viewMargin)
@@ -137,37 +144,12 @@ class SettingView: UIView {
     }
     
     private func showPickerView() {
-        guard !subviews.contains(where: { (view) -> Bool in
-            return view.isKind(of: UIPickerView.self)
-        }) else { return }
-        
-        let picker = UIPickerView()
-        picker.dataSource = self
-        picker.delegate = self
-        picker.showsSelectionIndicator = true
-        picker.backgroundColor = ColorKit.backgroundColor.value
-        addSubview(picker)
-        picker.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview()
-            make.bottomMargin.equalToSuperview().inset(viewMargin)
-            make.height.equalTo(200)
-        }
+        hiddenTextField.becomeFirstResponder()
         
         if let row = Country.allCountry().firstIndex(where: { (country) -> Bool in
             return country == ConfigurationProvidor.currentCountry }) {
-            picker.selectRow(row, inComponent: 0, animated: true)
+            hiddenTextField.pickerView.selectRow(row, inComponent: 0, animated: true)
         }
-        
-        let tapGesture = UITapGestureRecognizer()
-        addGestureRecognizer(tapGesture)
-        
-        tapGesture.rx.event.bind(onNext: { _ in
-            UIView.animate(withDuration: 0.5, animations: {
-                picker.alpha = 0
-            }, completion: { (_) in
-                picker.removeFromSuperview()
-            })
-        }).disposed(by: disposeBag)
     }
     
     required init?(coder aDecoder: NSCoder) {
