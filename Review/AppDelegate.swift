@@ -23,12 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ConfigurationProvidor.registerDefaultValue()
         
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//            window?.rootViewController = ViewControllerFactory.makeIPadTabberVC()
-//        } else {
-//            window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
-//        }
-        
         window?.rootViewController = ViewControllerFactory.makePhoneTabBarController()
         
         window?.makeKeyAndVisible()

@@ -96,8 +96,8 @@ public class ChangeAPPICONView: UIView {
 
         UIView.animate(withDuration: 0.5,
                        delay: 0.3,
-                       usingSpringWithDamping: 0.8,
-                       initialSpringVelocity: 15,
+                       usingSpringWithDamping: 0.9,
+                       initialSpringVelocity: 20,
                        options: UIView.AnimationOptions.curveEaseOut,
                        animations: { [unowned self] in
                         self.containerView.snp.updateConstraints({ (make) in
