@@ -20,7 +20,7 @@ public struct AppSearchResponse: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case appName = "trackName"
-        case iconURLString = "artworkUrl60"
+        case iconURLString = "artworkUrl100"
         case appId = "trackId"
         case averageUserRating
     }

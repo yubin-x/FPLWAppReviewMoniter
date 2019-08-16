@@ -13,6 +13,7 @@ import ReviewHelperKit
 
 protocol AppSearchViewable {
     var saveAppSuccess: Observable<Bool> { get }
+    var searchActivityObserver: Observable<Bool> { get }
     func saveApp(appInfoModel: AppInfoModel)
     func searchApp(term: String) -> Observable<[AppInfoModel]>
 }
@@ -20,6 +21,8 @@ protocol AppSearchViewable {
 class AppSearchViewModel: AppSearchViewable {
     
     let saveAppSuccessReplay = BehaviorRelay<Bool>(value: false)
+    let searchActivityReplay = BehaviorRelay<Bool>(value: false)
+
     let disposeBag = DisposeBag()
     
     let searchService: AppInfoServiceProtocol
@@ -27,23 +30,21 @@ class AppSearchViewModel: AppSearchViewable {
     var saveAppSuccess: Observable<Bool> {
         return saveAppSuccessReplay.asObservable()
     }
+
+    var searchActivityObserver: Observable<Bool> {
+        return searchActivityReplay.asObservable()
+    }
     
     init(searchService: AppInfoServiceProtocol = AppStoreReviewServiceFactory.makeAppSearchService()) {
         self.searchService = searchService
     }
     
     func saveApp(appInfoModel: AppInfoModel) {
-        guard !ConfigurationProvidor.savedAppIDs.contains(appInfoModel.appId) else {
-            saveAppSuccessReplay.accept(false)
-            return
-        }
         searchService.saveApp(data: appInfoModel)
             .subscribe(onNext: { [weak self] (result) in
                 switch result {
                 case .success(_):
-                    var appIDs = ConfigurationProvidor.savedAppIDs
-                    appIDs.append(appInfoModel.appId)
-                    ConfigurationProvidor.savedAppIDs = appIDs
+                    ConfigurationProvidor.savedAppID = appInfoModel.appId
                     self?.saveAppSuccessReplay.accept(true)
                 case .failure(_):
                     self?.saveAppSuccessReplay.accept(false)
@@ -52,7 +53,9 @@ class AppSearchViewModel: AppSearchViewable {
     }
     
     func searchApp(term: String) -> Observable<[AppInfoModel]> {
-        return searchService.searchApp(term: term).map {
+        searchActivityReplay.accept(true)
+        return searchService.searchApp(term: term).map { [weak self] in
+            self?.searchActivityReplay.accept(false)
             switch $0 {
             case .success(let value):
                 return value

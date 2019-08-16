@@ -32,7 +32,7 @@ public struct ConfigurationProvidor {
     
     private static let autoScrollTimeIntervalKey = "autoScrollTimeIntervalKey"
     private static let enableAutoScrollKey = "enableAutoScrollKey"
-    private static let savedAppIDsKey = "savedAppIDsKey"
+    private static let savedAppIDKey = "savedAppIDKey"
     private static let currentCountryKey = "currentCountryKey"
     
     public static var autoScrollTimeInterval: TimeInterval {
@@ -69,13 +69,13 @@ public struct ConfigurationProvidor {
         UserDefaults.standard.register(defaults: [ConfigurationProvidor.currentCountryKey: "cn"])
     }
     
-    public static var savedAppIDs: [Int] {
+    public static var savedAppID: Int? {
         get {
-            guard let rawValue = UserDefaults.standard.object(forKey: savedAppIDsKey) as? [Int] else { return [] }
-            return rawValue
+            let rawValue = UserDefaults.standard.integer(forKey: savedAppIDKey)
+            return rawValue != 0 ? rawValue : nil
         }
         set {
-            UserDefaults.standard.set(newValue, forKey: savedAppIDsKey)
+            UserDefaults.standard.set(newValue, forKey: savedAppIDKey)
         }
     }
 }

@@ -71,16 +71,21 @@ class AppListViewController: UIViewController {
     }
     
     func bindUI() {
-        tableView.rx.itemDeleted
-            .subscribe(onNext: { [unowned self] in
-                self.viewModel.deleteApp(indexPath: $0)
-            }).disposed(by: disposeBag)
-        
+//        tableView.rx.itemDeleted
+//            .subscribe(onNext: { [unowned self] in
+//                self.viewModel.deleteApp(indexPath: $0)
+//            }).disposed(by: disposeBag)
+
         tableView.rx.modelSelected(AppInfoModel.self)
             .subscribe(onNext: { [unowned self] (model) in
                 self.viewModel.selectApp(appInfoModel: model)
                 self.delegate?.didSelectedApp(appInfoModel: model)
                 self.dismiss(animated: true, completion: nil)
+            }).disposed(by: disposeBag)
+
+        tableView.rx.modelDeleted(AppInfoModel.self)
+            .subscribe(onNext: { [weak self] (model) in
+                self?.viewModel.deleteApp(model: model)
             }).disposed(by: disposeBag)
     }
     

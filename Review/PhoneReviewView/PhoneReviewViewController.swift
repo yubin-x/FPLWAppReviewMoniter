@@ -60,7 +60,7 @@ class PhoneReviewViewController: UIViewController {
     
     
     func refreshUI() {
-        let appID = ConfigurationProvidor.savedAppIDs.first
+        let appID = ConfigurationProvidor.savedAppID
         rootView.plusButton.isHidden = appID != nil
         
         if let vc = reviewVC {

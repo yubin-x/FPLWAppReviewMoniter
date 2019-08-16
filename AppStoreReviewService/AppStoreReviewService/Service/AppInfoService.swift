@@ -14,7 +14,8 @@ import CacheKit
 public enum AppInfoServiceError: Error {
     case findAppFail
     case coreStoreError(Error)
-    
+    case duplicateMonitorApp
+
     public static func generateFrom(appDataEntryError: AppDataEntryError) -> AppInfoServiceError {
         switch appDataEntryError {
         case .coreStoreError(let error):
@@ -30,7 +31,7 @@ public protocol AppInfoServiceProtocol {
     func fetchApp(appID: Int) -> Observable<Result<AppInfoModel?, AppInfoServiceError>>
     func fetchApps() -> Observable<Result<[AppInfoModel], AppInfoServiceError>>
     func saveApp(data: AppInfoModel) -> Observable<Result<Bool, AppInfoServiceError>>
-    func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppInfoServiceError>>
+    func deleteApp(appID: Int) -> Observable<Result<Bool, AppInfoServiceError>>
 }
 
 class AppInfoService: AppInfoServiceProtocol {
@@ -84,21 +85,42 @@ class AppInfoService: AppInfoServiceProtocol {
     }
     
     func saveApp(data: AppInfoModel) -> Observable<Result<Bool, AppInfoServiceError>> {
-        return appInfoCacheManager.saveApp(appId: Int64(data.appId),
-                                           appName: data.appName,
-                                           iconURLString: data.iconURLString,
-                                           averageUserRating: data.averageUserRating ?? 0)
-            .map {
-                let newResult = $0
-                    .mapError({ (error) -> AppInfoServiceError in
-                        return AppInfoServiceError.generateFrom(appDataEntryError: error)
-                    })
-                return newResult
+        return fetchApp(appID: data.appId).flatMap { [weak self] (result) -> Observable<Result<Bool, AppInfoServiceError>> in
+            guard let self = self else {
+                return Observable<Result<Bool, AppInfoServiceError>>
+                    .just(Result<Bool, AppInfoServiceError>
+                        .failure(AppInfoServiceError.duplicateMonitorApp))
+            }
+
+            switch result {
+            case .success(let value):
+                if value != nil {
+                    return Observable<Result<Bool, AppInfoServiceError>>
+                        .just(Result<Bool, AppInfoServiceError>
+                            .failure(AppInfoServiceError.duplicateMonitorApp))
+                } else {
+                    return self.appInfoCacheManager.saveApp(appId: Int64(data.appId),
+                                                       appName: data.appName,
+                                                       iconURLString: data.iconURLString,
+                                                       averageUserRating: data.averageUserRating ?? 0)
+                        .map {
+                            let newResult = $0
+                                .mapError({ (error) -> AppInfoServiceError in
+                                    return AppInfoServiceError.generateFrom(appDataEntryError: error)
+                                })
+                            return newResult
+                    }
+                }
+            case .failure(let error):
+                return Observable<Result<Bool, AppInfoServiceError>>
+                    .just(Result<Bool, AppInfoServiceError>
+                        .failure(error))
+            }
         }
     }
     
-    func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppInfoServiceError>> {
-        return appInfoCacheManager.deleteApp(indexPath: indexPath).map {
+    func deleteApp(appID: Int) -> Observable<Result<Bool, AppInfoServiceError>> {
+        return appInfoCacheManager.deleteApp(appID: appID).map {
             let newResult = $0
                 .mapError({ (error) -> AppInfoServiceError in
                     return AppInfoServiceError.generateFrom(appDataEntryError: error)

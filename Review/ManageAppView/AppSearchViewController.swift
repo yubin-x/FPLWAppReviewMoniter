@@ -89,6 +89,15 @@ class AppSearchViewController: UIViewController {
                 }
                 self?.navigationController?.popViewController(animated: true)
             }).disposed(by: disposeBag)
+
+        viewMode.searchActivityObserver
+            .subscribe(onNext: { [weak self] (value) in
+                if value {
+                    self?.tableView.activityIndicatorView.startAnimating()
+                } else {
+                    self?.tableView.activityIndicatorView.stopAnimating()
+                }
+            }).disposed(by: disposeBag)
     }
 
     func saveApp(appModel: AppInfoModel) {

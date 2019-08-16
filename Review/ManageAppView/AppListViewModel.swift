@@ -15,7 +15,7 @@ protocol AppListViewable {
     var title: String { get }
     var fetchAppResult: Observable<[AppInfoModel]> { get }
     func fetchSavedApps()
-    func deleteApp(indexPath: IndexPath)
+    func deleteApp(model: AppInfoModel)
     func selectApp(appInfoModel: AppInfoModel)
 }
 
@@ -50,22 +50,26 @@ class AppListViewModel: AppListViewable {
         }).disposed(by: disposeBag)
     }
     
-    func deleteApp(indexPath: IndexPath) {
-        guard fetchAppReplay.value.count >= indexPath.row else { return }
-        let app = fetchAppReplay.value[indexPath.row]
-        appInfoProtocol.deleteApp(indexPath: indexPath)
+    func deleteApp(model: AppInfoModel) {
+        guard let index = fetchAppReplay.value.firstIndex(where: {
+            return model.appId == $0.appId
+        }) else { return }
+
+        appInfoProtocol.deleteApp(appID: model.appId)
             .subscribe(onNext: { (result) in
                 switch result {
                 case .success(let value):
                     guard value else { return }
-                    if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: app.appId) {
-                        var appIDs = ConfigurationProvidor.savedAppIDs
-                        appIDs.remove(at: index)
-                        ConfigurationProvidor.savedAppIDs = appIDs
-                    }
                     var apps = self.fetchAppReplay.value
-                    apps.remove(at: indexPath.row)
+                    apps.remove(at: index)
                     self.fetchAppReplay.accept(apps)
+                    if ConfigurationProvidor.savedAppID == model.appId {
+                        if let newAppID = apps.first?.appId {
+                            ConfigurationProvidor.savedAppID = newAppID
+                        } else {
+                            ConfigurationProvidor.savedAppID = nil
+                        }
+                    }
                 case .failure(_):
                     break
                 }
@@ -73,11 +77,6 @@ class AppListViewModel: AppListViewable {
     }
     
     func selectApp(appInfoModel: AppInfoModel) {
-        var appIDs = ConfigurationProvidor.savedAppIDs
-        if let index = appIDs.firstIndex(of: appInfoModel.appId) {
-            appIDs.remove(at: index)
-            appIDs.insert(appInfoModel.appId, at: 0)
-            ConfigurationProvidor.savedAppIDs = appIDs
-        }
+        ConfigurationProvidor.savedAppID = appInfoModel.appId
     }
 }

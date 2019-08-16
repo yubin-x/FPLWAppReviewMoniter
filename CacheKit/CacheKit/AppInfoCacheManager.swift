@@ -19,7 +19,7 @@ public protocol AppInfoCacheProtocol {
     func fetchApp(appID: Int64) -> Observable<Result<AppDataEntry?, AppDataEntryError>>
     func fetchApps() -> Observable<Result<[AppDataEntry]?, AppDataEntryError>>
     func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double) -> Observable<Result<Bool, AppDataEntryError>>
-    func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppDataEntryError>>
+    func deleteApp(appID: Int) -> Observable<Result<Bool, AppDataEntryError>>
 }
 
 class AppInfoCacheManager: AppInfoCacheProtocol {
@@ -81,27 +81,19 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
         })
     }
     
-    func deleteApp(indexPath: IndexPath) -> Observable<Result<Bool, AppDataEntryError>> {
+    func deleteApp(appID: Int) -> Observable<Result<Bool, AppDataEntryError>> {
         return Observable<Result<Bool, AppDataEntryError>>.create({ [weak self] (observer) -> Disposable in
             do {
-                guard let apps = try self?.dataStack.fetchAll(From<AppDataEntry>()),
-                    apps.count >= indexPath.row else {
+                guard let app = try self?.dataStack.fetchOne(From<AppDataEntry>().where(format: "appId == %@", appID)) else {
                     observer.onNext(Result.failure(AppDataEntryError.findAppFail))
                     return Disposables.create()
                 }
-                
-                let app = apps[indexPath.row]
                 
                 self?.dataStack.perform(asynchronous: { (transaction) -> Void in
                     transaction.delete(app)
                 }, completion: { (result) -> Void in
                     switch result {
                     case .success:
-                        if let index = ConfigurationProvidor.savedAppIDs.firstIndex(of: Int(app.appId)) {
-                            var appIDs = ConfigurationProvidor.savedAppIDs
-                            appIDs.remove(at: index)
-                            ConfigurationProvidor.savedAppIDs = appIDs
-                        }
                         observer.onNext(Result.success(true))
                     case .failure(let error):
                         observer.onNext(Result.failure(AppDataEntryError.coreStoreError(error)))

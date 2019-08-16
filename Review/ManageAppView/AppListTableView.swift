@@ -13,7 +13,8 @@ import RxSwift
 class AppListTableView: UITableView {
     
     lazy var refresh = UIRefreshControl()
-    
+    lazy var activityIndicatorView = UIActivityIndicatorView(style: .gray)
+
     let disposeBag = DisposeBag()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -32,6 +33,12 @@ class AppListTableView: UITableView {
                     self.refresh.endRefreshing()
                 })
         }).disposed(by: disposeBag)
+
+
+        addSubview(activityIndicatorView)
+        activityIndicatorView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
