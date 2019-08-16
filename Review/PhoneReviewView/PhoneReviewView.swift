@@ -19,12 +19,15 @@ class PhoneReviewView: UIView {
         return button
     }()
     
+
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = ColorKit.backgroundColor.value
         
         addSubview(plusButton)
+        
         plusButton.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
             make.size.equalTo(CGSize(width: 100, height: 100))

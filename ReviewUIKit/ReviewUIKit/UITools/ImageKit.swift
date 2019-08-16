@@ -20,7 +20,9 @@ public enum ImageKit {
     case primaryImage
     case secondImage
     case thirdImage
-
+    case error
+    case noResult
+    
     public var value: UIImage? {
         return UIImage(named: imageName)
     }
@@ -58,6 +60,10 @@ public enum ImageKit {
             return "second"
         case .thirdImage:
             return "third"
+        case .error:
+            return "error"
+        case .noResult:
+            return "noResult"
         }
     }
 }

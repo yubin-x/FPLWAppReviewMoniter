@@ -23,6 +23,7 @@ class AppSearchViewController: UIViewController {
         search.dimsBackgroundDuringPresentation = false
         search.searchBar.tintColor = ColorKit.cloudColor.value
         search.searchBar.barTintColor = ColorKit.searchBarColor.value
+        search.searchBar.placeholder = "Search App"
         tableView.tableHeaderView = search.searchBar
         return search
     }()
@@ -45,7 +46,6 @@ class AppSearchViewController: UIViewController {
         
         bindUI()
         bindViewModel()
-        searchController.searchBar.placeholder = "App Name"
         navigationController?.navigationBar.tintColor = ColorKit.cloudColor.value
     }
     
@@ -56,17 +56,27 @@ class AppSearchViewController: UIViewController {
     }
     
     func bindUI() {
-        searchController.searchBar.rx.text
-            .orEmpty
-            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
-            .distinctUntilChanged()
-            .filter { !$0.isEmpty }
-            .flatMap {[unowned self] in
-                self.viewMode.searchApp(term: $0)
-            }
+        let observer = searchController.searchBar.rx.text
+                            .orEmpty
+                            .debounce(RxTimeInterval.seconds(1), scheduler: MainScheduler.instance)
+                            .distinctUntilChanged()
+                            .filter { !$0.isEmpty }
+                            .flatMap {[unowned self] in
+                                self.viewMode.searchApp(term: $0)
+                            }.share()
+        observer
             .bind(to: tableView.rx.items(cellIdentifier: "AppListTableViewCell", cellType: AppListTableViewCell.self)) { (_, model, cell) in
                 cell.bindData(appModel: model)
             }.disposed(by: disposeBag)
+        
+        observer
+            .subscribe(onNext: { [weak self] result in
+                if result.isEmpty {
+                    self?.tableView.showNoResultView()
+                } else {
+                    self?.tableView.hideIssueView()
+                }
+            }).disposed(by: disposeBag)
         
         tableView.rx.modelSelected(AppInfoModel.self)
             .subscribe(onNext: { [unowned self] (model) in

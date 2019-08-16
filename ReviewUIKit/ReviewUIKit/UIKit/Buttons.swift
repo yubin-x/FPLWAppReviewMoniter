@@ -17,4 +17,12 @@ public struct Buttons {
         button.imageView?.layer.masksToBounds = true
         return button
     }
+    
+    public static func functionButton() -> UIButton {
+        let button = UIButton()
+        button.backgroundColor = ColorKit.electronBlue.value
+        button.layer.cornerRadius = 27.5
+        button.layer.masksToBounds = true
+        return button
+    }
 }

@@ -18,6 +18,7 @@ public struct Labels {
     public static func h2Label() -> UILabel {
         let label = UILabel()
         label.font = FontKit.reviewContentFont.value
+        label.numberOfLines = 0
         return label
     }
     
@@ -46,6 +47,12 @@ public struct Labels {
         label.layer.masksToBounds = true
         label.layer.borderColor = ColorKit.electronBlue.value?.cgColor
         label.layer.borderWidth = 1
+        return label
+    }
+    
+    public static func boldLabel() -> UILabel {
+        let label = UILabel()
+        label.font = FontKit.boldLabelFont.value
         return label
     }
 }

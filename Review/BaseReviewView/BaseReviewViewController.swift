@@ -86,9 +86,14 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
             
         observer
             .asObservable()
-            .subscribe({ [unowned self] _ in
-                self.indicatorView.stopAnimating()
-                self.startTimer()
+            .subscribe(onNext: { [weak self] result in
+                self?.indicatorView.stopAnimating()
+                if result.isEmpty {
+                    self?.tableView.showNoResultView()
+                } else {
+                    self?.tableView.hideIssueView()
+                    self?.startTimer()
+                }
             }).disposed(by: disposeBag)
     }
     

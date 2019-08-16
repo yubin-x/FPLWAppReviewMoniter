@@ -14,6 +14,7 @@ public enum FontKit {
     case rightInfoLabelFont
     case nameLabelFont
     case reviewContentFont
+    case boldLabelFont
     
     public var value: UIFont {
         switch self {
@@ -25,6 +26,8 @@ public enum FontKit {
             return UIFont.systemFont(ofSize: 14)
         case .nameLabelFont, .reviewContentFont:
             return UIFont.systemFont(ofSize: 15)
+        case .boldLabelFont:
+            return UIFont.boldSystemFont(ofSize: 17)
         }
     }
 }

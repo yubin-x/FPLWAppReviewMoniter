@@ -22,6 +22,12 @@ class BaseReviewViewModel: BaseReviewViewable {
     let reviewService: ReviewServiceProtocol
     let disposeBag = DisposeBag()
     
+    let errorReplay = BehaviorRelay<Bool>(value: false)
+    
+    var errorObserver: Observable<Bool> {
+        return errorReplay.asObservable()
+    }
+    
     init(appInfoModel: AppInfoModel,
          reviewService: ReviewServiceProtocol = AppStoreReviewServiceFactory.makeReviewService()) {
         self.appInfoModel = appInfoModel
@@ -41,7 +47,7 @@ class BaseReviewViewModel: BaseReviewViewable {
         
         /* Zip three API call result to [[EntryModel]] Array */
         return Observable.zip(observerList)
-            .map { (result) -> [ReviewModel] in
+            .map { [weak self] (result) -> [ReviewModel] in
                 var reviewModels = [ReviewModel]()
                 result.forEach {
                     switch $0 {

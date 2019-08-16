@@ -45,13 +45,13 @@ class SettingView: UIView {
     }()
     lazy var rightLabel: UILabel = {
         let label = Labels.appInfoLabel()
-        label.text = "© FordLabs China"
+        label.text = "© Ting Zhu"
         return label
     }()
     lazy var versionLabel: UILabel = Labels.appInfoLabel()
     lazy var currentRegionLabel: UILabel = {
         let label = Labels.h1Label()
-        label.text = "Current Region"
+        label.text = "Change Country"
         return label
     }()
     lazy var currentRegionValueLabel: UILabel = {

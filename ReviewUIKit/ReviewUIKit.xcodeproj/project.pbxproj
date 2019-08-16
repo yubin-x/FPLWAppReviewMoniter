@@ -11,6 +11,7 @@
 		3B261A5322FB0B680047C1DE /* BarButtonItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A5222FB0B680047C1DE /* BarButtonItems.swift */; };
 		3B261A5522FB11240047C1DE /* ImageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A5422FB11240047C1DE /* ImageViews.swift */; };
 		3B261A5B22FB1F9F0047C1DE /* AlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B261A5A22FB1F9F0047C1DE /* AlertHelper.swift */; };
+		3B467DAF2306CF3D00798E75 /* IssueViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B467DAE2306CF3D00798E75 /* IssueViews.swift */; };
 		3B7E0CFC22FAFEA500593EB1 /* ReviewUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B7E0CF222FAFEA500593EB1 /* ReviewUIKit.framework */; };
 		3B7E0D0122FAFEA500593EB1 /* ReviewUIKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7E0D0022FAFEA500593EB1 /* ReviewUIKitTests.swift */; };
 		3B7E0D0322FAFEA500593EB1 /* ReviewUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7E0CF522FAFEA500593EB1 /* ReviewUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,6 +64,7 @@
 		3B261A5222FB0B680047C1DE /* BarButtonItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItems.swift; sourceTree = "<group>"; };
 		3B261A5422FB11240047C1DE /* ImageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViews.swift; sourceTree = "<group>"; };
 		3B261A5A22FB1F9F0047C1DE /* AlertHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHelper.swift; sourceTree = "<group>"; };
+		3B467DAE2306CF3D00798E75 /* IssueViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViews.swift; sourceTree = "<group>"; };
 		3B7E0CF222FAFEA500593EB1 /* ReviewUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ReviewUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B7E0CF522FAFEA500593EB1 /* ReviewUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReviewUIKit.h; sourceTree = "<group>"; };
 		3B7E0CF622FAFEA500593EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				D4A7BA9122FD10220079A041 /* PickerViews.swift */,
 				D488037D23068D2A003478DC /* ChangeAPPICONView.swift */,
 				D4880383230699FB003478DC /* Buttons.swift */,
+				3B467DAE2306CF3D00798E75 /* IssueViews.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				3B7E0D2022FB00D800593EB1 /* ImageKit.swift in Sources */,
 				3B7E0D0D22FAFEE000593EB1 /* RatingView.swift in Sources */,
 				3B7E0D1E22FB00D800593EB1 /* Color.swift in Sources */,
+				3B467DAF2306CF3D00798E75 /* IssueViews.swift in Sources */,
 				3B261A5122FB08B90047C1DE /* TabBarItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

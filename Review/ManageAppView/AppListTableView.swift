@@ -14,7 +14,17 @@ class AppListTableView: UITableView {
     
     lazy var refresh = UIRefreshControl()
     lazy var activityIndicatorView = UIActivityIndicatorView(style: .gray)
-
+    lazy var errorView: IssueBaseView = {
+        let view = IssueViews.errorView()
+        view.isHidden = true
+        return view
+    }()
+    lazy var noResultView: IssueBaseView = {
+        let view = IssueViews.noResultView()
+        view.isHidden = true
+        return view
+    }()
+    
     let disposeBag = DisposeBag()
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -35,10 +45,37 @@ class AppListTableView: UITableView {
         }).disposed(by: disposeBag)
 
 
+        addSubview(errorView)
+        addSubview(noResultView)
         addSubview(activityIndicatorView)
+        
         activityIndicatorView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()
         }
+        
+        errorView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.size.equalTo(CGSize(width: 400, height: 470))
+        }
+        
+        noResultView.snp.makeConstraints { (make) in
+            make.edges.equalTo(errorView)
+        }
+    }
+    
+    func showErrorView() {
+        errorView.isHidden = false
+        noResultView.isHidden = true
+    }
+    
+    func showNoResultView() {
+        errorView.isHidden = true
+        noResultView.isHidden = false
+    }
+    
+    func hideIssueView() {
+        errorView.isHidden = true
+        noResultView.isHidden = true
     }
     
     required init?(coder aDecoder: NSCoder) {
