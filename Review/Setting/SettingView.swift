@@ -66,7 +66,14 @@ class SettingView: UIView {
         textField.pickerView.dataSource = self
         return textField
     }()
-    
+    lazy var changeICONLabel: UILabel = {
+        let label = Labels.h1Label()
+        label.text = "Change App icon"
+        return label
+    }()
+    lazy var currentICONImageView = ImageViews.currentAppICONImageView()
+    lazy var changeICONButton = UIButton()
+
     private let viewMargin: CGFloat = 25
     
     override init(frame: CGRect) {
@@ -89,7 +96,10 @@ class SettingView: UIView {
         addSubview(currentRegionLabel)
         addSubview(currentRegionValueLabel)
         addSubview(hiddenTextField)
-        
+        addSubview(changeICONLabel)
+        addSubview(changeICONButton)
+        addSubview(currentICONImageView)
+
         scrollSwitcher.snp.makeConstraints { (make) in
             make.topMargin.equalToSuperview().inset(viewMargin)
             make.right.equalToSuperview().inset(viewMargin)
@@ -127,6 +137,20 @@ class SettingView: UIView {
         currentRegionValueLabel.snp.makeConstraints { (make) in
             make.top.right.bottom.equalTo(changeRegionButton)
             make.width.equalTo(60)
+        }
+        changeICONButton.snp.makeConstraints { (make) in
+            make.top.equalTo(changeRegionButton.snp.bottom).inset(-34)
+            make.left.equalTo(scrollSwitcherLabel)
+            make.right.equalTo(scrollSwitcher)
+            make.height.equalTo(30)
+        }
+        changeICONLabel.snp.makeConstraints { (make) in
+            make.top.left.bottom.equalTo(changeICONButton)
+            make.width.equalTo(200)
+        }
+        currentICONImageView.snp.makeConstraints { (make) in
+            make.right.centerY.equalTo(changeICONButton)
+            make.size.equalTo(CGSize(width: 30, height: 30))
         }
         
         rightLabel.snp.makeConstraints { (make) in
@@ -179,5 +203,11 @@ extension SettingView: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         currentRegionValueLabel.text = Country.allCountry()[row].countryName
         ConfigurationProvidor.currentCountry = Country.allCountry()[row]
+    }
+}
+
+extension SettingView: ChangeAPPICONViewDelegate {
+    func didChangeAppICON() {
+        currentICONImageView.image = ImageKit.currentAppICON()
     }
 }

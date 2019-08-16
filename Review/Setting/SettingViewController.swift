@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ReviewHelperKit
+import ReviewUIKit
 
 class SettingViewController: UIViewController {
 
@@ -49,5 +50,19 @@ class SettingViewController: UIViewController {
                 ConfigurationProvidor.autoScrollTimeInterval = TimeInterval(value)
             })
             .disposed(by: disposeBag)
+
+        rootView.changeICONButton.rx.tap.asObservable()
+            .subscribe(onNext: { [weak self] (_) in
+                self?.showAppICONChangeView()
+            }).disposed(by: disposeBag)
+    }
+
+    func showAppICONChangeView() {
+        let changeAPPICONView = ChangeAPPICONView()
+        changeAPPICONView.delegate = rootView
+        tabBarController?.view.window?.addSubview(changeAPPICONView)
+        changeAPPICONView.snp.makeConstraints({ (make) in
+            make.edges.equalToSuperview()
+        })
     }
 }

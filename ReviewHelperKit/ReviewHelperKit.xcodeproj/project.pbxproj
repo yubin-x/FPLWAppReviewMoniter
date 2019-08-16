@@ -11,6 +11,7 @@
 		3B13D1F822F7D9D000FE6107 /* ReviewHelperKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D1F722F7D9D000FE6107 /* ReviewHelperKitTests.swift */; };
 		3B13D1FA22F7D9D000FE6107 /* ReviewHelperKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3B13D20422F7DA0A00FE6107 /* ConfigurationProvidor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */; };
+		D4880374230689AC003478DC /* AppICONChangeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4880373230689AC003478DC /* AppICONChangeHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		3B13D1F722F7D9D000FE6107 /* ReviewHelperKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHelperKitTests.swift; sourceTree = "<group>"; };
 		3B13D1F922F7D9D000FE6107 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationProvidor.swift; sourceTree = "<group>"; };
+		D4880373230689AC003478DC /* AppICONChangeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppICONChangeHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				3B13D20322F7DA0A00FE6107 /* ConfigurationProvidor.swift */,
 				3B13D1EC22F7D9D000FE6107 /* ReviewHelperKit.h */,
 				3B13D1ED22F7D9D000FE6107 /* Info.plist */,
+				D4880373230689AC003478DC /* AppICONChangeHelper.swift */,
 			);
 			path = ReviewHelperKit;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4880374230689AC003478DC /* AppICONChangeHelper.swift in Sources */,
 				3B13D20422F7DA0A00FE6107 /* ConfigurationProvidor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

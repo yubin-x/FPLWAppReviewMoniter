@@ -15,4 +15,12 @@ public struct ImageViews {
         imageView.layer.masksToBounds = true
         return imageView
     }
+
+    public static func currentAppICONImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 5
+        imageView.layer.masksToBounds = true
+        imageView.image = ImageKit.currentAppICON()
+        return imageView
+    }
 }

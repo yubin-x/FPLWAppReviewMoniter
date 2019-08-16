@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReviewHelperKit
 
 public enum ImageKit {
     case reviewTabBarImage
@@ -16,11 +17,25 @@ public enum ImageKit {
     case menuICONImage
     case addAppICONImage
     case refreshICONImage
-    
+    case primaryImage
+    case secondImage
+    case thirdImage
+
     public var value: UIImage? {
         return UIImage(named: imageName)
     }
-    
+
+    public static func currentAppICON() -> UIImage? {
+        switch AppICONType.currentType() {
+        case .primary:
+            return ImageKit.primaryImage.value
+        case .second:
+            return ImageKit.secondImage.value
+        case .third:
+            return ImageKit.thirdImage.value
+        }
+    }
+
     private var imageName: String {
         switch self {
         case .reviewTabBarImage:
@@ -37,6 +52,12 @@ public enum ImageKit {
             return "plus"
         case .refreshICONImage:
             return "refresh"
+        case .primaryImage:
+            return "primary"
+        case .secondImage:
+            return "second"
+        case .thirdImage:
+            return "third"
         }
     }
 }
