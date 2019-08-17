@@ -45,8 +45,6 @@
 		D488038223069897003478DC /* primary@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D488038023069897003478DC /* primary@3x.png */; };
 		D48803872306A296003478DC /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48803852306A295003478DC /* second@2x.png */; };
 		D48803882306A296003478DC /* second@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48803862306A296003478DC /* second@3x.png */; };
-		D488038B2306A2B9003478DC /* third@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48803892306A2B8003478DC /* third@3x.png */; };
-		D488038C2306A2B9003478DC /* third@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D488038A2306A2B9003478DC /* third@2x.png */; };
 		D4A7BA8F22FD0D580079A041 /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A7BA8E22FD0D580079A041 /* Instabug.framework */; };
 		D4A7BA9022FD0D620079A041 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4A7BA8E22FD0D580079A041 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -216,8 +214,6 @@
 		D488038023069897003478DC /* primary@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "primary@3x.png"; sourceTree = "<group>"; };
 		D48803852306A295003478DC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		D48803862306A296003478DC /* second@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@3x.png"; sourceTree = "<group>"; };
-		D48803892306A2B8003478DC /* third@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@3x.png"; sourceTree = "<group>"; };
-		D488038A2306A2B9003478DC /* third@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "third@2x.png"; sourceTree = "<group>"; };
 		D4A7BA8E22FD0D580079A041 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -417,8 +413,6 @@
 		D488035F230685AB003478DC /* AppIcons */ = {
 			isa = PBXGroup;
 			children = (
-				D488038A2306A2B9003478DC /* third@2x.png */,
-				D48803892306A2B8003478DC /* third@3x.png */,
 				D48803852306A295003478DC /* second@2x.png */,
 				D48803862306A296003478DC /* second@3x.png */,
 				D488037F23069897003478DC /* primary@2x.png */,
@@ -606,8 +600,6 @@
 				82ECBD1021DD077900900188 /* LaunchScreen.storyboard in Resources */,
 				82ECBD0D21DD077900900188 /* Assets.xcassets in Resources */,
 				D488038223069897003478DC /* primary@3x.png in Resources */,
-				D488038C2306A2B9003478DC /* third@2x.png in Resources */,
-				D488038B2306A2B9003478DC /* third@3x.png in Resources */,
 				D48803882306A296003478DC /* second@3x.png in Resources */,
 				D48803872306A296003478DC /* second@2x.png in Resources */,
 				D488038123069897003478DC /* primary@2x.png in Resources */,

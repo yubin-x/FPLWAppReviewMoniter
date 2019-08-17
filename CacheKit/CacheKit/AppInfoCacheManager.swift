@@ -18,7 +18,7 @@ public enum AppDataEntryError: Error {
 public protocol AppInfoCacheProtocol {
     func fetchApp(appID: Int64) -> Observable<Result<AppDataEntry?, AppDataEntryError>>
     func fetchApps() -> Observable<Result<[AppDataEntry]?, AppDataEntryError>>
-    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double) -> Observable<Result<Bool, AppDataEntryError>>
+    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double, genres: [String], artistName: String) -> Observable<Result<Bool, AppDataEntryError>>
     func deleteApp(appID: Int) -> Observable<Result<Bool, AppDataEntryError>>
 }
 
@@ -59,7 +59,7 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
         })
     }
     
-    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double) -> Observable<Result<Bool, AppDataEntryError>> {
+    func saveApp(appId: Int64, appName: String?, iconURLString: String?, averageUserRating: Double, genres: [String], artistName: String) -> Observable<Result<Bool, AppDataEntryError>> {
         return Observable<Result<Bool, AppDataEntryError>>.create({ [weak self] (observer) -> Disposable in
             self?.dataStack.perform(asynchronous: { (transaction) -> Void in
                 let app = transaction.create(Into<AppDataEntry>())
@@ -68,6 +68,8 @@ class AppInfoCacheManager: AppInfoCacheProtocol {
                 app.iconURLString = iconURLString
                 app.averageUserRating = averageUserRating
                 app.country = ConfigurationProvidor.currentCountry.rawValue
+                app.genres = genres
+                app.artistName = artistName
             }, completion: { (result) -> Void in
                 switch result {
                 case .success:

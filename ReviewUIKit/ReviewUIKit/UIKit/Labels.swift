@@ -9,6 +9,12 @@
 import UIKit
 
 public struct Labels {
+    public static func userNameLabel() -> UILabel {
+        let label = UILabel()
+        label.font = FontKit.userNameFont.value
+        return label
+    }
+    
     public static func h1Label() -> UILabel {
         let label = UILabel()
         label.font = FontKit.labelFont.value
@@ -18,6 +24,13 @@ public struct Labels {
     public static func h2Label() -> UILabel {
         let label = UILabel()
         label.font = FontKit.reviewContentFont.value
+        label.numberOfLines = 0
+        return label
+    }
+    
+    public static func h2BoldLabel() -> UILabel {
+        let label = UILabel()
+        label.font = FontKit.reviewTitleFont.value
         label.numberOfLines = 0
         return label
     }

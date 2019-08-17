@@ -102,7 +102,9 @@ class AppInfoService: AppInfoServiceProtocol {
                     return self.appInfoCacheManager.saveApp(appId: Int64(data.appId),
                                                        appName: data.appName,
                                                        iconURLString: data.iconURLString,
-                                                       averageUserRating: data.averageUserRating ?? 0)
+                                                       averageUserRating: data.averageUserRating ?? 0,
+                                                       genres: data.genres,
+                                                       artistName: data.artistName)
                         .map {
                             let newResult = $0
                                 .mapError({ (error) -> AppInfoServiceError in

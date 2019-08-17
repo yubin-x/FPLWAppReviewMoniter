@@ -13,10 +13,11 @@ import ReviewUIKit
 
 class BaseReviewTableViewCell: UITableViewCell {
 
-    lazy var titleLabel: UILabel = Labels.h1Label()
+    lazy var portraitImageView = ImageViews.portraitImageView()
+    lazy var nameLabel: UILabel = Labels.userNameLabel()
     lazy var versionLabel: UILabel = Labels.grayH2Label()
-    lazy var ratingView: RatingView = RatingView.quickInit()
-    lazy var nameLabel: UILabel = Labels.grayH2Label()
+    lazy var ratingView: RatingView = RatingView.fiveStartRatingView()
+    
     lazy var contentLabel: UILabel = {
         let label = Labels.h2Label()
         label.numberOfLines = 0
@@ -24,7 +25,7 @@ class BaseReviewTableViewCell: UITableViewCell {
     }()
     lazy var reviewCardView: UIView = Views.cardContentView()
     
-    private let viewMargin: CGFloat = 25
+    private let viewMargin: CGFloat = 10
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -33,38 +34,38 @@ class BaseReviewTableViewCell: UITableViewCell {
         contentView.addSubview(reviewCardView)
         reviewCardView.snp.makeConstraints { (make) in
             make.left.right.equalToSuperview().inset(viewMargin)
-            make.top.bottom.equalToSuperview().inset(15)
+            make.top.bottom.equalToSuperview().inset(7)
+        }
+        
+        reviewCardView.addSubview(portraitImageView)
+        portraitImageView.snp.makeConstraints { (make) in
+            make.top.left.equalToSuperview().inset(15)
+            make.size.equalTo(CGSize(width: 40, height: 40))
         }
         
         reviewCardView.addSubview(versionLabel)
         versionLabel.snp.makeConstraints { (make) in
-            make.top.right.equalToSuperview().inset(15)
+            make.top.right.equalToSuperview().inset(18)
             make.width.equalTo(50)
         }
         
-        reviewCardView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { (make) in
-            make.top.left.equalToSuperview().inset(15)
+        reviewCardView.addSubview(nameLabel)
+        nameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(portraitImageView).inset(3)
+            make.left.equalTo(portraitImageView.snp.right).inset(-10)
             make.right.equalTo(versionLabel.snp.left).inset(-10)
         }
         
         reviewCardView.addSubview(ratingView)
         ratingView.snp.makeConstraints { (make) in
-            make.top.equalTo(titleLabel.snp.bottom).inset(-10)
-            make.left.equalTo(titleLabel)
-            make.size.equalTo(CGSize(width: 129, height: 24))
+            make.top.equalTo(nameLabel.snp.bottom).inset(-2)
+            make.left.equalTo(nameLabel)
+            make.size.equalTo(CGSize(width: 100, height: 15))
         }
-        
-        reviewCardView.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(ratingView)
-            make.right.equalTo(versionLabel)
-            make.left.equalTo(ratingView.snp.right).inset(10)
-        }
-        
+
         reviewCardView.addSubview(contentLabel)
         contentLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(ratingView.snp.bottom).inset(-15)
+            make.top.equalTo(ratingView.snp.bottom).inset(-10)
             make.left.bottom.right.equalToSuperview().inset(15)
         }
     }
@@ -75,9 +76,17 @@ class BaseReviewTableViewCell: UITableViewCell {
     
     func bindData(reviewModel: ReviewModel) {
         versionLabel.text = reviewModel.version
-        titleLabel.text = reviewModel.title
         nameLabel.text = reviewModel.author
         ratingView.rating = reviewModel.rating
-        contentLabel.text = reviewModel.content
+        portraitImageView.image = UIImage(named: reviewModel.portraitImageName)
+        
+        let attributedText = NSMutableAttributedString(string: reviewModel.title,
+                                                  attributes: [NSAttributedString.Key.font: FontKit.reviewTitleFont.value])
+        let contentText = NSAttributedString(string: reviewModel.content,
+                                             attributes: [NSAttributedString.Key.font: FontKit.reviewContentFont.value])
+        attributedText.append(NSAttributedString(string: "  "))
+        attributedText.append(contentText)
+        
+        contentLabel.attributedText = attributedText
     }
 }

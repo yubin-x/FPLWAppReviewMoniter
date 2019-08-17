@@ -16,7 +16,7 @@ public struct AlertHelper {
     }
     
     public static func addAppAlert(confirm: (()->())?) -> UIAlertController {
-        let ac = UIAlertController(title: "Monitor this App?", message: nil, preferredStyle: .alert)
+        let ac = UIAlertController(title: "Follow this App?", message: nil, preferredStyle: .alert)
         
         let confirmAction = UIAlertAction(title: "Confirm", style: .default) { (_) in
             confirm?()

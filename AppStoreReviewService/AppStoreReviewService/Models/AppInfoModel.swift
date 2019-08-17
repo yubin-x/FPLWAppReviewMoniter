@@ -16,17 +16,23 @@ public struct AppInfoModel {
     public let appId: Int
     public let averageUserRating: Double?
     public let country: Country
+    public let genres: [String]
+    public let artistName: String
     
     public init(appName: String?,
                 iconURLString: String?,
                 appId: Int?,
                 averageUserRating: Double?,
-                country: Country) {
+                country: Country,
+                genres: [String] = [],
+                artistName: String = "") {
         self.appName = appName ?? ""
         self.iconURLString = iconURLString ?? ""
         self.appId = appId ?? 0
         self.averageUserRating = averageUserRating
         self.country = country
+        self.genres = genres
+        self.artistName = artistName
     }
     
     public init(from appSearchResponse: AppSearchResponse) {
@@ -35,6 +41,8 @@ public struct AppInfoModel {
         self.appId = appSearchResponse.appId
         self.averageUserRating = appSearchResponse.averageUserRating
         self.country = ConfigurationProvidor.currentCountry
+        self.genres = appSearchResponse.genres
+        self.artistName = appSearchResponse.artistName
     }
     
     public init(from appDataEntry: AppDataEntry) {
@@ -43,5 +51,7 @@ public struct AppInfoModel {
         self.appId = Int(appDataEntry.appId)
         self.averageUserRating = appDataEntry.averageUserRating
         self.country = Country(rawValue: appDataEntry.country ?? "cn") ?? .china
+        self.genres = appDataEntry.genres ?? [" ", " "]
+        self.artistName = appDataEntry.artistName ?? " "
     }
 }

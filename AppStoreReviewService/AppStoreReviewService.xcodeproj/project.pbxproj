@@ -81,6 +81,27 @@
 			remoteGlobalIDString = 3BC1523E22F85BA500FA3F50;
 			remoteInfo = CacheKit;
 		};
+		3BC13D2F2307CEFA00276DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B7E0CF222FAFEA500593EB1;
+			remoteInfo = ReviewUIKit;
+		};
+		3BC13D312307CEFA00276DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B7E0CFB22FAFEA500593EB1;
+			remoteInfo = ReviewUIKitTests;
+		};
+		3BC13D332307CF0100276DDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B7E0CF122FAFEA500593EB1;
+			remoteInfo = ReviewUIKit;
+		};
 		3BCB8AB722F67EA900BAA401 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3BCB8AA322F67EA800BAA401 /* Project object */;
@@ -98,6 +119,7 @@
 		3B13D21D22F7DAD500FE6107 /* AppInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfoModel.swift; sourceTree = "<group>"; };
 		3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppStoreReviewAPILayer.xcodeproj; path = ../AppStoreReviewAPILayer/AppStoreReviewAPILayer.xcodeproj; sourceTree = "<group>"; };
 		3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CacheKit.xcodeproj; path = ../CacheKit/CacheKit.xcodeproj; sourceTree = "<group>"; };
+		3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReviewUIKit.xcodeproj; path = ../ReviewUIKit/ReviewUIKit.xcodeproj; sourceTree = "<group>"; };
 		3BC1523222F85ABE00FA3F50 /* AppStoreReviewServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewServiceFactory.swift; sourceTree = "<group>"; };
 		3BCB8AAC22F67EA800BAA401 /* AppStoreReviewService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppStoreReviewService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BCB8AAF22F67EA800BAA401 /* AppStoreReviewService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppStoreReviewService.h; sourceTree = "<group>"; };
@@ -129,6 +151,7 @@
 		3B13D20522F7DA4800FE6107 /* Dependency */ = {
 			isa = PBXGroup;
 			children = (
+				3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */,
 				3BAB87A422F87B4400B0CABD /* CacheKit.xcodeproj */,
 				3BAB879822F87AAF00B0CABD /* AppStoreReviewAPILayer.xcodeproj */,
 				3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */,
@@ -177,6 +200,15 @@
 			children = (
 				3BAB87AA22F87B4400B0CABD /* CacheKit.framework */,
 				3BAB87AC22F87B4400B0CABD /* CacheKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BC13D282307CEFA00276DDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BC13D302307CEFA00276DDA /* ReviewUIKit.framework */,
+				3BC13D322307CEFA00276DDA /* ReviewUIKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +279,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3BC13D342307CF0100276DDA /* PBXTargetDependency */,
 				3BAB87AE22F87B4900B0CABD /* PBXTargetDependency */,
 				3BAB87A322F87AB500B0CABD /* PBXTargetDependency */,
 				3B13D21022F7DA5800FE6107 /* PBXTargetDependency */,
@@ -316,6 +349,10 @@
 					ProductGroup = 3B13D20722F7DA5200FE6107 /* Products */;
 					ProjectRef = 3B13D20622F7DA5200FE6107 /* ReviewHelperKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 3BC13D282307CEFA00276DDA /* Products */;
+					ProjectRef = 3BC13D272307CEFA00276DDA /* ReviewUIKit.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -366,6 +403,20 @@
 			fileType = wrapper.cfbundle;
 			path = CacheKitTests.xctest;
 			remoteRef = 3BAB87AB22F87B4400B0CABD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BC13D302307CEFA00276DDA /* ReviewUIKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReviewUIKit.framework;
+			remoteRef = 3BC13D2F2307CEFA00276DDA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3BC13D322307CEFA00276DDA /* ReviewUIKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReviewUIKitTests.xctest;
+			remoteRef = 3BC13D312307CEFA00276DDA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -425,6 +476,11 @@
 			isa = PBXTargetDependency;
 			name = CacheKit;
 			targetProxy = 3BAB87AD22F87B4900B0CABD /* PBXContainerItemProxy */;
+		};
+		3BC13D342307CF0100276DDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReviewUIKit;
+			targetProxy = 3BC13D332307CF0100276DDA /* PBXContainerItemProxy */;
 		};
 		3BCB8AB822F67EA900BAA401 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

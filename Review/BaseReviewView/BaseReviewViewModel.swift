@@ -47,7 +47,7 @@ class BaseReviewViewModel: BaseReviewViewable {
         
         /* Zip three API call result to [[EntryModel]] Array */
         return Observable.zip(observerList)
-            .map { [weak self] (result) -> [ReviewModel] in
+            .map { (result) -> [ReviewModel] in
                 var reviewModels = [ReviewModel]()
                 result.forEach {
                     switch $0 {

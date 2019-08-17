@@ -17,21 +17,29 @@ public struct AppSearchResponse: Decodable {
     public let iconURLString: String
     public let appId: Int
     public let averageUserRating: Double?
+    public let genres: [String]
+    public let artistName: String
     
     enum CodingKeys: String, CodingKey {
         case appName = "trackName"
         case iconURLString = "artworkUrl100"
         case appId = "trackId"
         case averageUserRating
+        case genres
+        case artistName
     }
     
     public init(appName: String?,
                 iconURLString: String?,
                 appId: Int?,
-                averageUserRating: Double?) {
+                averageUserRating: Double?,
+                genres: [String],
+                artistName: String) {
         self.appName = appName ?? ""
         self.iconURLString = iconURLString ?? ""
         self.appId = appId ?? 0
         self.averageUserRating = averageUserRating
+        self.genres = genres
+        self.artistName = artistName
     }
 }

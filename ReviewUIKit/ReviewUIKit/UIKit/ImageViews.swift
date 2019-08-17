@@ -13,6 +13,7 @@ public struct ImageViews {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 15
         imageView.layer.masksToBounds = true
+        imageView.backgroundColor = ColorKit.cloudColor.value
         return imageView
     }
 
@@ -21,6 +22,13 @@ public struct ImageViews {
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
         imageView.image = ImageKit.currentAppICON()
+        return imageView
+    }
+    
+    public static func portraitImageView() -> UIImageView {
+        let imageView = UIImageView()
+        imageView.layer.cornerRadius = 20
+        imageView.layer.masksToBounds = true
         return imageView
     }
 }

@@ -48,6 +48,8 @@
 
 /* Begin PBXFileReference section */
 		3BAB87B122F8812B00B0CABD /* CacheKitFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheKitFactory.swift; sourceTree = "<group>"; };
+		3BC13D352307EBC000276DDA /* Review 02.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Review 02.xcdatamodel"; sourceTree = "<group>"; };
+		3BC13D372307ED9400276DDA /* ReviewV2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReviewV2.xcdatamodel; sourceTree = "<group>"; };
 		3BC1523F22F85BA500FA3F50 /* CacheKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CacheKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BC1524222F85BA500FA3F50 /* CacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CacheKit.h; sourceTree = "<group>"; };
 		3BC1524322F85BA500FA3F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -543,9 +545,11 @@
 		D404261D22FBBA5700F91BF3 /* Review.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				3BC13D372307ED9400276DDA /* ReviewV2.xcdatamodel */,
+				3BC13D352307EBC000276DDA /* Review 02.xcdatamodel */,
 				D404261E22FBBA5700F91BF3 /* Review.xcdatamodel */,
 			);
-			currentVersion = D404261E22FBBA5700F91BF3 /* Review.xcdatamodel */;
+			currentVersion = 3BC13D372307ED9400276DDA /* ReviewV2.xcdatamodel */;
 			name = Review.xcdatamodeld;
 			path = ../../Review/Review.xcdatamodeld;
 			sourceTree = "<group>";

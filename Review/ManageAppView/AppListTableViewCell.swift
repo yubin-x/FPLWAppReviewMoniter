@@ -10,13 +10,21 @@ import UIKit
 import Kingfisher
 import ReviewUIKit
 import AppStoreReviewService
+import StoreKit
 
 class AppListTableViewCell: UITableViewCell {
 
     lazy var appIconImageView: UIImageView = ImageViews.appICONImageView()
     lazy var appNameLabel: UILabel = Labels.h1Label()
-    lazy var ratingView: RatingView = RatingView.quickInit()
-    lazy var averageRatingLabel: UILabel = Labels.h2Label()
+    lazy var genresLabel: UILabel = Labels.grayH2Label()
+    lazy var artistNameLabel: UILabel = {
+        let label = Labels.grayH2Label()
+        label.textAlignment = .left
+        return label
+    }()
+    lazy var ratingView: RatingView = RatingView.oneStartRatingView()
+    lazy var averageRatingLabel: UILabel = Labels.grayH2Label()
+    lazy var seperateView: UIView = Views.seperateView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -27,27 +35,44 @@ class AppListTableViewCell: UITableViewCell {
     func configUI() {
         contentView.addSubview(appIconImageView)
         contentView.addSubview(appNameLabel)
+        contentView.addSubview(genresLabel)
+        contentView.addSubview(artistNameLabel)
         contentView.addSubview(ratingView)
         contentView.addSubview(averageRatingLabel)
+        contentView.addSubview(seperateView)
         
         appIconImageView.snp.makeConstraints { (make) in
-            make.top.left.bottom.equalToSuperview().inset(20)
-            make.size.equalTo(CGSize(width: 60, height: 60))
+            make.top.left.bottom.equalToSuperview().inset(15)
+            make.size.equalTo(CGSize(width: 70, height: 70))
         }
         appNameLabel.snp.makeConstraints { (make) in
             make.top.equalTo(appIconImageView)
-            make.left.equalTo(appIconImageView.snp.right).inset(-20)
-            make.right.equalToSuperview().inset(25)
+            make.left.equalTo(appIconImageView.snp.right).inset(-15)
+            make.right.equalToSuperview().inset(20)
         }
-        ratingView.snp.makeConstraints { (make) in
-            make.bottom.equalTo(appIconImageView)
+        genresLabel.snp.makeConstraints { (make) in
             make.left.equalTo(appNameLabel)
-            make.size.equalTo(CGSize(width: 129, height: 24))
+            make.top.equalTo(appNameLabel.snp.bottom).inset(-5)
         }
         averageRatingLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(ratingView)
-            make.left.equalTo(ratingView.snp.right).inset(-10)
-            make.right.equalToSuperview().inset(20)
+            make.centerY.equalTo(genresLabel)
+            make.left.equalTo(genresLabel.snp.right).inset(-10)
+        }
+        ratingView.snp.makeConstraints { (make) in
+            make.centerY.equalTo(averageRatingLabel)
+            make.left.equalTo(averageRatingLabel.snp.right).inset(-3)
+            make.size.equalTo(CGSize(width: 100, height: 15))
+        }
+        artistNameLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(appNameLabel)
+            make.top.equalTo(genresLabel.snp.bottom).inset(-5)
+            make.right.equalTo(appNameLabel)
+        }
+        seperateView.snp.makeConstraints { (make) in
+            make.left.equalTo(appIconImageView)
+            make.right.equalTo(appNameLabel)
+            make.bottom.equalToSuperview()
+            make.height.equalTo(1)
         }
     }
     
@@ -57,6 +82,8 @@ class AppListTableViewCell: UITableViewCell {
     
     func bindData(appModel: AppInfoModel) {
         appNameLabel.text = appModel.appName
+        genresLabel.text = appModel.genres.joined(separator: ", ")
+        artistNameLabel.text = appModel.artistName
         ratingView.rating = appModel.averageUserRating ?? 0
         averageRatingLabel.text = String(appModel.averageUserRating ?? 0)
         guard let url = URL(string: appModel.iconURLString) else { return }

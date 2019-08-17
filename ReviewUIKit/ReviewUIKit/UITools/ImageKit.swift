@@ -66,4 +66,9 @@ public enum ImageKit {
             return "noResult"
         }
     }
+    
+    public static func portraitImageName() -> String {
+        let portraitId = Int.random(in: 1...44)
+        return String(format: "portrait/%02d", portraitId)
+    }
 }

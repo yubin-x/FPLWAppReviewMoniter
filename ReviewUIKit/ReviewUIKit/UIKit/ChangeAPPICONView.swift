@@ -46,13 +46,13 @@ public class ChangeAPPICONView: UIView {
         button.setImage(ImageKit.secondImage.value, for: UIControl.State.highlighted)
         return button
     }()
-    lazy var iconImageButton3: UIButton = {
-        let button = Buttons.appICONButton()
-        button.setImage(ImageKit.thirdImage.value, for: UIControl.State.normal)
-        button.setImage(ImageKit.thirdImage.value, for: UIControl.State.highlighted)
-        return button
-    }()
-    lazy var iconImageButtonArray = [iconImageButton1, iconImageButton2, iconImageButton3]
+//    lazy var iconImageButton3: UIButton = {
+//        let button = Buttons.appICONButton()
+//        button.setImage(ImageKit.thirdImage.value, for: UIControl.State.normal)
+//        button.setImage(ImageKit.thirdImage.value, for: UIControl.State.highlighted)
+//        return button
+//    }()
+    lazy var iconImageButtonArray = [iconImageButton1, iconImageButton2]
     lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: iconImageButtonArray)
         stackView.axis = NSLayoutConstraint.Axis.horizontal
