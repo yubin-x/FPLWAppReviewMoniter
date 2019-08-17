@@ -87,6 +87,6 @@ class AppListTableViewCell: UITableViewCell {
         ratingView.rating = appModel.averageUserRating ?? 0
         averageRatingLabel.text = String(appModel.averageUserRating ?? 0)
         guard let url = URL(string: appModel.iconURLString) else { return }
-        appIconImageView.kf.setImage(with: url)
+        appIconImageView.kf.setImage(with: url, options: [.transition(.fade(0.2))])
     }
 }
