@@ -45,7 +45,7 @@ class SettingView: UIView {
     }()
     lazy var rightLabel: UILabel = {
         let label = Labels.appInfoLabel()
-        label.text = "© Ting Zhu"
+        label.text = "© FordLabs China"
         return label
     }()
     lazy var versionLabel: UILabel = Labels.appInfoLabel()
