@@ -15,7 +15,7 @@ import RxSwift
 class SettingView: UIView {
 
     let disposeBag = DisposeBag()
-    
+
     lazy var scrollSwitcherLabel: UILabel = {
         let label = Labels.h1Label()
         label.text = "Enable Auto Scroll"
@@ -74,6 +74,52 @@ class SettingView: UIView {
     lazy var currentICONImageView = ImageViews.currentAppICONImageView()
     lazy var changeICONButton = UIButton()
 
+    lazy var verticalStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 30
+        stackView.distribution = .equalSpacing
+        return stackView
+    }()
+
+    lazy var autoScrollStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.addArrangedSubview(scrollSwitcherLabel)
+        stackView.addArrangedSubview(scrollSwitcher)
+        return stackView
+    }()
+
+    lazy var timeIntervalStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.addArrangedSubview(timeIntervalLabel)
+        stackView.addArrangedSubview(timeIntervalTextField)
+        return stackView
+    }()
+
+    lazy var regionStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.addArrangedSubview(currentRegionLabel)
+        stackView.addArrangedSubview(currentRegionValueLabel)
+        stackView.addSubview(changeRegionButton)
+        return stackView
+    }()
+
+    lazy var changeICONStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        stackView.addArrangedSubview(changeICONLabel)
+        stackView.addArrangedSubview(currentICONImageView)
+        stackView.addSubview(changeICONButton)
+        return stackView
+    }()
+
     private let viewMargin: CGFloat = 25
     
     override init(frame: CGRect) {
@@ -84,75 +130,40 @@ class SettingView: UIView {
     
     private func configUI() {
         backgroundColor = ColorKit.backgroundColor.value
-        
-        addSubview(scrollSwitcher)
-        addSubview(scrollSwitcherLabel)
-        addSubview(timeIntervalTextField)
-        addSubview(timeIntervalLabel)
-        addSubview(slider)
+
+        addSubview(verticalStackView)
+        addSubview(hiddenTextField)
         addSubview(rightLabel)
         addSubview(versionLabel)
-        addSubview(changeRegionButton)
-        addSubview(currentRegionLabel)
-        addSubview(currentRegionValueLabel)
-        addSubview(hiddenTextField)
-        addSubview(changeICONLabel)
-        addSubview(changeICONButton)
-        addSubview(currentICONImageView)
 
-        scrollSwitcher.snp.makeConstraints { (make) in
-            make.topMargin.equalToSuperview().inset(viewMargin)
-            make.right.equalToSuperview().inset(viewMargin)
+        verticalStackView.addArrangedSubview(autoScrollStackView)
+        verticalStackView.addArrangedSubview(timeIntervalStackView)
+        verticalStackView.addArrangedSubview(slider)
+        verticalStackView.addArrangedSubview(regionStackView)
+        verticalStackView.addArrangedSubview(changeICONStackView)
+
+        verticalStackView.snp.makeConstraints { (make) in
+            make.left.right.equalToSuperview().inset(viewMargin)
+            make.top.equalTo(self.safeAreaLayoutGuide.snp.top).inset(viewMargin)
+            make.height.equalTo(320)
         }
-        scrollSwitcherLabel.snp.makeConstraints { (make) in
-            make.centerY.equalTo(scrollSwitcher)
-            make.left.equalToSuperview().inset(viewMargin)
-            make.right.equalTo(scrollSwitcher.snp.left).inset(viewMargin)
-        }
-        timeIntervalTextField.snp.makeConstraints { (make) in
-            make.top.equalTo(scrollSwitcher.snp.bottom).offset(34)
-            make.right.equalTo(scrollSwitcher)
-            make.size.equalTo(CGSize(width: 51, height: 30))
-        }
-        timeIntervalLabel.snp.makeConstraints { (make) in
-            make.left.equalTo(scrollSwitcherLabel)
-            make.right.equalTo(timeIntervalTextField.snp.left).inset(viewMargin)
-            make.centerY.equalTo(timeIntervalTextField)
-        }
-        slider.snp.makeConstraints { (make) in
-            make.left.equalTo(scrollSwitcherLabel)
-            make.right.equalTo(scrollSwitcher)
-            make.top.equalTo(timeIntervalLabel.snp.bottom).inset(-20)
-        }
-        changeRegionButton.snp.makeConstraints { (make) in
-            make.top.equalTo(slider.snp.bottom).inset(-34)
-            make.left.equalTo(scrollSwitcherLabel)
-            make.right.equalTo(scrollSwitcher)
-            make.height.equalTo(30)
-        }
-        currentRegionLabel.snp.makeConstraints { (make) in
-            make.top.left.bottom.equalTo(changeRegionButton)
-            make.width.equalTo(200)
-        }
+
         currentRegionValueLabel.snp.makeConstraints { (make) in
-            make.top.right.bottom.equalTo(changeRegionButton)
-            make.width.equalTo(60)
+            make.size.equalTo(CGSize(width: 60, height: 30))
         }
-        changeICONButton.snp.makeConstraints { (make) in
-            make.top.equalTo(changeRegionButton.snp.bottom).inset(-34)
-            make.left.equalTo(scrollSwitcherLabel)
-            make.right.equalTo(scrollSwitcher)
-            make.height.equalTo(30)
+
+        changeRegionButton.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
         }
-        changeICONLabel.snp.makeConstraints { (make) in
-            make.top.left.bottom.equalTo(changeICONButton)
-            make.width.equalTo(200)
-        }
+
         currentICONImageView.snp.makeConstraints { (make) in
-            make.right.centerY.equalTo(changeICONButton)
             make.size.equalTo(CGSize(width: 30, height: 30))
         }
-        
+
+        changeICONButton.snp.makeConstraints { (make) in
+            make.edges.equalToSuperview()
+        }
+
         rightLabel.snp.makeConstraints { (make) in
             make.bottomMargin.equalToSuperview().inset(viewMargin)
             make.left.right.equalToSuperview().inset(viewMargin)
@@ -161,7 +172,7 @@ class SettingView: UIView {
             make.bottom.equalTo(rightLabel.snp.top).offset(-16)
             make.left.right.equalTo(rightLabel)
         }
-        
+
         changeRegionButton.rx.tap.subscribe(onNext: { [unowned self] (_) in
             self.showPickerView()
         }).disposed(by: disposeBag)
