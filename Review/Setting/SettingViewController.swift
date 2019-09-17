@@ -32,9 +32,10 @@ class SettingViewController: UIViewController {
         rootView.scrollSwitcher.isOn = ConfigurationProvidor.enableAutoScroll
         rootView.timeIntervalTextField.text = String(ConfigurationProvidor.autoScrollTimeInterval)
         rootView.slider.value = Float(ConfigurationProvidor.autoScrollTimeInterval)
-        guard let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else { return }
+        guard let versionNumber = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String,
+            let build = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String else { return }
         
-        rootView.versionLabel.text = "Version: " + versionNumber
+        rootView.versionLabel.text = "Version: " + versionNumber + "(\(build))"
     }
     
     func bindUI() {

@@ -39,7 +39,6 @@
 		D4547E3C22F9219B00FA2F42 /* Alamofire.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4547E2B22F9215700FA2F42 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8D822F97240003E5AB8 /* PhoneTabBarController.swift */; };
 		D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8DA22F97345003E5AB8 /* SettingView.swift */; };
-		D46AC8E522F98549003E5AB8 /* PhoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */; };
 		D46AC8E722F9865D003E5AB8 /* PhoneReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */; };
 		D488038123069897003478DC /* primary@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D488037F23069897003478DC /* primary@2x.png */; };
 		D488038223069897003478DC /* primary@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D488038023069897003478DC /* primary@3x.png */; };
@@ -47,6 +46,7 @@
 		D48803882306A296003478DC /* second@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D48803862306A296003478DC /* second@3x.png */; };
 		D4A7BA8F22FD0D580079A041 /* Instabug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4A7BA8E22FD0D580079A041 /* Instabug.framework */; };
 		D4A7BA9022FD0D620079A041 /* Instabug.framework in Embeded Framework */ = {isa = PBXBuildFile; fileRef = D4A7BA8E22FD0D580079A041 /* Instabug.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D4B16901230AA1D500E4F0B5 /* PhoneReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B16900230AA1D500E4F0B5 /* PhoneReviewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,13 +208,13 @@
 		D4547E3222F9218400FA2F42 /* Cosmos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cosmos.framework; path = Carthage/Build/iOS/Cosmos.framework; sourceTree = "<group>"; };
 		D46AC8D822F97240003E5AB8 /* PhoneTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTabBarController.swift; sourceTree = "<group>"; };
 		D46AC8DA22F97345003E5AB8 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewController.swift; sourceTree = "<group>"; };
 		D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewView.swift; sourceTree = "<group>"; };
 		D488037F23069897003478DC /* primary@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "primary@2x.png"; sourceTree = "<group>"; };
 		D488038023069897003478DC /* primary@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "primary@3x.png"; sourceTree = "<group>"; };
 		D48803852306A295003478DC /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		D48803862306A296003478DC /* second@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@3x.png"; sourceTree = "<group>"; };
 		D4A7BA8E22FD0D580079A041 /* Instabug.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Instabug.framework; sourceTree = "<group>"; };
+		D4B16900230AA1D500E4F0B5 /* PhoneReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneReviewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,9 +403,9 @@
 		D46AC8E322F9852C003E5AB8 /* PhoneReviewView */ = {
 			isa = PBXGroup;
 			children = (
-				D46AC8E422F98549003E5AB8 /* PhoneReviewViewController.swift */,
 				D46AC8E622F9865D003E5AB8 /* PhoneReviewView.swift */,
 				3BD9D49F22F9B0CF00048796 /* PhoneReviewViewModel.swift */,
+				D4B16900230AA1D500E4F0B5 /* PhoneReviewViewController.swift */,
 			);
 			path = PhoneReviewView;
 			sourceTree = "<group>";
@@ -663,12 +663,12 @@
 				82BA6C1A21E98BCA007AC9FB /* AppListViewModel.swift in Sources */,
 				827BE3FA21E8F04E009E0517 /* AppListTableView.swift in Sources */,
 				82ECBD1A21DD08F500900188 /* BaseReviewViewController.swift in Sources */,
+				D4B16901230AA1D500E4F0B5 /* PhoneReviewViewController.swift in Sources */,
 				82ECBD0321DD077800900188 /* AppDelegate.swift in Sources */,
 				D46AC8D922F97240003E5AB8 /* PhoneTabBarController.swift in Sources */,
 				D46AC8DB22F97345003E5AB8 /* SettingView.swift in Sources */,
 				827BE3F621E8D874009E0517 /* AppSearchViewController.swift in Sources */,
 				827BE3F821E8DFFB009E0517 /* AppSearchViewModel.swift in Sources */,
-				D46AC8E522F98549003E5AB8 /* PhoneReviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
