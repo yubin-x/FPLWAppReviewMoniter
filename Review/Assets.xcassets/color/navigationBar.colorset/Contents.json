@@ -9,10 +9,10 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0.902",
+          "red" : "0x34",
           "alpha" : "1.000",
-          "blue" : "0.133",
-          "green" : "0.494"
+          "blue" : "0xDB",
+          "green" : "0x98"
         }
       }
     },
@@ -27,10 +27,10 @@
       "color" : {
         "color-space" : "srgb",
         "components" : {
-          "red" : "0xE6",
+          "red" : "0x34",
           "alpha" : "1.000",
-          "blue" : "0x22",
-          "green" : "0x7E"
+          "blue" : "0xDB",
+          "green" : "0x98"
         }
       }
     },
@@ -43,13 +43,8 @@
         }
       ],
       "color" : {
-        "color-space" : "srgb",
-        "components" : {
-          "red" : "0xD3",
-          "alpha" : "1.000",
-          "blue" : "0x00",
-          "green" : "0x54"
-        }
+        "platform" : "ios",
+        "reference" : "systemBackgroundColor"
       }
     }
   ]

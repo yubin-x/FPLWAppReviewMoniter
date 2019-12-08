@@ -13,7 +13,7 @@ import RxSwift
 class AppListTableView: UITableView {
     
     lazy var refresh = UIRefreshControl()
-    lazy var activityIndicatorView = UIActivityIndicatorView(style: .gray)
+    lazy var activityIndicatorView = UIActivityIndicatorView(style: .large)
     lazy var errorView: IssueBaseView = {
         let view = IssueViews.errorView()
         view.isHidden = true

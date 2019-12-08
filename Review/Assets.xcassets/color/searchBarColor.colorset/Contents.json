@@ -43,13 +43,8 @@
         }
       ],
       "color" : {
-        "color-space" : "srgb",
-        "components" : {
-          "red" : "0x51",
-          "alpha" : "1.000",
-          "blue" : "0xDF",
-          "green" : "0xA6"
-        }
+        "platform" : "ios",
+        "reference" : "systemBackgroundColor"
       }
     }
   ]

@@ -114,6 +114,6 @@ class PhoneReviewViewController: UIViewController {
 
 extension PhoneReviewViewController: AppListViewControllerDelegate {
     func didSelectedApp(appInfoModel: AppInfoModel) {
-
+        refreshUI()
     }
 }

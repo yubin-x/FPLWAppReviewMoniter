@@ -20,7 +20,6 @@ class AppSearchViewController: UIViewController {
     
     lazy var searchController: UISearchController = {
         let search = UISearchController(searchResultsController: nil)
-        search.dimsBackgroundDuringPresentation = false
         search.searchBar.tintColor = ColorKit.cloudColor.value
         search.searchBar.barTintColor = ColorKit.searchBarColor.value
         search.searchBar.placeholder = "Search App"

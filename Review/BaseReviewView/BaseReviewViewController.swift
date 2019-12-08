@@ -29,7 +29,7 @@ class BaseReviewViewController: UIViewController, ReviewViewControllerProtocol {
     let viewModel: BaseReviewViewable
     
     lazy var indicatorView: UIActivityIndicatorView = {
-        let indicatorView = UIActivityIndicatorView(style: .gray)
+        let indicatorView = UIActivityIndicatorView(style: .large)
         view.addSubview(indicatorView)
         indicatorView.snp.makeConstraints { (make) in
             make.center.equalToSuperview()

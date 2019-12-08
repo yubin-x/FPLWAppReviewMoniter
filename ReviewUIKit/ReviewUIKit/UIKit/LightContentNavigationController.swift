@@ -17,7 +17,7 @@ public class LightContentNavigationController: UINavigationController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationBar.barTintColor = ColorKit.electronBlue.value
+        navigationBar.barTintColor = ColorKit.navigationBar.value
         navigationBar.setValue(true, forKey: "hidesShadow")
         let textAttributes = [NSAttributedString.Key.foregroundColor: ColorKit.cloudColor.value!]
         navigationBar.titleTextAttributes = textAttributes

@@ -4189,3 +4189,6 @@ Review/SDK/Instabug.framework/InstabugResources.bundle/zh-Hans.lproj/Localizable
 Review/SDK/Instabug.framework/InstabugResources.bundle/zh-Hant-TW.lproj/Localizable.strings
 Review/SDK/Instabug.framework/InstabugResources.bundle/zh-Hant.lproj/Localizable.strings
 Review/SDK/Instabug.framework/Modules/module.modulemap
+Carthage
+Review/SDK/Instabug.framework
+Review/SDK

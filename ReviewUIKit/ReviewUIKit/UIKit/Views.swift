@@ -17,7 +17,7 @@ public struct Views {
         view.layer.shadowOffset = CGSize(width: 0, height: 1)
         
         let containerView = UIView()
-        containerView.backgroundColor = ColorKit.backgroundColor.value
+        containerView.backgroundColor = ColorKit.cardBackground.value
         containerView.layer.cornerRadius = 8
         containerView.layer.masksToBounds = true
         view.addSubview(containerView)

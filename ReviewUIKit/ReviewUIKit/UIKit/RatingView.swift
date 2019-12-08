@@ -12,9 +12,9 @@ public class RatingView: CosmosView {
     
     public static func fiveStartRatingView() -> RatingView {
         var setting = CosmosSettings.default
-        setting.filledBorderColor = ColorKit.midnightBlue.value!
-        setting.filledColor = ColorKit.midnightBlue.value!
-        setting.emptyBorderColor = ColorKit.midnightBlue.value!
+        setting.filledBorderColor = ColorKit.nameLabelColor.value!
+        setting.filledColor = ColorKit.nameLabelColor.value!
+        setting.emptyBorderColor = ColorKit.nameLabelColor.value!
         setting.fillMode = .precise
         setting.updateOnTouch = false
         setting.starSize = 15

@@ -21,15 +21,17 @@ public enum ColorKit {
     case alizarin
     case midnightBlue
     case searchBarColor
+    case cardBackground
+    case navigationBar
     
     public var value: UIColor? {
         switch self {
         case .labelTextColor:
-            return UIColor.darkText
+            return UIColor.label
         case .subLabelTextColor:
-            return UIColor.lightGray
+            return UIColor.systemGray
         case .backgroundColor:
-            return UIColor.white
+            return UIColor.systemBackground
         case .nameLabelColor:
             return UIColor(named: "color/nameLabelColor")
         case .cloudColor:
@@ -48,6 +50,10 @@ public enum ColorKit {
             return UIColor(named: "color/midnightBlue")
         case .searchBarColor:
             return UIColor(named: "color/searchBarColor")
+        case .cardBackground:
+            return UIColor(named: "color/cardBackground")
+        case .navigationBar:
+            return UIColor(named: "color/navigationBar")
         }
     }
 }
